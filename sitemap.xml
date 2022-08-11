@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://marcusyyds.github.io/post/4a17b156.html</loc>
+    
+    <lastmod>2022-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcusyyds.github.io/post/e70bf4f.html</loc>
+    
+    <lastmod>2022-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcusyyds.github.io/post/6709fc4a.html</loc>
+    
+    <lastmod>2022-08-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://marcusyyds.github.io/games/index.html</loc>
     
     <lastmod>2022-08-11</lastmod>
@@ -92,33 +119,6 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/post/2.html</loc>
-    
-    <lastmod>2022-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://marcusyyds.github.io/post/3.html</loc>
-    
-    <lastmod>2022-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://marcusyyds.github.io/post/1.html</loc>
-    
-    <lastmod>2022-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/nav/index.html</loc>
     
     <lastmod>2022-08-10</lastmod>
@@ -182,13 +182,6 @@
 
   
   <url>
-    <loc>https://marcusyyds.github.io/tags/Cloudrever/</loc>
-    <lastmod>2022-08-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/tags/Replit/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -203,6 +196,13 @@
   </url>
   
   <url>
+    <loc>https://marcusyyds.github.io/tags/%E7%99%BD%E5%AB%96/</loc>
+    <lastmod>2022-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://marcusyyds.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -210,7 +210,7 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/tags/%E7%99%BD%E5%AB%96/</loc>
+    <loc>https://marcusyyds.github.io/tags/Cloudrever/</loc>
     <lastmod>2022-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
