@@ -1,0 +1,25 @@
+User-agent: *
+Allow: / 
+Allow: /message/
+Allow: /about/
+Allow: /link/
+Allow: /box/
+Allow: /timeline/
+Allow: /nav/
+Allow: /music/
+Allow: /movies/
+Allow: /picture/
+Allow: /book/
+Allow: /games/
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /_data/
+
+Sitemap: https://marcusyyds.github.io/sitemap.xml
+Sitemap: https://marcusyyds.github.io/baidusitemap.xml
