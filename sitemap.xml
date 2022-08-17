@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/posts/586ff2f5.html</loc>
-    
-    <lastmod>2022-08-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/about/index.html</loc>
     
     <lastmod>2022-08-16</lastmod>
@@ -219,20 +210,6 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://marcusyyds.github.io/tags/Hexo/</loc>
-    <lastmod>2022-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/tags/Cloudrever/</loc>
     <lastmod>2022-08-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -249,21 +226,7 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/categories/%E5%88%86%E4%BA%AB/</loc>
-    <lastmod>2022-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://marcusyyds.github.io/categories/Hexo/</loc>
     <lastmod>2022-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
