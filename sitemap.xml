@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://marcusyyds.github.io/posts/586ff2f5.html</loc>
+    <loc>https://marcusyyds.github.io/posts/e70bf4f.html</loc>
     
     <lastmod>2022-08-17</lastmod>
     
@@ -22,16 +22,16 @@
   <url>
     <loc>https://marcusyyds.github.io/posts/4a17b156.html</loc>
     
-    <lastmod>2022-08-16</lastmod>
+    <lastmod>2022-08-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/posts/e70bf4f.html</loc>
+    <loc>https://marcusyyds.github.io/posts/586ff2f5.html</loc>
     
-    <lastmod>2022-08-16</lastmod>
+    <lastmod>2022-08-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/tags/Cloudrever-Replit-%E6%9C%8D%E5%8A%A1%E5%99%A8-%E7%BC%96%E7%A8%8B-%E7%99%BD%E5%AB%96/</loc>
-    <lastmod>2022-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2022-08-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -234,6 +227,13 @@
   
   <url>
     <loc>https://marcusyyds.github.io/tags/Hexo/</loc>
+    <lastmod>2022-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcusyyds.github.io/tags/Cloudrever/</loc>
     <lastmod>2022-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
