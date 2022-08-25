@@ -1,16 +1,88 @@
-/* @font-face {
+@font-face {
   font-family: Candyhome;
   src: url(https://cdn.cbd.int/anzhiyu-blog@latest/fonts/Candyhome.ttf);
   font-display: swap;
   font-weight: lighter;
-} */
+}
 @font-face {
     font-family: ZhuZiAYuanJWD;
     src: url(https://cdn.cbd.int/anzhiyu-blog@latest/fonts/ZhuZiAWan.woff2);
     font-display: swap;
     font-weight: lighter;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('/fonts/iconfont.eot');
+  src: url('/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iconfont.woff2') format('woff2'),
+  url('/fonts/iconfont.woff') format('woff'),
+  url('/fonts/iconfont.ttf') format('truetype'),
+  url('/fonts/iconfont.svg#iconfont') format('svg');
+  }
+  @font-face {
+    font-family: "iconfont"; /* Project id 3608755 */
+    src: url('iconfont.eot?t=1661425588461'); /* IE9 */
+    src: url('iconfont.eot?t=1661425588461#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('iconfont.woff2?t=1661425588461') format('woff2'),
+         url('iconfont.woff?t=1661425588461') format('woff'),
+         url('iconfont.ttf?t=1661425588461') format('truetype'),
+         url('iconfont.svg?t=1661425588461#iconfont') format('svg');
   }
   
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-mojituo:before {
+    content: "\e6be";
+  }
+  
+  .icon-xiangcaobingqilin:before {
+    content: "\e6c2";
+  }
+  
+  .icon-minecraft:before {
+    content: "\e7f9";
+  }
+  
+  .icon-RSS:before {
+    content: "\e78a";
+  }
+  
+  .icon-anemo:before {
+    content: "\e60d";
+  }
+  
+  .icon-dendro:before {
+    content: "\e60f";
+  }
+  
+  .icon-electro:before {
+    content: "\e610";
+  }
+  
+  .icon-geo:before {
+    content: "\e611";
+  }
+  
+  .icon-hydro:before {
+    content: "\e612";
+  }
+  
+  .icon-pyro:before {
+    content: "\e613";
+  }
+  
+  .icon-yangtuo:before {
+    content: "\e788";
+  }
+  
+  
+ /* 
   div#menus {
     font-family: 'ZhuZiAYuanJWD';
   }
@@ -23,13 +95,13 @@
   a.categoryBar-list-link,
   h1.post-title {
     font-family: ZhuZiAYuanJWD;
-  }
+  } */
   
   .iconfont {
     font-family: 'iconfont' !important;
-    font-size: 3em;
     /* 可以定义图标大小 */
     font-style: normal;
+    font-size: 3em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -154,14 +226,14 @@
     background: transparent !important;
   }
   /* 页脚透明 */
-  #footer {
+  /* #footer {
     background: transparent !important;
-  }
+  } */
   
   /* 头图透明 */
-  #page-header {
+  /* #page-header {
     background: transparent !important;
-  }
+  }  */
   
   #rightside > div > button {
     border-radius: 5px;
@@ -368,4 +440,4 @@
   #article-container figure.highlight {
     border-radius: 10px;
   }
-  <link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+  
