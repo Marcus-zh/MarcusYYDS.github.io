@@ -110,22 +110,22 @@
     
     
     <entry>
-      <title>小说</title>
-      <link href="/book/index.html"/>
-      <url>/book/index.html</url>
+      <title>百宝箱</title>
+      <link href="/box/index.html"/>
+      <url>/box/index.html</url>
       
-        <content type="html"><![CDATA[<div class="gallery-group-main">  <figure class="gallery-group">  <img class="gallery-group-img no-lightbox" src='https://pic2.zhimg.com/80/v2-7d1356a124e35267398323948f8a2799_720w.jpg?source=1940ef5c' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">程序员坐牢了会被安排去写代码吗？</div>  <p>转自知乎</p>  <a href='/book/0001/'></a>  </figcaption>  </figure>  </div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[<div class="flink"><div class="flink-name">感谢链接</div><div class="flink-desc">感谢这些链接帮助我</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Hexo" />              </div>              <div class="flink-item-name">Hexo</div>               <div class="flink-item-desc" title="本站使用的网站框架">本站使用的网站框架</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://butterfly.js.org/" title="butterfly" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="butterfly" />              </div>              <div class="flink-item-name">butterfly</div>               <div class="flink-item-desc" title="本站使用的主题">本站使用的主题</div>            </a>          </div></div><div class="flink-name">知名网站</div><div class="flink-desc">知名大厂的网站</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://www.bilibili.com/" title="BiliBili" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://img.ixintu.com/download/jpg/20200831/b5b5fef64ab25c86b410cb2048926f07_512_464.jpg!con" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="BiliBili" />              </div>              <div class="flink-item-name">BiliBili</div>               <div class="flink-item-desc" title="国内最大视频网站">国内最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.youtube.com/" title="Youtube" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Youtube" />              </div>              <div class="flink-item-name">Youtube</div>               <div class="flink-item-desc" title="国外最大视频网站">国外最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.weibo.com/" title="Weibo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Weibo" />              </div>              <div class="flink-item-name">Weibo</div>               <div class="flink-item-desc" title="中国最大社交分享平台">中国最大社交分享平台</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://twitter.com/" title="Twitter" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Twitter" />              </div>              <div class="flink-item-name">Twitter</div>               <div class="flink-item-desc" title="社交分享平台">社交分享平台</div>            </a>          </div></div></div><p>暂时还没写好</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>百宝箱</title>
-      <link href="/box/index.html"/>
-      <url>/box/index.html</url>
+      <title>小说</title>
+      <link href="/book/index.html"/>
+      <url>/book/index.html</url>
       
-        <content type="html"><![CDATA[<div class="flink"><div class="flink-name">感谢链接</div><div class="flink-desc">感谢这些链接帮助我</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Hexo" />              </div>              <div class="flink-item-name">Hexo</div>               <div class="flink-item-desc" title="本站使用的网站框架">本站使用的网站框架</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://butterfly.js.org/" title="butterfly" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="butterfly" />              </div>              <div class="flink-item-name">butterfly</div>               <div class="flink-item-desc" title="本站使用的主题">本站使用的主题</div>            </a>          </div></div><div class="flink-name">知名网站</div><div class="flink-desc">知名大厂的网站</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://www.bilibili.com/" title="BiliBili" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://img.ixintu.com/download/jpg/20200831/b5b5fef64ab25c86b410cb2048926f07_512_464.jpg!con" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="BiliBili" />              </div>              <div class="flink-item-name">BiliBili</div>               <div class="flink-item-desc" title="国内最大视频网站">国内最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.youtube.com/" title="Youtube" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Youtube" />              </div>              <div class="flink-item-name">Youtube</div>               <div class="flink-item-desc" title="国外最大视频网站">国外最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.weibo.com/" title="Weibo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Weibo" />              </div>              <div class="flink-item-name">Weibo</div>               <div class="flink-item-desc" title="中国最大社交分享平台">中国最大社交分享平台</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://twitter.com/" title="Twitter" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Twitter" />              </div>              <div class="flink-item-name">Twitter</div>               <div class="flink-item-desc" title="社交分享平台">社交分享平台</div>            </a>          </div></div></div><p>暂时还没写好</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[<div class="gallery-group-main">  <figure class="gallery-group">  <img class="gallery-group-img no-lightbox" src='https://pic2.zhimg.com/80/v2-7d1356a124e35267398323948f8a2799_720w.jpg?source=1940ef5c' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">程序员坐牢了会被安排去写代码吗？</div>  <p>转自知乎</p>  <a href='/book/0001/'></a>  </figcaption>  </figure>  </div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
@@ -176,22 +176,22 @@
     
     
     <entry>
-      <title>视频</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=978838069&bvid=BV1e44y1W7Zw&cid=503070236&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[    <div id="aplayer-lvfbYUBt" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7249426730" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div>    <div id="aplayer-eqJWjQxz" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="6782971019" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>视频</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
-        <content type="html"><![CDATA[    <div id="aplayer-JSCKyiqi" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7249426730" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div>    <div id="aplayer-cwsyXwGO" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="6782971019" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=978838069&bvid=BV1e44y1W7Zw&cid=503070236&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
