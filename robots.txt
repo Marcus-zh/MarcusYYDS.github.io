@@ -20,6 +20,7 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /img/
 Disallow: /_data/
+Disallow: /_draft/
 
 Sitemap: https://marcusyyds.github.io/sitemap.xml
 Sitemap: https://marcusyyds.github.io/baidusitemap.xml
