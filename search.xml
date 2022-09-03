@@ -35,15 +35,15 @@
       
         <tags>
             
+            <tag> Cloudrever </tag>
+            
             <tag> Replit </tag>
             
             <tag> 服务器 </tag>
             
-            <tag> 白嫖 </tag>
-            
             <tag> 编程 </tag>
             
-            <tag> Cloudrever </tag>
+            <tag> 白嫖 </tag>
             
         </tags>
       
@@ -74,9 +74,9 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 白嫖 </tag>
-            
             <tag> 编程 </tag>
+            
+            <tag> 白嫖 </tag>
             
         </tags>
       
@@ -99,17 +99,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="关于站点"><a href="#关于站点" class="headerlink" title="关于站点"></a>关于站点</h2><p>本站是由<a href="https://hexo.io/zh-cn/index.html">Hexo</a>搭建<br><a href="https://github.com/">Github</a>托管<br><a href="https://butterfly.js.org/">Butterfly</a>主题(太好看了以至于我两个博客都用的这个主题)</p><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>QQ:3105950984</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小说</title>
       <link href="/book/index.html"/>
       <url>/book/index.html</url>
@@ -121,22 +110,33 @@
     
     
     <entry>
-      <title>百宝箱</title>
-      <link href="/box/index.html"/>
-      <url>/box/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<div class="flink"><div class="flink-name">感谢链接</div><div class="flink-desc">感谢这些链接帮助我</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Hexo" />              </div>              <div class="flink-item-name">Hexo</div>               <div class="flink-item-desc" title="本站使用的网站框架">本站使用的网站框架</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://butterfly.js.org/" title="butterfly" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="butterfly" />              </div>              <div class="flink-item-name">butterfly</div>               <div class="flink-item-desc" title="本站使用的主题">本站使用的主题</div>            </a>          </div></div><div class="flink-name">知名网站</div><div class="flink-desc">知名大厂的网站</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://www.bilibili.com/" title="BiliBili" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://img.ixintu.com/download/jpg/20200831/b5b5fef64ab25c86b410cb2048926f07_512_464.jpg!con" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="BiliBili" />              </div>              <div class="flink-item-name">BiliBili</div>               <div class="flink-item-desc" title="国内最大视频网站">国内最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.youtube.com/" title="Youtube" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Youtube" />              </div>              <div class="flink-item-name">Youtube</div>               <div class="flink-item-desc" title="国外最大视频网站">国外最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.weibo.com/" title="Weibo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Weibo" />              </div>              <div class="flink-item-name">Weibo</div>               <div class="flink-item-desc" title="中国最大社交分享平台">中国最大社交分享平台</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://twitter.com/" title="Twitter" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Twitter" />              </div>              <div class="flink-item-name">Twitter</div>               <div class="flink-item-desc" title="社交分享平台">社交分享平台</div>            </a>          </div></div></div><p>暂时还没写好</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[<h2 id="关于站点"><a href="#关于站点" class="headerlink" title="关于站点"></a>关于站点</h2><p>本站是由<a href="https://hexo.io/zh-cn/index.html">Hexo</a>搭建<br><a href="https://github.com/">Github</a>托管<br><a href="https://butterfly.js.org/">Butterfly</a>主题(太好看了以至于我两个博客都用的这个主题)</p><h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>QQ:3105950984</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百宝箱</title>
+      <link href="/box/index.html"/>
+      <url>/box/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="flink"><div class="flink-name">感谢链接</div><div class="flink-desc">感谢这些链接帮助我</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://hexo.io/zh-tw/" title="Hexo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Hexo" />              </div>              <div class="flink-item-name">Hexo</div>               <div class="flink-item-desc" title="本站使用的网站框架">本站使用的网站框架</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://butterfly.js.org/" title="butterfly" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-01-cover.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="butterfly" />              </div>              <div class="flink-item-name">butterfly</div>               <div class="flink-item-desc" title="本站使用的主题">本站使用的主题</div>            </a>          </div></div><div class="flink-name">知名网站</div><div class="flink-desc">知名大厂的网站</div> <div class="flink-list">          <div class="flink-list-item">            <a href="https://www.bilibili.com/" title="BiliBili" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://img.ixintu.com/download/jpg/20200831/b5b5fef64ab25c86b410cb2048926f07_512_464.jpg!con" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="BiliBili" />              </div>              <div class="flink-item-name">BiliBili</div>               <div class="flink-item-desc" title="国内最大视频网站">国内最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.youtube.com/" title="Youtube" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Youtube" />              </div>              <div class="flink-item-name">Youtube</div>               <div class="flink-item-desc" title="国外最大视频网站">国外最大视频网站</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://www.weibo.com/" title="Weibo" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Weibo" />              </div>              <div class="flink-item-name">Weibo</div>               <div class="flink-item-desc" title="中国最大社交分享平台">中国最大社交分享平台</div>            </a>          </div>          <div class="flink-list-item">            <a href="https://twitter.com/" title="Twitter" target="_blank">              <div class="flink-item-icon">                <img class="no-lightbox" src="https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Twitter" />              </div>              <div class="flink-item-name">Twitter</div>               <div class="flink-item-desc" title="社交分享平台">社交分享平台</div>            </a>          </div></div></div><p>暂时还没写好</p><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
@@ -176,33 +176,22 @@
     
     
     <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[    <div id="aplayer-OTTXcSjT" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7249426730" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div>    <div id="aplayer-NeeuvMMa" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="6782971019" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>视频</title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=978838069&bvid=BV1e44y1W7Zw&cid=503070236&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[    <div id="aplayer-XAnphBqT" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="7249426730" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div>    <div id="aplayer-sdPYZjVP" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="6782971019" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"    ></div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>导航</title>
-      <link href="/nav/index.html"/>
-      <url>/nav/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
@@ -220,6 +209,17 @@
     
     
     <entry>
+      <title>时间线</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2022</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>08-09</p></div></div><div class='timeline-item-content'><p>第一个<a href="https://marcusyyds.github.io">Hexo博客</a>建成</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>07-22</p></div></div><div class='timeline-item-content'><p>黑羽玄伊的第一个<a href="https://BolgVanessa.repl.co">Typecho博客</a>建成</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>07-20</p></div></div><div class='timeline-item-content'><p>第一个<a href="https://blogmarcus.replit.io">Typecho博客</a>建成</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>04-30</p></div></div><div class='timeline-item-content'><p>第一个<a href="">Bolgger博客</a>上线</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>04-23</p></div></div><div class='timeline-item-content'><p>第一个<a href="https://marcusyyds.wordpress.com">wordpress博客</a>上线</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>04-04</p></div></div><div class='timeline-item-content'><p>第一个静态页面上线</p></div></div></div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -231,11 +231,11 @@
     
     
     <entry>
-      <title>时间线</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title>导航</title>
+      <link href="/nav/index.html"/>
+      <url>/nav/index.html</url>
       
-        <content type="html"><![CDATA[<div class="timeline undefined"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>2022</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>08-09</p></div></div><div class='timeline-item-content'><p>第一个<a href="https://marcusyyds.github.io">Hexo博客</a>建成</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>07-22</p></div></div><div class='timeline-item-content'><p>黑羽玄伊的第一个<a href="https://BolgVanessa.repl.co">Typecho博客</a>建成</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>07-20</p></div></div><div class='timeline-item-content'><p>第一个<a href="https://blogmarcus.replit.io">Typecho博客</a>建成</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>04-30</p></div></div><div class='timeline-item-content'><p>第一个<a href="">Bolgger博客</a>上线</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>04-23</p></div></div><div class='timeline-item-content'><p>第一个<a href="https://marcusyyds.wordpress.com">wordpress博客</a>上线</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>04-04</p></div></div><div class='timeline-item-content'><p>第一个静态页面上线</p></div></div></div><link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="/css/bilicard.css" type="text/css">]]></content>
       
     </entry>
     
