@@ -11,9 +11,9 @@ Allow: /movies/
 Allow: /picture/
 Allow: /book/
 Allow: /games/
-Allow: /archives/
-Allow: /tags/
-Allow: /categories/
+Disallow: /archives/
+Disallow: /tags/
+Disallow: /categories/
 Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
