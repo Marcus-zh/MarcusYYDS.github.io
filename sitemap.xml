@@ -191,13 +191,6 @@
 
   
   <url>
-    <loc>https://marcusyyds.github.io/tags/Cloudrever/</loc>
-    <lastmod>2022-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://marcusyyds.github.io/tags/Replit/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,6 +205,13 @@
   </url>
   
   <url>
+    <loc>https://marcusyyds.github.io/tags/%E7%99%BD%E5%AB%96/</loc>
+    <lastmod>2022-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://marcusyyds.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -219,7 +219,7 @@
   </url>
   
   <url>
-    <loc>https://marcusyyds.github.io/tags/%E7%99%BD%E5%AB%96/</loc>
+    <loc>https://marcusyyds.github.io/tags/Cloudrever/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
