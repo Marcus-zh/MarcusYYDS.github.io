@@ -1,12 +1,12 @@
 @font-face {
   font-family: Candyhome;
-  src: url(https://cdn.cbd.int/anzhiyu-blog@latest/fonts/Candyhome.ttf);
+  src: url(/fonts/Candyhome.ttf);
   font-display: swap;
   font-weight: lighter;
 }
 @font-face {
     font-family: ZhuZiAYuanJWD;
-    src: url(https://cdn.cbd.int/anzhiyu-blog@latest/fonts/ZhuZiAWan.woff2);
+    src: url(/fonts/ZhuZiAWan.woff2);
     font-display: swap;
     font-weight: lighter;
 }
@@ -440,4 +440,4 @@
   #article-container figure.highlight {
     border-radius: 10px;
   }
-  
+  <link rel="stylesheet" href="/css/bilicard.css" type="text/css">
