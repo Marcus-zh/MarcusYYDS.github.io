@@ -34,3 +34,4 @@ setInterval(() => {
   }
   document.getElementById("workboard").innerHTML = currentTimeHtml;
 }, 1000);
+<link rel="stylesheet" href="/css/bilicard.css" type="text/css">

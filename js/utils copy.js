@@ -276,3 +276,4 @@ const btf = {
     }
   }
 }
+<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
