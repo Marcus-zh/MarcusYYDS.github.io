@@ -10,4 +10,4 @@ function percent() {
         result<=99||(result=99),btn.innerHTML=result
 }
 
-document.getElementById("page-name").innerText=document.title.split(" | 安知鱼")[0];<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+document.getElementById("page-name").innerText=document.title.split(" | Marcus")[0];<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
