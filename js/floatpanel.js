@@ -51,4 +51,4 @@ function floatable (content) {
 								   rotateX(${x}deg)
 								   rotateY(${y}deg)`;
 	});
-}<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+}

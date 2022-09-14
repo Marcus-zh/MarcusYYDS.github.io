@@ -33,4 +33,4 @@ setInterval(() => {
     currentTimeHtml ="<img class='boardsign' src='https://img.shields.io/badge/Marcus的小窝-放学了-6adea8?style=social&logo=Minetest' title='耶,放学啦!~'><div id='runtime'>" + time[0] + ' YEAR ' + time[1] + ' DAYS ' + time[2] + ' : ' + time[3] + ' : ' + time[4] + '</div>';
   }
   document.getElementById("workboard").innerHTML = currentTimeHtml;
-}, 1000);<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+}, 1000);

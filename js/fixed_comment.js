@@ -50,4 +50,4 @@ function RemoveFixedComment() {
     }
   }
   //切换页面先初始化一遍，确保开始时是原生状态。所以要加pjax重载。
-  RemoveFixedComment();<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+  RemoveFixedComment();

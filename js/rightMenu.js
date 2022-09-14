@@ -189,4 +189,3 @@ $("#rightmenu-mask").contextmenu(function () {
     removeRightMenu();
     return false;
 });
-<link rel="stylesheet" href="/css/bilicard.css" type="text/css">

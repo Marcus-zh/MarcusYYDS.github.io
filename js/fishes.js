@@ -356,4 +356,3 @@ FISH.prototype = {
 $(function(){
 	RENDERER.init();
 });
-<link rel="stylesheet" href="/css/bilicard.css" type="text/css">

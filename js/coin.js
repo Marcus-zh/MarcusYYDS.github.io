@@ -87,4 +87,4 @@ tipButtons.forEach((button) => {
       }, 1500)
     }
   }
-})<link rel="stylesheet" href="/css/bilicard.css" type="text/css">
+})
