@@ -239,40 +239,41 @@ const btf = {
       })
 
       if (!window.fancyboxRun) {
-        Fancybox.bind('[data-fancybox]', {
-          Hash: false,
-          Thumbs: {
-            autoStart: false
-          }
-        })
-        window.fancyboxRun = true
-      }
-    }
-  },
+  //       Fancybox.bind('[data-fancybox]', {
+  //         Hash: false,
+  //         Thumbs: {
+  //           autoStart: false
+  //         }
+  //       })
+  //       window.fancyboxRun = true
+  //     }
+  //   }
+  // },
 
-  initJustifiedGallery: function (selector) {
-    selector.forEach(function (i) {
-      if (!btf.isHidden(i)) {
-        fjGallery(i, {
-          itemSelector: '.fj-gallery-item',
-          rowHeight: 220,
-          gutter: 4,
-          onJustify: function () {
-            this.$container.style.opacity = '1'
-          }
-        })
-      }
-    })
-  },
+  // initJustifiedGallery: function (selector) {
+  //   selector.forEach(function (i) {
+  //     if (!btf.isHidden(i)) {
+  //       fjGallery(i, {
+  //         itemSelector: '.fj-gallery-item',
+  //         rowHeight: 220,
+  //         gutter: 4,
+  //         onJustify: function () {
+  //           this.$container.style.opacity = '1'
+  //         }
+  //       })
+  //     }
+  //   })
+  // },
 
-  updateAnchor: (anchor) => {
-    if (anchor !== window.location.hash) {
-      if (!anchor) anchor = location.pathname
-      const title = GLOBAL_CONFIG_SITE.title
-      window.history.replaceState({
-        url: location.href,
-        title: title
-      }, title, anchor)
+  // updateAnchor: (anchor) => {
+  //   if (anchor !== window.location.hash) {
+  //     if (!anchor) anchor = location.pathname
+  //     const title = GLOBAL_CONFIG_SITE.title
+  //     window.history.replaceState({
+  //       url: location.href,
+  //       title: title
+  //     }, title, anchor)
     }
   }
+}
 }
