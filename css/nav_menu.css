@@ -1,6 +1,3 @@
-#nav {
-  padding: 0 calc((100% - 1400px)/ 2);
-}
 #nav a:hover {
   background: var(--anzhiyu-main);
   transition: 0.3s;
@@ -333,7 +330,7 @@ center#name-container {
 }
 
 .mask-name-container {
-  width: 1200px;
+  width: 950px;
   height: 100%;
   position: absolute;
   overflow: hidden;
