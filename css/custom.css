@@ -93,7 +93,8 @@
   a.article-title,
   a.blog-slider__title,
   a.categoryBar-list-link,
-  h1.post-title {
+  h1.post-title,
+  a.rightMenu-item menu-link {
     font-family: ZhuZiAYuanJWD;
   }
   
@@ -597,4 +598,7 @@ li.card-archive-list-item {
 }
 .card-widget.card-recent-post {
   padding: 0.4rem 0.6rem !important;
+}
+#rightMenu-item menu-link{
+  font
 }
