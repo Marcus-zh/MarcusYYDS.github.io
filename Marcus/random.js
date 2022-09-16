@@ -1,11 +1,1 @@
-hexo.extend.generator.register('random', function (locals) {
-    const config = hexo.config.random || {}
-    const posts = []
-    for (const post of locals.posts.data) {
-        if (post.random !== false) posts.push(post.path)
-    }
-    return {
-        path: config.path || 'zhheo/random.js',
-        data: `var posts=${JSON.stringify(posts)};function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};`
-    }
-})
+var posts=["posts/4a17b156.html","posts/e70bf4f.html","posts/6709fc4a.html"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
