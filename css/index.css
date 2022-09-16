@@ -507,15 +507,15 @@ template {
       transform: rotate();
     }
   }
-@font-face {
+/* @font-face {
   font-family: Candyhome;
   src: url(/fonts/Candyhome.ttf);
   font-display: swap;
   font-weight: lighter;
-}
+} */
 @font-face {
     font-family: ZhuZiAYuanJWD;
-    src: url(/fonts/ZhuZiAWan.woff2);
+    src: url(https://npm.elemecdn.com/anzhiyu-blog@2.0.4/fonts/ZhuZiAWan.woff2);
     font-display: swap;
     font-weight: lighter;
 }
