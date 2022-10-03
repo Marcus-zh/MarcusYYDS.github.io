@@ -6,7 +6,7 @@
   <link href="https://marcusyyds.github.io/atom.xml" rel="self"/>
   
   <link href="https://marcusyyds.github.io/"/>
-  <updated>2022-09-24T06:41:42.176Z</updated>
+  <updated>2022-10-03T08:03:31.623Z</updated>
   <id>https://marcusyyds.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo的twikoo,valine和waline配置</title>
+    <link href="https://marcusyyds.github.io/posts/a2c6a34f.html"/>
+    <id>https://marcusyyds.github.io/posts/a2c6a34f.html</id>
+    <published>2022-10-02T13:25:20.000Z</published>
+    <updated>2022-10-03T08:03:31.623Z</updated>
+    
+    <content type="html"><![CDATA[<details class="folding-tag" blue><summary> 点击查看更新记录 </summary>              <div class='content'>              <div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新记录</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.2</p></div></div><div class='timeline-item-content'><p>创建文章</p></div></div></div>              </div>            </details><details class="folding-tag" blue><summary> 点击查看参考教程 </summary>              <div class='content'>              <table><thead><tr><th><strong>参考方向</strong></th><th><strong>教程原贴</strong></th></tr></thead><tbody><tr><td>twikoo</td><td><a href="twikoo.js.org">twikoo官方文档</a></td></tr><tr><td>valine</td><td><a href="valine.js.org">valine官方文档</a></td></tr><tr><td>waline</td><td><a href="waline.js.org">waline官方文档</a></td></tr></tbody></table>              </div>            </details><h1 id="评论区别"><a href="#评论区别" class="headerlink" title="评论区别"></a>评论区别</h1><table><thead><tr><th>评论</th><th>数据库</th><th>媒介</th><th>适用人群</th></tr></thead><tbody><tr><td>twikoo</td><td><a href="mongodb.com">MongoDB</a></td><td>vercel(需要自己的域名)</td><td>有域名,第一次用MongoDB(推荐)</td></tr><tr><td>valine</td><td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td><td>无</td><td>无域名(推荐)</td></tr><tr><td>waline</td><td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td><td>vercel(需要自己的域名)</td><td>有域名,MongoDB已经用过了</td></tr></tbody></table><h1 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h1><h2 id="数据库设置"><a href="#数据库设置" class="headerlink" title="数据库设置"></a>数据库设置</h2><p>1.申请 <a href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a> 账号</p>   <details class="folding-tag" blue><summary> 点击查看图片教程 </summary>              <div class='content'>              <p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/202210031037.jpeg"></p><p>填入信息</p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105658.png" alt="20221003105658"></p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105757.png" alt="20221003105757"></p><p>小调查填写</p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110323.png" alt="20221003110323"></p><p>选择<code>FREE</code></p>              </div>            </details><p>2.创建免费 MongoDB 数据库，区域选择 <code>AWS / N. Virginia (us-east-1)</code></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105929.png" alt="20221003105929"></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110027.png" alt="20221003110027"></p><p>3.设置<code>username</code>和<code>password</code>并记牢</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110444.png" alt="20221003110444"></p><p>4.<code>IP Address</code>填入<code>0.0.0.0</code>然后add,最后完成关闭,返回控制台</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110544.png" alt="20221003110544"></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003115225.png" alt="20221003115225"></p><p>5.在 Clusters 页面点击 CONNECT,选择<code>Connect your application</code></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003104350.png" alt="20221003104350"></p><p>6.<code>DRIVER</code>选择Node.js,<code>VERSION</code>选择4.1 or later</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003120532.png" alt="20221003120532"></p><p>7.记住<code>mongodb+srv://&lt;user&gt;:&lt;password&gt;</code>这段文字,并将<code>&lt;user&gt;</code>和<code>&lt;password&gt;</code>换成自己的</p><h2 id="vercel配置"><a href="#vercel配置" class="headerlink" title="vercel配置"></a>vercel配置</h2><p>1.申请 <a href="https://vercel.com/signup">Vercel</a> 账号</p><p>2.一键部署进vercel<br>  <a href="https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/main/src/server/vercel-min"><img src="https://vercel.com/button" alt="img"></a></p><p>3.有什么用什么</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142501.png" alt="20221003142501"></p><p>4.选择账号和设置仓库名称</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142602.png" alt="20221003142602"></p><p>5.等待部署完成</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142804.png" alt="20221003142804"></p><p>6.前往控制台</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142852.png" alt="20221003142852"></p><p>7.点击<code>Setting</code>-<code>environment-variables</code>新建一个name为<code>MONGODB_URI</code>,值为上面第七步的数据库连接字符串</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003143110.png" alt="20221003143110"></p><p>8.重新部署一下</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003151430.png" alt="20221003151430"></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151705887.png" alt="image-20221003151705887"></p><p>11.等待部署ing</p><p>12.<img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151829531.png" alt="image-20221003151829531"></p><p>13.完成<img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151904018.png" alt="image-20221003151904018"></p><p>14.绑定域名<img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003152053339.png" alt="image-20221003152053339"></p><pre><code>| Type  | Name   | Value                || ----- | ------ | -------------------- || CNAME | twikoo | cname.vercel-dns.com |</code></pre><div class="tip warning faa-horizontal animated"><p>2021年5月初，<code>Vercel</code>因为一些原因被<code>GFW</code>屏蔽，导致无法访问。各位可以通过更改相应的域名解析记录来恢复访问。<br>A记录就从<code>76.76.21.21</code> 改成 <code>52.76.85.65</code>，<code>CNAME</code>记录则是从<code>cname-vercel-dns.com.</code>改成 <code>cname-china.vercel-dns.com.</code>；关于A记录，可用的IP值也可以从这个里面找：<a href="https://gist.github.com/ChenYFan/fc2bd4ec1795766f2613b52ba123c0f8">Vercel可用解析记录IP</a>,因为是gist，大概要翻墙才能看。</p></div><p>15.访问! <a href="https://twikoo.marcus233.top/">我的twikoo</a><br><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003153309668.png" alt="image-20221003153309668"></p><h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><div class='checkbox blue checked'><input type="checkbox" checked="checked"/>            <p>Twikoo</p>            </div><div class='checkbox blue'><input type="checkbox" />            <p>Valine</p>            </div><div class='checkbox blue'><input type="checkbox" />            <p>Waline</p>            </div>]]></content>
+    
+    
+    <summary type="html">Hexo的twikoo,valine和waline配置</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://marcusyyds.github.io/categories/Hexo/"/>
+    
+    <category term="教程" scheme="https://marcusyyds.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://marcusyyds.github.io/tags/Hexo/"/>
+    
+    <category term="twikoo" scheme="https://marcusyyds.github.io/tags/twikoo/"/>
+    
+    <category term="valine" scheme="https://marcusyyds.github.io/tags/valine/"/>
+    
+    <category term="waline" scheme="https://marcusyyds.github.io/tags/waline/"/>
+    
+  </entry>
+  
+  <entry>
     <title>鱼了个鱼🐟</title>
     <link href="https://marcusyyds.github.io/posts/72351e9.html"/>
     <id>https://marcusyyds.github.io/posts/72351e9.html</id>
     <published>2022-09-17T12:47:31.000Z</published>
-    <updated>2022-09-24T06:41:42.176Z</updated>
+    <updated>2022-10-02T13:27:21.856Z</updated>
     
     <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>最近被🐏了个🐏刷屏了</p><p>正好看见<a href="https://yupi.icu/">鱼皮</a>出了个低配版</p><p>那必须整起来!</p><h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><p>####1.首先clone下来</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/liyupi/yulegeyu.git</span><br></pre></td></tr></table></figure><p>####2.打开VS code</p><p>####3.下载依赖</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>不过我下载的有点慢,不知道是不是我的问题</p><p>####4.生成静态文件</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure><p>####5.运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure><p>####6.如图所示</p><p><img src="https://npm.elemecdn.com/marcusyyds-assets@1.0.4/img/20220917210044.jpg">)</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>如果有错误</p><p>望纠正(勿喷)</p><p>来<a href="https://akilar.top/">店长</a>群里<del>玩呀</del>请教大佬 </p><p><img src="https://bu.dusays.com/2022/09/17/63255541c9b4a.jpg" alt="QQ群"></p>]]></content>
     
@@ -30,11 +59,9 @@
     
     
     
-    <category term="编程" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="前端" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/"/>
-    
     <category term="分享" scheme="https://marcusyyds.github.io/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="前端" scheme="https://marcusyyds.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="开源" scheme="https://marcusyyds.github.io/tags/%E5%BC%80%E6%BA%90/"/>
@@ -48,20 +75,18 @@
     <link href="https://marcusyyds.github.io/posts/586ff2f5.html"/>
     <id>https://marcusyyds.github.io/posts/586ff2f5.html</id>
     <published>2022-09-17T05:30:42.000Z</published>
-    <updated>2022-09-24T06:15:11.287Z</updated>
+    <updated>2022-10-03T07:29:56.269Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>1.整<a href="marcusyyds.github.io">Hexo</a>博客去了<br>2.学习 <span class="hide-inline"><button type="button" class="hide-button" style="background-color: #ffffff;color: #ffffff">   </button><span class="hide-content">赶作业</span></span>去了</p><p>3.<span class="hide-inline"><button type="button" class="hide-button" style="background-color: #ffffff;color: #ffffff">   </button><span class="hide-content">玩游戏</span></span></p><h2 id="我的Hexo配置"><a href="#我的Hexo配置" class="headerlink" title="我的Hexo配置"></a>我的Hexo配置</h2><object title="Butterfly" standby="loading..." data="https://img.shields.io/badge/Butterfly-Theme-orange?logo=bitdefender&color=6513df&link=https://butterfly.js.org/&style=flat"></object><object title="Hexo" standby="loading..." data="https://img.shields.io/badge/Hexo-Frame-orange?logo=hexo&color=blue&link=https://hexo.io/&style=flat"></object><object title="GitHub" standby="loading..." data="https://img.shields.io/badge/Github-Source-orange?logo=github&color=d021d6&link=https://github.com/&style=flat"></object><object title="jsDelivr" standby="loading..." data="https://img.shields.io/badge/jsDelivr-CDN-orange?logo=jsDelivr&color=orange&link=https://www.jsdelivr.com/&style=flat"></object><object title="BY--NC--SA%204.0" standby="loading..." data="https://img.shields.io/badge/BY--NC--SA%25204.0-Copyright-orange?logo=Claris&color=d42328&link=http://creativecommons.org/licenses/by-nc-sa/4.0/&style=flat"></object><h2 id="踩坑-amp-amp-魔改心得"><a href="#踩坑-amp-amp-魔改心得" class="headerlink" title="踩坑&amp;&amp;魔改心得"></a>踩坑&amp;&amp;魔改心得</h2><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><p>万一在魔改时不小心改错了,自己又不知道,后果不堪设想</p><p>提供两种解决方案</p><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#test1-1">方案1</button></li><li class="tab"><button type="button" data-href="#test1-2">方案2</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="test1-1"><p>重装(推荐看<a href="https://anzhiy.cn/posts/sdxhu.html">butterfly 重装日记 | 安知鱼 (anzhiy.cn)</a>)</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p>来<a href="https://akilar.top/">店长</a>群里<del>玩呀</del>请教大佬 </p><p><img src="https://bu.dusays.com/2022/09/17/63255541c9b4a.jpg" alt="QQ群"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><div class="site-card-group"><a class="site-card" href="https://akilar.top/"><div class="img"><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg"/></div><div class="info"><img src="https://akilar.top/img/author.webp"/><span class="title">Akilarの糖果屋</span><span class="desc">期待您的光临！</span></div></a><a class="site-card" href="https://blog.zhheo.com/"><div class="img"><img src="https://img.zhheo.com/i/2022/08/19/62ff337cdeaa0.png"/></div><div class="info"><img src="https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png"/><span class="title">张洪Heo</span><span class="desc">分享设计与科技生活</span></div></a><a class="site-card" href="https://zfe.one"><div class="img"><img src="https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/anzhiy.cn/https://zfe.one"/></div><div class="info"><img src="https://zfe.space/images/headimage.png"/><span class="title">小冰博客</span><span class="desc">做个有梦想的人！</span></div></a><a class="site-card" href="https://noionion.top/"><div class="img"><img src="https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/noionion.top.png"/></div><div class="info"><img src="https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/head.jpg"/><span class="title">贰猹的小窝</span><span class="desc">用这生命中的每一秒，给自己一个不后悔的未来</span></div></a><a class="site-card" href="https://anzhiy.cn/"><div class="img"><img src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg"/></div><div class="info"><img src="https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg"/><span class="title">安知鱼`Blog</span><span class="desc">生活明朗，万物可爱</span></div></a></div>]]></content>
+    <content type="html"><![CDATA[<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>1.整<a href="marcusyyds.github.io">Hexo</a>博客去了<br>2.学习 <span class="hide-inline"><button type="button" class="hide-button" style="background-color: #ffffff;color: #ffffff">   </button><span class="hide-content">赶作业</span></span>去了</p><p>3.<span class="hide-inline"><button type="button" class="hide-button" style="background-color: #ffffff;color: #ffffff">   </button><span class="hide-content">玩游戏</span></span></p><h2 id="我的Hexo配置"><a href="#我的Hexo配置" class="headerlink" title="我的Hexo配置"></a>我的Hexo配置</h2><object title="Butterfly" standby="loading..." data="https://img.shields.io/badge/Butterfly-Theme-orange?logo=bitdefender&color=6513df&link=https://butterfly.js.org/&style=flat"></object><object title="Hexo" standby="loading..." data="https://img.shields.io/badge/Hexo-Frame-orange?logo=hexo&color=blue&link=https://hexo.io/&style=flat"></object><object title="GitHub" standby="loading..." data="https://img.shields.io/badge/Github-Source-orange?logo=github&color=d021d6&link=https://github.com/&style=flat"></object><object title="jsDelivr" standby="loading..." data="https://img.shields.io/badge/jsDelivr-Tianli-CDN-orange?logo=jsDelivr&color=orange&link=https://www.jsdelivr.com/&style=flat"></object><h2 id="踩坑-amp-amp-魔改心得"><a href="#踩坑-amp-amp-魔改心得" class="headerlink" title="踩坑&amp;&amp;魔改心得"></a>踩坑&amp;&amp;魔改心得</h2><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><p>万一在魔改时不小心改错了,自己又不知道,后果不堪设想</p><p>提供两种解决方案</p><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#test1-1">方案1</button></li><li class="tab"><button type="button" data-href="#test1-2">方案2</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="test1-1"><p>重装(推荐看<a href="https://anzhiy.cn/posts/sdxhu.html">butterfly 重装日记 | 安知鱼 (anzhiy.cn)</a>)</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p>来<a href="https://akilar.top/">店长</a>群里<del>玩呀</del>请教大佬 </p><p><img src="https://bu.dusays.com/2022/09/17/63255541c9b4a.jpg" alt="QQ群"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><div class="site-card-group"><a class="site-card" href="https://akilar.top/"><div class="img"><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg"/></div><div class="info"><img src="https://akilar.top/img/author.webp"/><span class="title">Akilarの糖果屋</span><span class="desc">期待您的光临！</span></div></a><a class="site-card" href="https://blog.zhheo.com/"><div class="img"><img src="https://img.zhheo.com/i/2022/08/19/62ff337cdeaa0.png"/></div><div class="info"><img src="https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png"/><span class="title">张洪Heo</span><span class="desc">分享设计与科技生活</span></div></a><a class="site-card" href="https://zfe.one"><div class="img"><img src="https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/anzhiy.cn/https://zfe.one"/></div><div class="info"><img src="https://zfe.space/images/headimage.png"/><span class="title">小冰博客</span><span class="desc">做个有梦想的人！</span></div></a><a class="site-card" href="https://noionion.top/"><div class="img"><img src="https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/noionion.top.png"/></div><div class="info"><img src="https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/head.jpg"/><span class="title">贰猹的小窝</span><span class="desc">用这生命中的每一秒，给自己一个不后悔的未来</span></div></a><a class="site-card" href="https://anzhiy.cn/"><div class="img"><img src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg"/></div><div class="info"><img src="https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg"/><span class="title">安知鱼`Blog</span><span class="desc">生活明朗，万物可爱</span></div></a></div>]]></content>
     
     
     <summary type="html">关于我鸽了这么久这件事</summary>
     
     
     
-    <category term="编程" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="Hexo" scheme="https://marcusyyds.github.io/categories/Hexo/"/>
     
     <category term="生活" scheme="https://marcusyyds.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="Hexo" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/Hexo/"/>
     
     <category term="分享" scheme="https://marcusyyds.github.io/categories/%E5%88%86%E4%BA%AB/"/>
     
@@ -92,7 +117,7 @@
     <link href="https://marcusyyds.github.io/posts/6709fc4a.html"/>
     <id>https://marcusyyds.github.io/posts/6709fc4a.html</id>
     <published>2022-07-28T04:06:00.000Z</published>
-    <updated>2022-09-24T06:20:07.550Z</updated>
+    <updated>2022-10-02T13:26:54.493Z</updated>
     
     <content type="html"><![CDATA[<h2 id="演示地址"><a href="#演示地址" class="headerlink" title="演示地址"></a>演示地址</h2><p><a href="https://demo.cloudreve.org/">Demo</a></p><h2 id="Cloudreve简介"><a href="#Cloudreve简介" class="headerlink" title="Cloudreve简介"></a>Cloudreve简介</h2><p><img src="https://www.gitbook.com/cdn-cgi/image/width=24,height=24,fit=contain,dpr=3,format=auto/https%3A%2F%2F3847020651-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fcollections%252FwqgIMrzTAT3E40ScUdPF%252Ficon%252F3v5lygqjbk28vCT8Bz2Y%252Flogo192.png%3Falt%3Dmedia%26token%3D8713a140-0480-47a2-b767-ebad48ec49f7" alt="cloudreve"><br>Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。你可以使用 Cloudreve 搭建个人用网盘、文件分享系统，亦或是针对大小团体的公有云系统。</p><h2 id="快速搭建"><a href="#快速搭建" class="headerlink" title="快速搭建"></a>快速搭建</h2><p>新建一个bash项目<br>console或shell内输入以下代码<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/4209458325.png" alt="2022.7.28.一.png"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/cloudreve/Cloudreve/releases/download/3.5.3/cloudreve_3.5.3_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure><p>等待输出完毕<br>再输入以下代码</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf cloudreve_3.5.3_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure><p>等待解压<br>最后输入 <code>./cloudreve</code> 运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./cloudreve</span><br></pre></td></tr></table></figure><p>运行后在输出中找到账号和密码<br>类似这样<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/1183548629.png" alt="2022.7.28.二.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin@cloudreve.org</span><br></pre></td></tr></table></figure><p>登陆 <code>(这个项目名).(账户名).repl.co</code><br>快速搭建完成了！👍<br>登陆后点头像-控制面板<br>根据自己喜好更改</p><h2 id="部署进Replit"><a href="#部署进Replit" class="headerlink" title="部署进Replit"></a>部署进Replit</h2><p>进入刚才Replit的项目里<br>file里找到main.sh<br>编辑</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x ./cloudreve</span><br><span class="line">./cloudreve</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/863116350.png" alt="2022.7.28.三.png"><br>重启Replit<br>完成👍</p>]]></content>
     
@@ -101,9 +126,7 @@
     
     
     
-    <category term="编程" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Replit" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/Replit/"/>
+    <category term="Replit" scheme="https://marcusyyds.github.io/categories/Replit/"/>
     
     <category term="教程" scheme="https://marcusyyds.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
@@ -123,7 +146,7 @@
     <link href="https://marcusyyds.github.io/posts/e70bf4f.html"/>
     <id>https://marcusyyds.github.io/posts/e70bf4f.html</id>
     <published>2022-07-25T02:49:00.000Z</published>
-    <updated>2022-09-24T06:19:23.417Z</updated>
+    <updated>2022-10-02T13:26:48.727Z</updated>
     
     <content type="html"><![CDATA[<h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><a href="https://replit.com/">Replit</a>(超好用的！)<br>图片:<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/129259614.png" alt="2022.7.25.一.png"></p><h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><p>打开官网<br>点击Start coding<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/702808070.png" alt="2022.7.25.二.png"><br>注册一枚账号<br>用邮箱或Continue with Github<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/168576233.png" alt="2022.7.25.三.png"><br>点Create新建项目<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/2129948654.png" alt="2002.7.25.四.png"><br>选择语言和项目名<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/704430836.png" alt="2022.7.25.五.png"><br>成功啦！~</p><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>1.免费(团队pro除外)<br>2.有一个Linux的”壳”(机翻)<br>3.教育团队免费版项目创建无上限</p><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>服务器在国外<br>难免有些网络问题<br>自行解决🐶</p><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>1.云服务<br>2.博客<br>3.静态网页托管<br>4.MC服务器</p><p>下期出教程</p>]]></content>
     
@@ -132,9 +155,7 @@
     
     
     
-    <category term="编程" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Replit" scheme="https://marcusyyds.github.io/categories/%E7%BC%96%E7%A8%8B/Replit/"/>
+    <category term="Replit" scheme="https://marcusyyds.github.io/categories/Replit/"/>
     
     <category term="分享" scheme="https://marcusyyds.github.io/categories/%E5%88%86%E4%BA%AB/"/>
     

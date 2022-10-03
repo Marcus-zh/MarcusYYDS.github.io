@@ -606,8 +606,8 @@ template {
   a.rightMenu-item menu-link {
     font-family: ZhuZiAYuanJWD;
   }
-  a.social-icon,div.headline,div.headline{
-    color:white !important;
+  a.social-icon,div.headline,div.headline,div.length-num{
+    color:white ;
   }
   .iconfont {
     font-family: 'iconfont' !important;
@@ -964,6 +964,9 @@ template {
 .site-data > a .headline,.site-data > a .length-num {
   color: var(--anzhiyu-white);
 }
+#aside-content .card-info #card-info-btn {
+	border-radius: var(--anzhiyu-border-radius)
+}
 /* tags样式 */
 #aside-content .card-tag-cloud a {
   color: var(--anzhiyu-fontcolor)!important;
@@ -1110,69 +1113,9 @@ li.card-archive-list-item {
 .card-widget.card-recent-post {
   padding: 0.4rem 0.6rem !important;
 }
-.layout {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -o-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1 auto;
-  -ms-flex: 1 auto;
-  flex: 1 auto;
-  margin: 0 auto;
-  padding: 40px 15px;
-  max-width: 100% !important;
-  width: 100%;
-}
-/* 加载动画 */
-/* .loading-bg{
-  display: flex !important;
-  width: 100% !important;
-  height: 100% !important;
-  position: fixed !important;
-  background: var(--anzhiyu-card-bg) !important;
-  z-index: 1001 !important;
-  opacity: 1 !important;
-  transition: .3s !important;
-}
+/* snackbar弹窗 */
+/* <div class="snackbar-container  snackbar-pos top-center" style="width: auto; background: rgb(73, 177, 245); opacity: 1;"><p style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-size: 14px; font-weight: 300; line-height: 1em;">复制成功，复制和转载请标注本文地址</p></div> */
 
-#loading-box{
-  .loading-img{
-    width: 100px !important;
-    border-radius: 50% !important;
-    margin: auto !important;
-    animation-duration: .3s !important;
-    animation-name: loadingAction !important;
-    animation-iteration-count: infinite !important;
-    animation-direction: alternate !important;
-  }
-
-&.loaded{
-  .loading-bg{
-    opacity: 0 !important;
-    z-index: -1000 !important;
-  }
-}
-}
-
-@keyframes loadingAction{
-  0% {
-    opacity: 1 !important;
-}
-  100% {
-    opacity: .4 !important;
-}
-}
-
-#loading-box.loaded .loading-bg {
-opacity: 0 !important;
-z-index: -1000 !important;
-} */
 div#post-comment.fixedcomment {
     position: fixed;
     top: 0;
@@ -5305,12 +5248,6 @@ h1.page-title + .tag-cloud-list {
   -o-animation-direction: alternate;
   -ms-animation-direction: alternate;
   animation-direction: alternate;
-}
-#loading-box.loaded .loading-bg {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  z-index: -1000;
 }
 #loading-box.loaded .loading-bg {
   opacity: 0;
