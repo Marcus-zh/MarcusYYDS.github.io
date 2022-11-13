@@ -239,21 +239,21 @@ document.addEventListener("pjax:send", function () {
 }),
   (document.getElementById("page-name").innerText =
     document.title.split(" | Marcus")[0]),
-var mySwiper = new Swiper('#stickyList', {
-      direction: 'horizontal',
-      speed: 600,
-      loop: true,
-      effect : 'fade',
-      loopPreventsSlide: false,
-      autoplay: {
-        delay: 20000,
-      },
-      mousewheel: false,
-      pagination: {
-          el: ".swiper-pagination",
-          dynamicBullets: true,
-      },
-    })
+// var mySwiper = new Swiper('#stickyList', {
+//       direction: 'horizontal',
+//       speed: 600,
+//       loop: true,
+//       effect : 'fade',
+//       loopPreventsSlide: false,
+//       autoplay: {
+//         delay: 20000,
+//       },
+//       mousewheel: false,
+//       pagination: {
+//           el: ".swiper-pagination",
+//           dynamicBullets: true,
+//       },
+//     })
   marcus.initIndexEssay(),
   marcus.changeTimeInEssay(),
   marcus.changeTimeInAlbumDetail(),
