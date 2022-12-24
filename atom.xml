@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Marcus的小窝</title>
+  <title>Marcus</title>
   
-  <subtitle>一只有梦想的羊驼</subtitle>
+  <subtitle>人间值得，未来可期</subtitle>
   <link href="https://blog.marcus233.top/atom.xml" rel="self"/>
   
   <link href="https://blog.marcus233.top/"/>
-  <updated>2022-11-06T04:55:37.561Z</updated>
+  <updated>2022-12-10T14:08:08.972Z</updated>
   <id>https://blog.marcus233.top/</id>
   
   <author>
@@ -17,11 +17,103 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>第50周周记</title>
+    <link href="https://blog.marcus233.top/p/2022week50.html"/>
+    <id>https://blog.marcus233.top/p/2022week50.html</id>
+    <published>2022-12-10T13:59:31.000Z</published>
+    <updated>2022-12-10T14:08:08.972Z</updated>
+    
+    <content type="html"><![CDATA[<p>这周是今年的第50周，我又回来了。</p><h1 id="周三作业多"><a href="#周三作业多" class="headerlink" title="周三作业多"></a>周三作业多</h1><p>烦死了，总是作业这么多写都写不完，然后忘了安排打扫卫生，垃圾没人倒，地没人扫，黑板没人擦，书也没背，作业也没写完。诶…去😫</p><h1 id="中期再次取消"><a href="#中期再次取消" class="headerlink" title="中期再次取消"></a>中期再次取消</h1><p>本来说把中期当做一场正常的考试来考的，结果呢，疫情复发了走了一个班，不考了，老师也全部隔离了，全在家里给教室的我们上网课，haha🥳</p><h1 id="同学关系"><a href="#同学关系" class="headerlink" title="同学关系"></a>同学关系</h1><p>emm…怎么说呢？应该是我把她惹毛的吧，从星期三开始，她一句话都不给我说，跟她道歉她也不接受，亏还是我们组织的人呢…😓</p>]]></content>
+    
+    
+    <summary type="html">第50周周记</summary>
+    
+    
+    
+    <category term="周记本" scheme="https://blog.marcus233.top/categories/%E5%91%A8%E8%AE%B0%E6%9C%AC/"/>
+    
+    
+    <category term="周记" scheme="https://blog.marcus233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+    <category term="生活" scheme="https://blog.marcus233.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记一次全体故障</title>
+    <link href="https://blog.marcus233.top/p/42a88467.html"/>
+    <id>https://blog.marcus233.top/p/42a88467.html</id>
+    <published>2022-12-04T02:20:34.000Z</published>
+    <updated>2022-12-19T04:33:51.791Z</updated>
+    
+    <content type="html"><![CDATA[<p>2022年12月3日下午六点左右,手贱登陆了一下couldflare,结果全部以<code>.marcus233.top</code>为域名的网站全部故障<del>我也不知道为啥</del><br><img src="https://img01.anzhiy.cn/useruploads/8/2022/12/10/63948ca6bac2b.png" alt="cloudflare"><br><img src="https://img01.anzhiy.cn/useruploads/8/2022/12/10/63948a9c87f87.png" alt="mystatus"><br>干脆不用cf了,于是删掉了解析<br>不想让<a href="https://status.marcus233.top/">status</a>留下红色,所以删除了了记录<br><img src="https://img01.anzhiy.cn/useruploads/8/2022/12/10/63948d84058eb.png" alt="删除后"><br>于是第二天早上一起来,就收到了发的一堆邮件</p><details class="folding-tag" blue><summary> 有点长 </summary>              <div class='content'>              <p><img src="https://img01.anzhiy.cn/useruploads/8/2022/12/10/63948e0233dc9.png" alt="邮件"></p>              </div>            </details><p>就告一段落了</p>]]></content>
+    
+    
+    <summary type="html">记一次全体故障</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://blog.marcus233.top/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://blog.marcus233.top/tags/Hexo/"/>
+    
+    <category term="故障" scheme="https://blog.marcus233.top/tags/%E6%95%85%E9%9A%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第49周周记</title>
+    <link href="https://blog.marcus233.top/p/2022week49.html"/>
+    <id>https://blog.marcus233.top/p/2022week49.html</id>
+    <published>2022-12-03T11:34:06.000Z</published>
+    <updated>2022-12-19T04:33:29.288Z</updated>
+    
+    <content type="html"><![CDATA[<p>依旧，也是来写篇周记吧!</p><h1 id="期中取消"><a href="#期中取消" class="headerlink" title="期中取消"></a>期中取消</h1><p>因为疫情，本来说的考试，取消啦，乐死。🥳</p><h1 id="同学在家隔离"><a href="#同学在家隔离" class="headerlink" title="同学在家隔离"></a>同学在家隔离</h1><p>左右两边都没有人，无聊…🥱</p><h1 id="班主任更年期"><a href="#班主任更年期" class="headerlink" title="班主任更年期"></a>班主任更年期</h1><p>烦死了，班主任天天拿着手机看监控，监视我们的一举一动，还时不时的发脾气，无语😤</p><p><del>谁也不知道我水文</del></p>]]></content>
+    
+    
+    <summary type="html">第49周周记</summary>
+    
+    
+    
+    <category term="周记本" scheme="https://blog.marcus233.top/categories/%E5%91%A8%E8%AE%B0%E6%9C%AC/"/>
+    
+    
+    <category term="周记" scheme="https://blog.marcus233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+    <category term="生活" scheme="https://blog.marcus233.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第48周周记</title>
+    <link href="https://blog.marcus233.top/p/2022week48.html"/>
+    <id>https://blog.marcus233.top/p/2022week48.html</id>
+    <published>2022-11-26T02:34:23.000Z</published>
+    <updated>2022-11-26T02:34:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>这周是2022的第48周，闲着无事<del>肯定不是为了水文章</del>，来记录一下一周的学校生活😘 </p><h1 id="学校停电"><a href="#学校停电" class="headerlink" title="学校停电"></a>学校停电</h1><p>星期二一起来就发现寝室没有电，于是只能摸着黑起床，早饭都没有，在教室里又黑又饿，还以为晚自习不上了，结果是去食堂上，第二天才搬了个教室，老师也被隔离了，听都听不到，结果下午又好了，搬来这么多东西又搬回去，无语。😓 </p><h1 id="体测满分"><a href="#体测满分" class="headerlink" title="体测满分"></a>体测满分</h1><p>星期五体育课测1000和800，我3分50，初二满分，哈！😍 </p><h1 id="体检眼睛"><a href="#体检眼睛" class="headerlink" title="体检眼睛"></a>体检眼睛</h1><p>唉，眼睛不行了，已经475了，怎么办啊！😵</p>]]></content>
+    
+    
+    <summary type="html">写在前面 这周是2022的第48周，闲着无事肯定不是为了水文章，来记录一下一周的学校生活😘</summary>
+    
+    
+    
+    <category term="周记本" scheme="https://blog.marcus233.top/categories/%E5%91%A8%E8%AE%B0%E6%9C%AC/"/>
+    
+    
+    <category term="周记" scheme="https://blog.marcus233.top/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+    <category term="生活" scheme="https://blog.marcus233.top/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo的twikoo,valine和waline配置</title>
     <link href="https://blog.marcus233.top/p/a2c6a34f.html"/>
     <id>https://blog.marcus233.top/p/a2c6a34f.html</id>
     <published>2022-10-02T13:25:20.000Z</published>
-    <updated>2022-11-06T04:55:37.561Z</updated>
+    <updated>2022-12-10T13:22:18.415Z</updated>
     
     <content type="html"><![CDATA[<details class="folding-tag" blue><summary> 点击查看更新记录 </summary>              <div class='content'>              <div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新记录</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.4</p></div></div><div class='timeline-item-content'><p>更新valine</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.3</p></div></div><div class='timeline-item-content'><p>更新twikoo魔改</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.3</p></div></div><div class='timeline-item-content'><p>更新twikoo</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.2</p></div></div><div class='timeline-item-content'><p>创建文章</p></div></div></div>              </div>            </details><details class="folding-tag" blue><summary> 点击查看参考教程 </summary>              <div class='content'>              <table><thead><tr><th><strong>参考方向</strong></th><th><strong>教程原贴</strong></th><th>魔改方向</th></tr></thead><tbody><tr><td>twikoo</td><td><a href="twikoo.js.org">twikoo官方文档</a></td><td><a href="https://blog.zhheo.com/p/8b1dde4c.html">Twikoo魔改样式分享-博客评论系统的定制皮肤 张洪Heo (blog.zhheo.com)</a></td></tr><tr><td>valine</td><td><a href="valine.js.org">valine官方文档</a></td><td></td></tr><tr><td>waline</td><td><a href="waline.js.org">waline官方文档</a></td><td></td></tr></tbody></table>              </div>            </details><h1 id="评论区别"><a href="#评论区别" class="headerlink" title="评论区别"></a>评论区别</h1><table><thead><tr><th>评论</th><th>数据库</th><th>媒介</th><th>适用人群</th></tr></thead><tbody><tr><td>twikoo</td><td><a href="mongodb.com">MongoDB</a></td><td>vercel(需要自己的域名)</td><td>有域名,第一次用MongoDB</td></tr><tr><td>valine</td><td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td><td>无</td><td>无域名</td></tr><tr><td>waline</td><td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td><td>vercel(需要自己的域名)</td><td>有域名不是,第一次用MongoDB</td></tr></tbody></table><table><thead><tr><th>评论</th><th>介绍</th><th>有无后端</th><th>Markdown 语法支持</th><th>Emoji</th><th>图片支持</th></tr></thead><tbody><tr><td>twikoo</td><td>一个简洁、安全、免费的静态网站评论系统</td><td>有</td><td>有</td><td>有</td><td>有</td></tr><tr><td>valine</td><td>一款快速、简洁且高效的无后端评论系统</td><td>无</td><td>有</td><td>有</td><td>无</td></tr><tr><td>waline</td><td>一款从 <a href="https://valine.js.org/">Valine</a> 衍生的带后端评论系统</td><td>有</td><td>有</td><td>有</td><td>有</td></tr></tbody></table><details class="folding-tag" blue><summary> 点击查twikoo特点 </summary>              <div class='content'>              <p>一. 简单<br>    1. 免费搭建（使用云开发 &#x2F; Vercel &#x2F; 私有服务器作为评论后台）<br>    2. 简单部署（支持云开发 &#x2F; Vercel 一键部署）<br>    二. 易用<br>    1. 支持回复、点赞<br>    2. 无需额外适配，支持搭配浅色主题与深色主题使用<br>    3. 支持 API 调用，批量获取文章评论数、最新评论<br>    4. 访客在昵称栏输入 QQ 号，会自动补全 QQ 昵称和 QQ 邮箱<br>    5. 访客填写数字 QQ 邮箱，会使用 QQ 头像作为评论头像<br>    6. 支持评论框粘贴图片（可禁用）<br>    7. 支持插入图片（可禁用）<br>    8. 支持去不图床、云开发图床<br>    9. 支持插入表情（可禁用）<br>    10. 支持 Ctrl + Enter 快捷回复<br>    11. 评论框内容实时保存草稿，刷新不会丢失<br>    12. 支持 Katex 公式<br>    13. 支持按语言的代码高亮<br>    三. 安全<br>    1. 隐私信息安全（通过云函数控制敏感字段（邮箱、IP、环境配置等）不会泄露）<br>    2. 支持 Akismet 垃圾评论检测（需自行注册 akismet.com）<br>    3. 支持腾讯云内容安全垃圾评论检测（需自行注册 腾讯云内容安全）<br>    4. 支持人工审核模式<br>    5. 防 XSS 注入<br>    6. 支持限制每个 IP 每 10 分钟最多发表多少条评论<br>    四. 即时<br>    1. 支持邮件提醒（访客和博主）<br>    2. 支持微信提醒（仅针对博主，基于 Server酱，需自行注册）<br>    3. 支持 QQ 提醒（仅针对博主，基于 Qmsg酱，需自行注册）<br>    4. 支持 QQ 提醒（针对博主QQ或者群，基于 go-cqhttp，需自己有服务器）<br>    五. 个性<br>    1. 支持自定义评论框背景图片<br>    2. 支持自定义“博主”标识文字<br>    3. 支持自定义通知邮件模板<br>    4. 支持自定义评论框提示信息（placeholder）<br>    5. 支持自定义表情列表（兼容 OwO 的数据格式）<br>    6. 支持自定义【昵称】【邮箱】【网址】必填 &#x2F; 选填<br>    7. 支持自定义代码高亮主题<br>    六. 便捷管理<br>    1. 内嵌式管理面板，通过密码登录，可方便地查看评论、隐藏评论、删除评论、修改配置<br>    2. 支持隐藏管理入口，通过输入暗号显示<br>    3. 支持从 Valine、Artalk、Disqus 导入评论<br>    七. 缺点<br>    1. 不支持 IE</p>              </div>            </details><details class="folding-tag" blue><summary> 点击查valine特点 </summary>              <div class='content'>              <ol><li>快速</li><li>安全</li><li>Emoji 😉</li><li>无后端实现</li><li>MarkDown 全语法支持</li><li>轻量易用</li><li>文章阅读量统计 v1.2.0+</li></ol>              </div>            </details><details class="folding-tag" blue><summary> 点击查valine特点 </summary>              <div class='content'>              <ol><li>邮件通知</li><li>微信通知</li><li>QQ 通知</li><li>Telegram 通知</li><li>Akismet</li><li>文章统计</li><li>多语言同步</li><li>自定义语言支持</li><li>登录支持</li><li>评论管理</li><li>评论删除</li><li>其它数据库支持 (已支持 LeanCloud, MySQL, MongoDB, SQLite, PostgreSQL, CloudBase, Deta, 轻服务, GitHub)</li><li>基于 IP 的发布评论频率限制</li><li>基于关键词的评论过滤限制</li><li>IP 黑名单</li><li>重复内容检测</li><li>CloudBase 腾讯云开发部署支持</li><li>社交登录</li><li>置顶评论</li><li>评论赞踩</li></ol>              </div>            </details><h2 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h2><details class="folding-tag" blue><summary> 点击查twikoo教程 </summary>              <div class='content'>              <p>数据库设置</p><p>1.申请 <a href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a> 账号</p>   <details class="folding-tag" blue><summary> 点击查看图片教程 </summary>              <div class='content'>              <p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/202210031037.jpeg"></p><p>填入信息</p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105658.png" alt="20221003105658"></p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105757.png" alt="20221003105757"></p><p>小调查填写</p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110323.png" alt="20221003110323"></p><p>选择<code>FREE</code></p>              </div>            </details><p>2.创建免费 MongoDB 数据库，区域选择 <code>AWS / N. Virginia (us-east-1)</code></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105929.png" alt="20221003105929"></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110027.png" alt="20221003110027"></p><p>3.设置<code>username</code>和<code>password</code>并记牢</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110444.png" alt="20221003110444"></p><p>4.<code>IP Address</code>填入<code>0.0.0.0</code>然后add,最后完成关闭,返回控制台</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110544.png" alt="20221003110544"></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003115225.png" alt="20221003115225"></p><p>5.在 Clusters 页面点击 CONNECT,选择<code>Connect your application</code></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003104350.png" alt="20221003104350"></p><p>6.<code>DRIVER</code>选择Node.js,<code>VERSION</code>选择4.1 or later</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003120532.png" alt="20221003120532"></p><p>7.记住<code>mongodb+srv://&lt;user&gt;:&lt;password&gt;</code>这段文字,并将<code>&lt;user&gt;</code>和<code>&lt;password&gt;</code>换成自己的</p><h2 id="vercel配置"><a href="#vercel配置" class="headerlink" title="vercel配置"></a>vercel配置</h2><p>1.申请 <a href="https://vercel.com/signup">Vercel</a> 账号</p><p>2.一键部署进vercel<br>  <a href="https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/main/src/server/vercel-min"><img src="https://vercel.com/button" alt="img"></a></p><p>3.有什么用什么</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142501.png" alt="20221003142501"></p><p>4.选择账号和设置仓库名称</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142602.png" alt="20221003142602"></p><p>5.等待部署完成</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142804.png" alt="20221003142804"></p><p>6.前往控制台</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142852.png" alt="20221003142852"></p><p>7.点击<code>Setting</code>-<code>environment-variables</code>新建一个name为<code>MONGODB_URI</code>,值为上面第七步的数据库连接字符串</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003143110.png" alt="20221003143110"></p><p>8.重新部署一下</p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003151430.png" alt="20221003151430"></p><p>   <img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151705887.png" alt="image-20221003151705887"></p><p>11.等待部署ing</p><p>12.<img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151829531.png" alt="image-20221003151829531"></p><p>13.完成<img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151904018.png" alt="image-20221003151904018"></p><p>14.绑定域名<img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003152053339.png" alt="image-20221003152053339"></p><table><thead><tr><th>Type</th><th>Name</th><th>Value</th></tr></thead><tbody><tr><td>CNAME</td><td>twikoo</td><td>cname.vercel-dns.com</td></tr></tbody></table><div class="tip warning faa-horizontal animated"><p>2021年5月初，<code>Vercel</code>因为一些原因被<code>GFW</code>屏蔽，导致无法访问。各位可以通过更改相应的域名解析记录来恢复访问。<br>A记录就从<code>76.76.21.21</code> 改成 <code>52.76.85.65</code>，<code>CNAME</code>记录则是从<code>cname-vercel-dns.com.</code>改成 <code>cname-china.vercel-dns.com.</code>；关于A记录，可用的IP值也可以从这个里面找：<a href="https://gist.github.com/ChenYFan/fc2bd4ec1795766f2613b52ba123c0f8">Vercel可用解析记录IP</a>,因为是gist，大概要翻墙才能看。</p></div><p>15.访问! <a href="https://twikoo.marcus233.top/">我的twikoo</a></p><p><img src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003153309668.png" alt="image-20221003153309668"></p><h2 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h2><ol><li>打开<code>themes\butterfly\_config.yml</code></li><li>填入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Twikoo</span></span><br><span class="line"><span class="comment"># https://github.com/imaegoo/twikoo</span></span><br><span class="line"><span class="attr">twikoo:</span></span><br><span class="line">  <span class="attr">envId:</span> <span class="comment"># https://twikoo.marcus233.top/</span></span><br><span class="line">  <span class="attr">region:</span> <span class="string">ap-shanghai</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure><ol start="3"><li>hexo三联</li></ol><h2 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h2><div class="note info simple"><p>来自<a href="https://blog.zhheo.com/p/8b1dde4c.html">Twikoo魔改样式分享-博客评论系统的定制皮肤 | 张洪Heo (zhheo.com)</a></p></div><h3 id="魔改内容"><a href="#魔改内容" class="headerlink" title="魔改内容"></a>魔改内容</h3><ol><li><p>先输入评论再输入个人信息</p></li><li><p>信息整合，让结构更有条理</p></li><li><p>将工具放入输入框，更符合直觉</p></li><li><p>删除了我个人不需要的按钮</p></li></ol><h3 id="装配"><a href="#装配" class="headerlink" title="装配"></a>装配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn1.tianli0.top/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js</span><br></pre></td></tr></table></figure><p>由<a href="https://tianli-blog.club/jsd/">免费JSD镜像使用手册 – Tianli’s blog (tianli-blog.club)</a>提供</p><h3 id="查看样式"><a href="#查看样式" class="headerlink" title="查看样式"></a>查看样式</h3><p><a href="#post-comment">查看样式</a></p>              </div>            </details><h1 id="valine"><a href="#valine" class="headerlink" title="valine"></a>valine</h1><details class="folding-tag" blue><summary> 点击查valine教程 </summary>              <div class='content'>              <h2 id="获取APP-ID-和-APP-Key"><a href="#获取APP-ID-和-APP-Key" class="headerlink" title="获取APP ID 和 APP Key"></a>获取APP ID 和 APP Key</h2><ol><li><p>请先<a href="https://leancloud.cn/dashboard/login.html#/signin">登录</a>或<a href="https://leancloud.cn/dashboard/login.html#/signup">注册</a> <code>LeanCloud</code>, 进入<a href="https://leancloud.cn/dashboard/applist.html#/apps">控制台</a>后点击左下角<a href="https://leancloud.cn/dashboard/applist.html#/newapp">创建应用</a>：</p></li><li><p>应用创建好以后，进入刚刚创建的应用，选择左下角的<code>设置</code>&gt;<code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了：</p></li></ol><h2 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h2><ol><li>打开<code>themes\butterfly\_config.yml</code></li><li>填入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">这一项</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">这一项</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">monsterid</span> <span class="comment"># gravatar style https://valine.js.org/#/avatar</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span></span><br><span class="line">  <span class="attr">bg:</span> <span class="comment"># valine background</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure><ol start="3"><li>hexo三联</li></ol>              </div>            </details><h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><div class='checkbox blue checked'><input type="checkbox" checked="checked"/>            <p>Twikoo</p>            </div><div class='checkbox blue checked'><input type="checkbox" checked="checked"/>            <p>Valine</p>            </div><div class='checkbox blue'><input type="checkbox" />            <p>Waline</p>            </div>]]></content>
     
@@ -31,8 +123,6 @@
     
     
     <category term="Hexo" scheme="https://blog.marcus233.top/categories/Hexo/"/>
-    
-    <category term="教程" scheme="https://blog.marcus233.top/categories/Hexo/%E6%95%99%E7%A8%8B/"/>
     
     
     <category term="Hexo" scheme="https://blog.marcus233.top/tags/Hexo/"/>
@@ -46,27 +136,27 @@
   </entry>
   
   <entry>
-    <title>鱼了个鱼🐟</title>
+    <title>鱼了个鱼</title>
     <link href="https://blog.marcus233.top/p/72351e9.html"/>
     <id>https://blog.marcus233.top/p/72351e9.html</id>
     <published>2022-09-17T12:47:31.000Z</published>
-    <updated>2022-10-15T07:01:57.052Z</updated>
+    <updated>2022-12-19T10:09:53.253Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>最近被🐏了个🐏刷屏了</p><p>正好看见<a href="https://yupi.icu/">鱼皮</a>出了个低配版</p><p>那必须整起来!</p><h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><p>####1.首先clone下来</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/liyupi/yulegeyu.git</span><br></pre></td></tr></table></figure><p>####2.打开VS code</p><p>####3.下载依赖</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>不过我下载的有点慢,不知道是不是我的问题</p><p>####4.生成静态文件</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure><p>####5.运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure><p>####6.如图所示</p><p><img src="https://npm.elemecdn.com/marcusyyds-assets@1.0.4/img/20220917210044.jpg">)</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>如果有错误</p><p>望纠正(勿喷)</p><p>来<a href="https://akilar.top/">店长</a>群里<del>玩呀</del>请教大佬 </p><p><img src="https://bu.dusays.com/2022/09/17/63255541c9b4a.jpg" alt="QQ群"></p>]]></content>
-    
-    
-    <summary type="html">鱼了个鱼🐟</summary>
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>最近被🐏了个🐏刷屏了</p><p>正好看见<a href="https://yupi.icu/">鱼皮</a>出了个低配版</p><p>那必须整起来!</p><h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><h4 id="1-首先clone下来"><a href="#1-首先clone下来" class="headerlink" title="1.首先clone下来"></a>1.首先clone下来</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/liyupi/yulegeyu.git</span><br></pre></td></tr></table></figure><h4 id="2-打开VS-code"><a href="#2-打开VS-code" class="headerlink" title="2.打开VS code"></a>2.打开VS code</h4><h4 id="3-下载依赖"><a href="#3-下载依赖" class="headerlink" title="3.下载依赖"></a>3.下载依赖</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>不过我下载的有点慢,不知道是不是我的问题</p><h4 id="4-生成静态文件"><a href="#4-生成静态文件" class="headerlink" title="4.生成静态文件"></a>4.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure><h4 id="5-运行"><a href="#5-运行" class="headerlink" title="5.运行"></a>5.运行</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure><h4 id="6-如图所示"><a href="#6-如图所示" class="headerlink" title="6.如图所示"></a>6.如图所示</h4><p><img src="https://npm.elemecdn.com/marcusyyds-assets@1.0.4/img/20220917210044.jpg">)</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>如果有错误</p><p>望纠正(勿喷)</p><p>来<a href="https://akilar.top/">店长</a>群里<del>玩呀</del>请教大佬 </p><p><img src="https://bu.dusays.com/2022/09/17/63255541c9b4a.jpg" alt="QQ群"></p>]]></content>
     
     
+    <summary type="html">鱼了个鱼</summary>
     
-    <category term="前端" scheme="https://blog.marcus233.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
     
     <category term="分享" scheme="https://blog.marcus233.top/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="前端" scheme="https://blog.marcus233.top/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="开源" scheme="https://blog.marcus233.top/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="🐏了个🐏" scheme="https://blog.marcus233.top/tags/%F0%9F%90%8F%E4%BA%86%E4%B8%AA%F0%9F%90%8F/"/>
+    <category term="羊了个羊" scheme="https://blog.marcus233.top/tags/%E7%BE%8A%E4%BA%86%E4%B8%AA%E7%BE%8A/"/>
     
   </entry>
   
@@ -75,7 +165,7 @@
     <link href="https://blog.marcus233.top/p/586ff2f5.html"/>
     <id>https://blog.marcus233.top/p/586ff2f5.html</id>
     <published>2022-09-17T05:30:42.000Z</published>
-    <updated>2022-10-03T07:29:56.269Z</updated>
+    <updated>2022-12-10T13:21:19.009Z</updated>
     
     <content type="html"><![CDATA[<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>1.整<a href="marcusyyds.github.io">Hexo</a>博客去了<br>2.学习 <span class="hide-inline"><button type="button" class="hide-button" style="background-color: #ffffff;color: #ffffff">   </button><span class="hide-content">赶作业</span></span>去了</p><p>3.<span class="hide-inline"><button type="button" class="hide-button" style="background-color: #ffffff;color: #ffffff">   </button><span class="hide-content">玩游戏</span></span></p><h2 id="我的Hexo配置"><a href="#我的Hexo配置" class="headerlink" title="我的Hexo配置"></a>我的Hexo配置</h2><object title="Butterfly" standby="loading..." data="https://img.shields.io/badge/Butterfly-Theme-orange?logo=bitdefender&color=6513df&link=https://butterfly.js.org/&style=flat"></object><object title="Hexo" standby="loading..." data="https://img.shields.io/badge/Hexo-Frame-orange?logo=hexo&color=blue&link=https://hexo.io/&style=flat"></object><object title="GitHub" standby="loading..." data="https://img.shields.io/badge/Github-Source-orange?logo=github&color=d021d6&link=https://github.com/&style=flat"></object><object title="jsDelivr" standby="loading..." data="https://img.shields.io/badge/jsDelivr-Tianli-CDN-orange?logo=jsDelivr&color=orange&link=https://www.jsdelivr.com/&style=flat"></object><h2 id="踩坑-amp-amp-魔改心得"><a href="#踩坑-amp-amp-魔改心得" class="headerlink" title="踩坑&amp;&amp;魔改心得"></a>踩坑&amp;&amp;魔改心得</h2><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><div class="tip warning faa-horizontal animated"><p>千万要备份</p></div><p>万一在魔改时不小心改错了,自己又不知道,后果不堪设想</p><p>提供两种解决方案</p><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#test1-1">方案1</button></li><li class="tab"><button type="button" data-href="#test1-2">方案2</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="test1-1"><p>重装(推荐看<a href="https://anzhiy.cn/posts/sdxhu.html">butterfly 重装日记 | 安知鱼 (anzhiy.cn)</a>)</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p>来<a href="https://akilar.top/">店长</a>群里<del>玩呀</del>请教大佬 </p><p><img src="https://bu.dusays.com/2022/09/17/63255541c9b4a.jpg" alt="QQ群"></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><div class="site-card-group"><a class="site-card" href="https://akilar.top/"><div class="img"><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg"/></div><div class="info"><img src="https://akilar.top/img/author.webp"/><span class="title">Akilarの糖果屋</span><span class="desc">期待您的光临！</span></div></a><a class="site-card" href="https://blog.zhheo.com/"><div class="img"><img src="https://img.zhheo.com/i/2022/08/19/62ff337cdeaa0.png"/></div><div class="info"><img src="https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png"/><span class="title">张洪Heo</span><span class="desc">分享设计与科技生活</span></div></a><a class="site-card" href="https://zfe.one"><div class="img"><img src="https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/anzhiy.cn/https://zfe.one"/></div><div class="info"><img src="https://zfe.space/images/headimage.png"/><span class="title">小冰博客</span><span class="desc">做个有梦想的人！</span></div></a><a class="site-card" href="https://noionion.top/"><div class="img"><img src="https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/noionion.top.png"/></div><div class="info"><img src="https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/head.jpg"/><span class="title">贰猹的小窝</span><span class="desc">用这生命中的每一秒，给自己一个不后悔的未来</span></div></a><a class="site-card" href="https://anzhiy.cn/"><div class="img"><img src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg"/></div><div class="info"><img src="https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg"/><span class="title">安知鱼`Blog</span><span class="desc">生活明朗，万物可爱</span></div></a></div>]]></content>
     
@@ -87,8 +177,6 @@
     <category term="Hexo" scheme="https://blog.marcus233.top/categories/Hexo/"/>
     
     <category term="生活" scheme="https://blog.marcus233.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="分享" scheme="https://blog.marcus233.top/categories/%E5%88%86%E4%BA%AB/"/>
     
     
     <category term="Hexo" scheme="https://blog.marcus233.top/tags/Hexo/"/>
@@ -117,7 +205,7 @@
     <link href="https://blog.marcus233.top/p/6709fc4a.html"/>
     <id>https://blog.marcus233.top/p/6709fc4a.html</id>
     <published>2022-07-28T04:06:00.000Z</published>
-    <updated>2022-10-15T07:02:20.994Z</updated>
+    <updated>2022-12-10T13:22:46.829Z</updated>
     
     <content type="html"><![CDATA[<h2 id="演示地址"><a href="#演示地址" class="headerlink" title="演示地址"></a>演示地址</h2><p><a href="https://demo.cloudreve.org/">Demo</a></p><h2 id="Cloudreve简介"><a href="#Cloudreve简介" class="headerlink" title="Cloudreve简介"></a>Cloudreve简介</h2><p><img src="https://www.gitbook.com/cdn-cgi/image/width=24,height=24,fit=contain,dpr=3,format=auto/https%3A%2F%2F3847020651-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fcollections%252FwqgIMrzTAT3E40ScUdPF%252Ficon%252F3v5lygqjbk28vCT8Bz2Y%252Flogo192.png%3Falt%3Dmedia%26token%3D8713a140-0480-47a2-b767-ebad48ec49f7" alt="cloudreve"><br>Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。你可以使用 Cloudreve 搭建个人用网盘、文件分享系统，亦或是针对大小团体的公有云系统。</p><h2 id="快速搭建"><a href="#快速搭建" class="headerlink" title="快速搭建"></a>快速搭建</h2><p>新建一个bash项目<br>console或shell内输入以下代码<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/4209458325.png" alt="2022.7.28.一.png"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/cloudreve/Cloudreve/releases/download/3.5.3/cloudreve_3.5.3_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure><p>等待输出完毕<br>再输入以下代码</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf cloudreve_3.5.3_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure><p>等待解压<br>最后输入 <code>./cloudreve</code> 运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./cloudreve</span><br></pre></td></tr></table></figure><p>运行后在输出中找到账号和密码<br>类似这样<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/1183548629.png" alt="2022.7.28.二.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">admin@cloudreve.org</span><br></pre></td></tr></table></figure><p>登陆 <code>(这个项目名).(账户名).repl.co</code><br>快速搭建完成了！👍<br>登陆后点头像-控制面板<br>根据自己喜好更改</p><h2 id="部署进Replit"><a href="#部署进Replit" class="headerlink" title="部署进Replit"></a>部署进Replit</h2><p>进入刚才Replit的项目里<br>file里找到main.sh<br>编辑</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x ./cloudreve</span><br><span class="line">./cloudreve</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/863116350.png" alt="2022.7.28.三.png"><br>重启Replit<br>完成👍</p>]]></content>
     
@@ -126,18 +214,16 @@
     
     
     
-    <category term="Replit" scheme="https://blog.marcus233.top/categories/Replit/"/>
+    <category term="分享" scheme="https://blog.marcus233.top/categories/%E5%88%86%E4%BA%AB/"/>
     
-    <category term="教程" scheme="https://blog.marcus233.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="Cloudrever" scheme="https://blog.marcus233.top/tags/Cloudrever/"/>
-    
-    <category term="Replit" scheme="https://blog.marcus233.top/tags/Replit/"/>
     
     <category term="服务器" scheme="https://blog.marcus233.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="白嫖" scheme="https://blog.marcus233.top/tags/%E7%99%BD%E5%AB%96/"/>
+    
+    <category term="Cloudrever" scheme="https://blog.marcus233.top/tags/Cloudrever/"/>
+    
+    <category term="Replit" scheme="https://blog.marcus233.top/tags/Replit/"/>
     
   </entry>
   
@@ -146,7 +232,7 @@
     <link href="https://blog.marcus233.top/p/e70bf4f.html"/>
     <id>https://blog.marcus233.top/p/e70bf4f.html</id>
     <published>2022-07-25T02:49:00.000Z</published>
-    <updated>2022-10-02T13:26:48.727Z</updated>
+    <updated>2022-12-10T13:21:56.014Z</updated>
     
     <content type="html"><![CDATA[<h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><a href="https://replit.com/">Replit</a>(超好用的！)<br>图片:<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/129259614.png" alt="2022.7.25.一.png"></p><h2 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h2><p>打开官网<br>点击Start coding<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/702808070.png" alt="2022.7.25.二.png"><br>注册一枚账号<br>用邮箱或Continue with Github<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/168576233.png" alt="2022.7.25.三.png"><br>点Create新建项目<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/2129948654.png" alt="2002.7.25.四.png"><br>选择语言和项目名<br><img src="https://cdn.jsdelivr.net/gh/MarcusYYDS/tuchuang/usr/uploads/2022/08/704430836.png" alt="2022.7.25.五.png"><br>成功啦！~</p><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><p>1.免费(团队pro除外)<br>2.有一个Linux的”壳”(机翻)<br>3.教育团队免费版项目创建无上限</p><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>服务器在国外<br>难免有些网络问题<br>自行解决🐶</p><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>1.云服务<br>2.博客<br>3.静态网页托管<br>4.MC服务器</p><p>下期出教程</p>]]></content>
     
@@ -154,8 +240,6 @@
     <summary type="html">分享一下Replit.com 官网 Replit(超好用的！)</summary>
     
     
-    
-    <category term="Replit" scheme="https://blog.marcus233.top/categories/Replit/"/>
     
     <category term="分享" scheme="https://blog.marcus233.top/categories/%E5%88%86%E4%BA%AB/"/>
     

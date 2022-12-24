@@ -427,7 +427,7 @@
   /* 闅忔満鏂囩珷css */
   #random {
     border-radius: 8px;
-    font-family: "ZhuZiAYuanJWD", PingFang, 寰蒋闆呴粦, HYTMR, SimSun;
+    font-family: "ZhuZiAYuanJWD";
     background-size: cover;
     color: var(--anzhiyu-white);
     font-size: 44px; /*瑙夊緱灏忓彲浠ュ紑澶т竴鐐�*/
@@ -614,4 +614,35 @@
   
   .top-group-list-none {
     width: calc(100% / 4 - 5px);
+  }
+  #random-banner  #skills-tags-group-all {
+    transform: rotate(-30deg);
+  }
+  #random-banner  #skills-tags-group-all .tags-group-wrapper {
+    margin-top: 7rem !important;
+  }
+  #skills-tags-group-all .tags-group-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    animation: rowup 60s linear infinite !important;
+  }
+  .banners-title {
+    top: 2.9rem;
+    left: 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  .banners-title-big {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .banners-title-small {
+    font-size: 12px;
+    line-height: 1;
+    color: var(--anzhiyu-secondtext);
+    margin-top: 8px;
+    margin-bottom: .5rem;
   }

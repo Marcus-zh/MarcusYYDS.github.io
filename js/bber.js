@@ -1,45 +1,6 @@
 "use strict";
 
-function owoBig() {
-    var t = 1,
-        n = "",
-        i = document.createElement("div"),
-        c = (i.id = "owo-big", document.querySelector("body"));
-    c.appendChild(i), document.getElementById("post-comment").addEventListener("DOMNodeInserted", function(e) {
-        e.target.classList && (e.target.classList.value, 1) && ((e = e.target).addEventListener("contextmenu", function(e) {
-            return e.preventDefault()
-        }), e.addEventListener("mouseover", function(a) {
-            "IMG" == a.target.tagName && t && (t = 0, n = setTimeout(function() {
-                var e = 3 * a.path[0].clientHeight,
-                    t = 3 * a.path[0].clientWidth,
-                    n = a.x - a.offsetX - (t - a.path[0].clientWidth) / 2,
-                    o = (n + t > c.clientWidth && (n -= n + t - c.clientWidth + 10), n < 0 && (n = 10), a.y - a.offsetY);
-                i.style.height = e + "px", i.style.width = t + "px", i.style.left = n + "px", i.style.top = o + "px", i.style.display = "flex", i.innerHTML = '<img src="'.concat(a.target.src, '">')
-            }, 300))
-        }), e.addEventListener("mouseout", function(e) {
-            i.style.display = "none", t = 1, clearTimeout(n)
-        }))
-    })
-}
 
-function percent() {
-    var e = document.documentElement.scrollTop || window.pageYOffset,
-        t = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight,
-        e = Math.round(e / t * 100),
-        t = document.querySelector("#percent"),
-        n = (e <= 99 || (e = 99), window.scrollY + document.documentElement.clientHeight),
-        o = document.getElementById("post-comment") || document.getElementById("footer");
-    o.offsetTop + o.offsetHeight / 2 < n || 90 < e ? (document.querySelector("#nav-totop").classList.add("long"), t.innerHTML = "返回顶部") : (document.querySelector("#nav-totop").classList.remove("long"), t.innerHTML = e)
-}
-
-function totraveling() {
-    btf.snackbarShow("即将跳转到「开往」项目的成员博客，不保证跳转网站的安全性和可用性", !1, 5e3), setTimeout(function() {
-        window.open("https://travellings.link/")
-    }, "5000")
-}
-document.getElementById("post-comment") && owoBig(), window.onscroll = btf.throttle(percent, 10), document.getElementById("page-name").innerText = document.title.split(" | 安知鱼")[0], window.onkeydown = function(e) {
-    123 === e.keyCode && btf.snackbarShow("开发者模式已打开，请遵循GPL协议", !1)
-};
 var anzhiyu = {
     showLoading: function() {
         document.querySelector("#loading-box").classList.remove("loaded")

@@ -11,10 +11,10 @@ Allow: /movies/
 Allow: /picture/
 Allow: /book/
 Allow: /games/
-Disallow: /archives/
-Disallow: /tags/
-Disallow: /categories/
-Disallow: /vendors/
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Allow: /vendors/
 Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/

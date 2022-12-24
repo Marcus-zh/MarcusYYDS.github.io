@@ -91,7 +91,7 @@ function ScrollBarElongation() {
       ) - document.documentElement.clientHeight,
     n = e / t,
     o = document.querySelector(".as-indicator");
-  0.1 <= n && (o.style.transform = "scale3d(1, ".concat(e / t, ", 1)"));
+  0.1 <= n;
 }
 function totraveling() {
   btf.snackbarShow(
