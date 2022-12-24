@@ -2748,7 +2748,77 @@ a span.top-group-text {
 #page-header.nav-fixed #nav #toggle-menu:hover {
   color: var(--marcus-theme);
 }
+/* marcus */
+@import "//at.alicdn.com/t/c/font_3823102_uwimkhlc7f.css";
+#recent-posts > .recent-post-item:not(:first-child):hover {
+  border: var(--style-border-hover) !important;
+  box-shadow: var(--marcus-shadow-main) !important;
+  transform: scale(1.03) !important;
+}
+.menus_item_child > li > a:hover {
+  background-color: var(--marcus-theme) !important;
+}
+#aside-content .card-tag-cloud a:hover {
+  background: var(--marcus-theme);
+  color: var(--marcus-white) !important;
+  box-shadow: var(--marcus-shadow-theme);
+}
+#random-banner  #skills-tags-group-all {
+  transform: rotate(-30deg);
+}
+#random-banner  #skills-tags-group-all .tags-group-wrapper {
+  margin-top: 7rem !important;
+}
+#skills-tags-group-all .tags-group-wrapper {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  animation: rowup 60s linear infinite !important;
+}
+.banners-title {
+  top: 2.9rem;
+  left: 3rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.banners-title-big {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.banners-title-small {
+  font-size: 12px;
+  line-height: 1;
+  color: var(--anzhiyu-secondtext);
+  margin-top: 8px;
+  margin-bottom: .5rem;
+}
+#page-header #post-top-cover {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  margin: 0 -20% 0 auto;
+  overflow: hidden;
+  margin-bottom: 0;
+  transform: rotate(10deg) translateY(-10%) scale(2);
+  filter: blur(10px);
+}
 
+  .back-menu-list-title,
+  .back-menu-item-text,
+  #percent,
+  .blog-slider__title,
+  a#random-hover > div,
+  .random-hover,
+  a,
+  /* span, */
+  div.swiper-wrapper>div,
+  .author-info__name,
+  .author-info__description
+  {
+      font-family: ZhuZiAYuanJWD;
+  }
 div#post-comment.fixedcomment {
     position: fixed;
     top: 0;
