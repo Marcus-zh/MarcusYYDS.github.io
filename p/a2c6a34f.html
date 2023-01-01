@@ -1,0 +1,664 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo的twikoo,valine和waline配置 | Marcus</title><meta name="keywords" content="Hexo的twikoo,valine和waline配置,Marcus,twikoo,valine,waline"><meta name="author" content="Marcus"><meta name="copyright" content="Marcus"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hexo的twikoo,valine和waline配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo的twikoo,valine和waline配置">
+<meta property="og:url" content="https://blog.marcus233.top/p/a2c6a34f.html">
+<meta property="og:site_name" content="Marcus">
+<meta property="og:description" content="Hexo的twikoo,valine和waline配置">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeedna8xj22bc1awwzs.jpg">
+<meta property="article:published_time" content="2022-10-02T13:25:20.000Z">
+<meta property="article:modified_time" content="2022-12-30T11:00:58.106Z">
+<meta property="article:author" content="Marcus">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="twikoo">
+<meta property="article:tag" content="valine">
+<meta property="article:tag" content="waline">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeedna8xj22bc1awwzs.jpg"><link rel="shortcut icon" href="/"><link rel="canonical" href="https://blog.marcus233.top/p/a2c6a34f"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><meta/><meta/><meta/><meta/><meta/><meta/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/favicon-16x16.png"/><link rel="mask-icon" href="/img/siteicon/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/fonts/ZhuZiAWan.woff2" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425aef","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo的twikoo,valine和waline配置',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-30 19:00:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/marcus.css"  media="defer" onload="this.media='all'"><meta name="google-site-verification" content="SCRPhqevO3cjQCVrX8YuEDEzJ4kY5Ekd6K8MzNYvuuc" /><meta name="baidu-site-verification" content="code-HowpJ7NzYb" /><meta name="msvalidate.01" content="8566A66DBBB00BBA148FF04D93F14056" /><link rel="stylesheet" href="/css/nav_menu.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/js-heo@1.0.11/bb/showbb_in_index.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3819422_1obcq5p4a4l.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiper.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/css/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro/lib/categoryGroup.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Marcus" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img01.anzhiy.cn/useruploads/8/2022/12/15/639adf5b8806a.png" data-lazy-src="https://img01.anzhiy.cn/useruploads/8/2022/12/15/639adf5b8806a.png"/><div class="loading-image-dot"></div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img01.anzhiy.cn/useruploads/8/2022/12/15/639adf5b8806a.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/message/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg><span> 留言墙</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-heart-line"></use></svg><span> 关于</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-apps-line"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-footprint-line"></use></svg><span> 即刻</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 链接</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-link"></use></svg><span> 友联</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-donut-chart-line"></use></svg><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-dropbox-line"></use></svg><span> 百宝箱</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/timeline/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-time-line"></use></svg><span> 时间线</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/nav/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-compass-line"></use></svg><span> 导航</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener external nofollow noreferrer" href="https://status.marcus233.top/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-pie-chart-2-line"></use></svg><span> 监控</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-music--line"></use></svg><span> 音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/movies/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-movie-2-line"></use></svg><span> 视频</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/picture/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-image-line"></use></svg><span> 图库</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/book/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-book-line"></use></svg><span> 小说</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/games/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-gamepad-line"></use></svg><span> 游戏</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><div class="back-home-button" tabindex="-1"><a class="back-home-button-icon fas fa-grip-vertical"></a><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">分站</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog-github.marcus233.top" rel="external nofollow" title="前往github分站" target="_blank" one-link-mark="yes"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.anzhiy.cn/adminuploads/1/2022/09/05/6315ec9737ac4.png"/><span class="back-menu-item-text">github分站</span></a><a class="back-menu-item" href="https://blog-cf.marcus233.top" rel="external nofollow" title="前往cloudflare分站" target="_blank" one-link-mark="yes"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://image.anzhiy.cn/adminuploads/1/2022/09/11/631d80e87b859.jpg"/><span class="back-menu-item-text">cloudflare分站</span></a></div></div></div></div><a id="site-name" href="/">Marcus</a></span><div class="mask-name-container"><center id="name-container"><a id="page-name" href="javascript:rmf.scrollToTop()" rel="external nofollow noreferrer">Marcus的小窝</a></center></div><div id="menus"><div class="nav-button" id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i></a></div><div class="nav-button" id="darkmode_navswitch"><a class="darkmode_switchbutton" type="button" title="浅色和深色模式转换" onclick="rmf.switchDarkMode()"><i class="fas fa-adjust"></i></a></div><div class="nav-button" id="nav-totop"><a class="totopbtn"><i class="fas fa-arrow-up"></i><span id="percent" onclick="btf.scrollToDest(0,500)"> </span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/message/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg><span> 留言墙</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-heart-line"></use></svg><span> 关于</span></a></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg><span> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-apps-line"></use></svg><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-footprint-line"></use></svg><span> 即刻</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 链接</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-link"></use></svg><span> 友联</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-donut-chart-line"></use></svg><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-dropbox-line"></use></svg><span> 百宝箱</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/timeline/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-time-line"></use></svg><span> 时间线</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/nav/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-compass-line"></use></svg><span> 导航</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener external nofollow noreferrer" href="https://status.marcus233.top/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-pie-chart-2-line"></use></svg><span> 监控</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);" rel="external nofollow noreferrer"><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-music--line"></use></svg><span> 音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/movies/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-movie-2-line"></use></svg><span> 视频</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/picture/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-image-line"></use></svg><span> 图库</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/book/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-book-line"></use></svg><span> 小说</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/games/"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-gamepad-line"></use></svg><span> 游戏</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hexo的twikoo,valine和waline配置</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-02T13:25:20.000Z" title="发表于 2022-10-02 21:25:20">2022-10-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-30T11:00:58.106Z" title="更新于 2022-12-30 19:00:58">2022-12-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Hexo/">Hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="Hexo的twikoo,valine和waline配置"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeedna8xj22bc1awwzs.jpg"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><details class="folding-tag" blue><summary> 点击查看更新记录 </summary>
+              <div class='content'>
+              <div class="timeline blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>更新记录</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.4</p></div></div><div class='timeline-item-content'><p>更新valine</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.3</p></div></div><div class='timeline-item-content'><p>更新twikoo魔改</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.3</p></div></div><div class='timeline-item-content'><p>更新twikoo</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>2022.10.2</p></div></div><div class='timeline-item-content'><p>创建文章</p></div></div></div>
+              </div>
+            </details>
+
+<details class="folding-tag" blue><summary> 点击查看参考教程 </summary>
+              <div class='content'>
+              <table><thead><tr><th><strong>参考方向</strong></th><th><strong>教程原贴</strong></th><th>魔改方向</th></tr></thead><tbody><tr><td>twikoo</td><td><a href="twikoo.js.org">twikoo官方文档</a></td><td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/p/8b1dde4c.html">Twikoo魔改样式分享-博客评论系统的定制皮肤 张洪Heo (blog.zhheo.com)</a></td></tr><tr><td>valine</td><td><a href="valine.js.org">valine官方文档</a></td><td></td></tr><tr><td>waline</td><td><a href="waline.js.org">waline官方文档</a></td><td></td></tr></tbody></table>
+              </div>
+            </details>
+
+<h1 id="评论区别"><a href="#评论区别" class="headerlink" title="评论区别"></a>评论区别</h1><table>
+<thead>
+<tr>
+<th>评论</th>
+<th>数据库</th>
+<th>媒介</th>
+<th>适用人群</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>twikoo</td>
+<td><a href="mongodb.com">MongoDB</a></td>
+<td>vercel(需要自己的域名)</td>
+<td>有域名,第一次用MongoDB</td>
+</tr>
+<tr>
+<td>valine</td>
+<td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td>
+<td>无</td>
+<td>无域名</td>
+</tr>
+<tr>
+<td>waline</td>
+<td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td>
+<td>vercel(需要自己的域名)</td>
+<td>有域名不是,第一次用MongoDB</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>评论</th>
+<th>介绍</th>
+<th>有无后端</th>
+<th>Markdown 语法支持</th>
+<th>Emoji</th>
+<th>图片支持</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>twikoo</td>
+<td>一个简洁、安全、免费的静态网站评论系统</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>valine</td>
+<td>一款快速、简洁且高效的无后端评论系统</td>
+<td>无</td>
+<td>有</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>waline</td>
+<td>一款从 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://valine.js.org/">Valine</a> 衍生的带后端评论系统</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+</tbody></table>
+<details class="folding-tag" blue><summary> 点击查twikoo特点 </summary>
+              <div class='content'>
+              <p>一. 简单<br>    1. 免费搭建（使用云开发 &#x2F; Vercel &#x2F; 私有服务器作为评论后台）<br>    2. 简单部署（支持云开发 &#x2F; Vercel 一键部署）<br>    二. 易用<br>    1. 支持回复、点赞<br>    2. 无需额外适配，支持搭配浅色主题与深色主题使用<br>    3. 支持 API 调用，批量获取文章评论数、最新评论<br>    4. 访客在昵称栏输入 QQ 号，会自动补全 QQ 昵称和 QQ 邮箱<br>    5. 访客填写数字 QQ 邮箱，会使用 QQ 头像作为评论头像<br>    6. 支持评论框粘贴图片（可禁用）<br>    7. 支持插入图片（可禁用）<br>    8. 支持去不图床、云开发图床<br>    9. 支持插入表情（可禁用）<br>    10. 支持 Ctrl + Enter 快捷回复<br>    11. 评论框内容实时保存草稿，刷新不会丢失<br>    12. 支持 Katex 公式<br>    13. 支持按语言的代码高亮<br>    三. 安全<br>    1. 隐私信息安全（通过云函数控制敏感字段（邮箱、IP、环境配置等）不会泄露）<br>    2. 支持 Akismet 垃圾评论检测（需自行注册 akismet.com）<br>    3. 支持腾讯云内容安全垃圾评论检测（需自行注册 腾讯云内容安全）<br>    4. 支持人工审核模式<br>    5. 防 XSS 注入<br>    6. 支持限制每个 IP 每 10 分钟最多发表多少条评论<br>    四. 即时<br>    1. 支持邮件提醒（访客和博主）<br>    2. 支持微信提醒（仅针对博主，基于 Server酱，需自行注册）<br>    3. 支持 QQ 提醒（仅针对博主，基于 Qmsg酱，需自行注册）<br>    4. 支持 QQ 提醒（针对博主QQ或者群，基于 go-cqhttp，需自己有服务器）<br>    五. 个性<br>    1. 支持自定义评论框背景图片<br>    2. 支持自定义“博主”标识文字<br>    3. 支持自定义通知邮件模板<br>    4. 支持自定义评论框提示信息（placeholder）<br>    5. 支持自定义表情列表（兼容 OwO 的数据格式）<br>    6. 支持自定义【昵称】【邮箱】【网址】必填 &#x2F; 选填<br>    7. 支持自定义代码高亮主题<br>    六. 便捷管理<br>    1. 内嵌式管理面板，通过密码登录，可方便地查看评论、隐藏评论、删除评论、修改配置<br>    2. 支持隐藏管理入口，通过输入暗号显示<br>    3. 支持从 Valine、Artalk、Disqus 导入评论<br>    七. 缺点<br>    1. 不支持 IE</p>
+              </div>
+            </details>
+<details class="folding-tag" blue><summary> 点击查valine特点 </summary>
+              <div class='content'>
+              <ol><li>快速</li><li>安全</li><li>Emoji 😉</li><li>无后端实现</li><li>MarkDown 全语法支持</li><li>轻量易用</li><li>文章阅读量统计 v1.2.0+</li></ol>
+              </div>
+            </details>
+<details class="folding-tag" blue><summary> 点击查valine特点 </summary>
+              <div class='content'>
+              <ol><li>邮件通知</li><li>微信通知</li><li>QQ 通知</li><li>Telegram 通知</li><li>Akismet</li><li>文章统计</li><li>多语言同步</li><li>自定义语言支持</li><li>登录支持</li><li>评论管理</li><li>评论删除</li><li>其它数据库支持 (已支持 LeanCloud, MySQL, MongoDB, SQLite, PostgreSQL, CloudBase, Deta, 轻服务, GitHub)</li><li>基于 IP 的发布评论频率限制</li><li>基于关键词的评论过滤限制</li><li>IP 黑名单</li><li>重复内容检测</li><li>CloudBase 腾讯云开发部署支持</li><li>社交登录</li><li>置顶评论</li><li>评论赞踩</li></ol>
+              </div>
+            </details>
+<h2 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h2><details class="folding-tag" blue><summary> 点击查twikoo教程 </summary>
+              <div class='content'>
+              <p>数据库设置</p><p>1.申请 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a> 账号</p>   <details class="folding-tag" blue><summary> 点击查看图片教程 </summary>              <div class='content'>              <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/202210031037.jpeg"></p><p>填入信息</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105658.png" alt="20221003105658"></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105757.png" alt="20221003105757"></p><p>小调查填写</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110323.png" alt="20221003110323"></p><p>选择<code>FREE</code></p>              </div>            </details><p>2.创建免费 MongoDB 数据库，区域选择 <code>AWS / N. Virginia (us-east-1)</code></p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105929.png" alt="20221003105929"></p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110027.png" alt="20221003110027"></p><p>3.设置<code>username</code>和<code>password</code>并记牢</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110444.png" alt="20221003110444"></p><p>4.<code>IP Address</code>填入<code>0.0.0.0</code>然后add,最后完成关闭,返回控制台</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110544.png" alt="20221003110544"></p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003115225.png" alt="20221003115225"></p><p>5.在 Clusters 页面点击 CONNECT,选择<code>Connect your application</code></p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003104350.png" alt="20221003104350"></p><p>6.<code>DRIVER</code>选择Node.js,<code>VERSION</code>选择4.1 or later</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003120532.png" alt="20221003120532"></p><p>7.记住<code>mongodb+srv://&lt;user&gt;:&lt;password&gt;</code>这段文字,并将<code>&lt;user&gt;</code>和<code>&lt;password&gt;</code>换成自己的</p><h2 id="vercel配置"><a href="#vercel配置" class="headerlink" title="vercel配置"></a>vercel配置</h2><p>1.申请 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/signup">Vercel</a> 账号</p><p>2.一键部署进vercel<br>  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/main/src/server/vercel-min"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vercel.com/button" alt="img"></a></p><p>3.有什么用什么</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142501.png" alt="20221003142501"></p><p>4.选择账号和设置仓库名称</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142602.png" alt="20221003142602"></p><p>5.等待部署完成</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142804.png" alt="20221003142804"></p><p>6.前往控制台</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142852.png" alt="20221003142852"></p><p>7.点击<code>Setting</code>-<code>environment-variables</code>新建一个name为<code>MONGODB_URI</code>,值为上面第七步的数据库连接字符串</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003143110.png" alt="20221003143110"></p><p>8.重新部署一下</p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003151430.png" alt="20221003151430"></p><p>   <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151705887.png" alt="image-20221003151705887"></p><p>11.等待部署ing</p><p>12.<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151829531.png" alt="image-20221003151829531"></p><p>13.完成<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151904018.png" alt="image-20221003151904018"></p><p>14.绑定域名<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003152053339.png" alt="image-20221003152053339"></p><table><thead><tr><th>Type</th><th>Name</th><th>Value</th></tr></thead><tbody><tr><td>CNAME</td><td>twikoo</td><td>cname.vercel-dns.com</td></tr></tbody></table><div class="tip warning faa-horizontal animated"><p>2021年5月初，<code>Vercel</code>因为一些原因被<code>GFW</code>屏蔽，导致无法访问。各位可以通过更改相应的域名解析记录来恢复访问。<br>A记录就从<code>76.76.21.21</code> 改成 <code>52.76.85.65</code>，<code>CNAME</code>记录则是从<code>cname-vercel-dns.com.</code>改成 <code>cname-china.vercel-dns.com.</code>；关于A记录，可用的IP值也可以从这个里面找：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://gist.github.com/ChenYFan/fc2bd4ec1795766f2613b52ba123c0f8">Vercel可用解析记录IP</a>,因为是gist，大概要翻墙才能看。</p></div><p>15.访问! <a target="_blank" rel="noopener external nofollow noreferrer" href="https://twikoo.marcus233.top/">我的twikoo</a></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003153309668.png" alt="image-20221003153309668"></p><h2 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h2><ol><li>打开<code>themes\butterfly\_config.yml</code></li><li>填入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Twikoo</span></span><br><span class="line"><span class="comment"># https://github.com/imaegoo/twikoo</span></span><br><span class="line"><span class="attr">twikoo:</span></span><br><span class="line">  <span class="attr">envId:</span> <span class="comment"># https://twikoo.marcus233.top/</span></span><br><span class="line">  <span class="attr">region:</span> <span class="string">ap-shanghai</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure><ol start="3"><li>hexo三联</li></ol><h2 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h2><div class="note info simple"><p>来自<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/p/8b1dde4c.html">Twikoo魔改样式分享-博客评论系统的定制皮肤 | 张洪Heo (zhheo.com)</a></p></div><h3 id="魔改内容"><a href="#魔改内容" class="headerlink" title="魔改内容"></a>魔改内容</h3><ol><li><p>先输入评论再输入个人信息</p></li><li><p>信息整合，让结构更有条理</p></li><li><p>将工具放入输入框，更符合直觉</p></li><li><p>删除了我个人不需要的按钮</p></li></ol><h3 id="装配"><a href="#装配" class="headerlink" title="装配"></a>装配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn1.tianli0.top/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js</span><br></pre></td></tr></table></figure><p>由<a target="_blank" rel="noopener external nofollow noreferrer" href="https://tianli-blog.club/jsd/">免费JSD镜像使用手册 – Tianli’s blog (tianli-blog.club)</a>提供</p><h3 id="查看样式"><a href="#查看样式" class="headerlink" title="查看样式"></a>查看样式</h3><p><a href="#post-comment">查看样式</a></p>
+              </div>
+            </details>
+
+<h1 id="valine"><a href="#valine" class="headerlink" title="valine"></a>valine</h1><details class="folding-tag" blue><summary> 点击查valine教程 </summary>
+              <div class='content'>
+              <h2 id="获取APP-ID-和-APP-Key"><a href="#获取APP-ID-和-APP-Key" class="headerlink" title="获取APP ID 和 APP Key"></a>获取APP ID 和 APP Key</h2><ol><li><p>请先<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/login.html#/signin">登录</a>或<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/login.html#/signup">注册</a> <code>LeanCloud</code>, 进入<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/applist.html#/apps">控制台</a>后点击左下角<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/applist.html#/newapp">创建应用</a>：</p></li><li><p>应用创建好以后，进入刚刚创建的应用，选择左下角的<code>设置</code>&gt;<code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了：</p></li></ol><h2 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h2><ol><li>打开<code>themes\butterfly\_config.yml</code></li><li>填入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">这一项</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">这一项</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">monsterid</span> <span class="comment"># gravatar style https://valine.js.org/#/avatar</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span></span><br><span class="line">  <span class="attr">bg:</span> <span class="comment"># valine background</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure><ol start="3"><li>hexo三联</li></ol>
+              </div>
+            </details>
+
+<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><div class='checkbox blue checked'><input type="checkbox" checked="checked"/>
+            <p>Twikoo</p>
+            </div>
+
+<div class='checkbox blue checked'><input type="checkbox" checked="checked"/>
+            <p>Valine</p>
+            </div>
+
+<div class='checkbox blue'><input type="checkbox" />
+            <p>Waline</p>
+            </div></article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>Hexo的twikoo,valine和waline配置</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://blog.marcus233.top/p/a2c6a34f.html">https://blog.marcus233.top/p/a2c6a34f.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>Marcus</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-10-02</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2022-12-30</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener external nofollow noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener external nofollow noreferrer" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/twikoo/">twikoo</a><a class="post-meta__tags" href="/tags/valine/">valine</a><a class="post-meta__tags" href="/tags/waline/">waline</a></div><div class="post_share"><div class="social-share" data-image="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeedna8xj22bc1awwzs.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">打赏</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://bu.dusays.com/2022/11/06/6367103b857fd.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bu.dusays.com/2022/11/06/6367103b857fd.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://bu.dusays.com/2022/11/06/63671134f1291.png" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bu.dusays.com/2022/11/06/63671134f1291.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></button></div><audio id="coinAudio" src="https://assets.akilar.top@1.0.16/audio/coin.mp3"></audio><script defer="defer" src="/"></script><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/2022week48.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeaz9z2oj25eg30iazi.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">第48周周记</div></div></a></div><div class="next-post pull-right"><a href="/p/72351e9.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoecgkrg1j22yo1o0e81.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">鱼了个鱼</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/p/586ff2f5.html" title="关于我鸽了这么久这件事"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeci4v4jj22qh1n97wh.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-17</div><div class="title">关于我鸽了这么久这件事</div></div></a></div><div><a href="/p/42a88467.html" title="记一次全体故障"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gznu8oc8ftj22t0140kjl.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-04</div><div class="title">记一次全体故障</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Valine</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img01.anzhiy.cn/useruploads/8/2022/12/15/639adf5b8806a.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Marcus</div><div class="author-info__description">人间值得，未来可期</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/message/"><div class="headline">评论数</div><div class="length-num">5</div></a></div><a id="card-info-btn" href="/about/"><i class="fa-fw fa-solid fa-arrow-up-right-from-square"></i><span>了解更多</span></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/marcusyyds" rel="external nofollow noreferrer" target="_blank" title="Github"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-github"></use></svg></a><a class="social-icon faa-parent animated-hover" href="mailto:marcus-zh@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xinxi"></use></svg></a><a class="social-icon faa-parent animated-hover" href="/atom.xml" target="_blank" title="RSS"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xinhao"></use></svg></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1024450661" rel="external nofollow noreferrer" target="_blank" title="BiliBili"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-bilibili"></use></svg></a><a class="social-icon faa-parent animated-hover" href="tencent://Message/?Uin=3105950984&amp;amp;websiteName=local.edu.com:8888=&amp;amp;Menu=yes" rel="external nofollow noreferrer" target="_blank" title="QQ"><svg class="icon faa-tada" aria-hidden="true"><use xlink:href="#icon-QQ"></use></svg></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><svg class="icon faa-tada fas fa-bullhorn fa-shake" aria-hidden="true"><use xlink:href="#icon-gonggao1"></use></svg><span>公告</span></div><div class="announcement_content">本站已更换域名为<br>blog.marcus233.top<div class="xpand" style="height:200px;"></div></div></div><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text">评论区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Twikoo"><span class="toc-number">1.1.</span> <span class="toc-text">Twikoo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vercel%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">vercel配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">主题文件配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AD%94%E6%94%B9"><span class="toc-number">1.4.</span> <span class="toc-text">魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AD%94%E6%94%B9%E5%86%85%E5%AE%B9"><span class="toc-number">1.4.1.</span> <span class="toc-text">魔改内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%85%8D"><span class="toc-number">1.4.2.</span> <span class="toc-text">装配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%A0%B7%E5%BC%8F"><span class="toc-number">1.4.3.</span> <span class="toc-text">查看样式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#valine"><span class="toc-number">2.</span> <span class="toc-text">valine</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96APP-ID-%E5%92%8C-APP-Key"><span class="toc-number">2.1.</span> <span class="toc-text">获取APP ID 和 APP Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">主题文件配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TODO"><span class="toc-number">3.</span> <span class="toc-text">TODO</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/2022.html" title="2022年度总结"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/404.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="2022年度总结"/></a><div class="content"><a class="title" href="/p/2022.html" title="2022年度总结">2022年度总结</a><time datetime="2022-12-31T15:59:59.000Z" title="发表于 2022-12-31 23:59:59">2022-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/2022week50.html" title="第50周周记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gznu0r1vubj22wb2ex1kz.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="第50周周记"/></a><div class="content"><a class="title" href="/p/2022week50.html" title="第50周周记">第50周周记</a><time datetime="2022-12-10T13:59:31.000Z" title="发表于 2022-12-10 21:59:31">2022-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/42a88467.html" title="记一次全体故障"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gznu8oc8ftj22t0140kjl.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="记一次全体故障"/></a><div class="content"><a class="title" href="/p/42a88467.html" title="记一次全体故障">记一次全体故障</a><time datetime="2022-12-04T02:20:34.000Z" title="发表于 2022-12-04 10:20:34">2022-12-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/2022week49.html" title="第49周周记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeecn4fnj23po2eaka1.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="第49周周记"/></a><div class="content"><a class="title" href="/p/2022week49.html" title="第49周周记">第49周周记</a><time datetime="2022-12-03T11:34:06.000Z" title="发表于 2022-12-03 19:34:06">2022-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/2022week48.html" title="第48周周记"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeaz9z2oj25eg30iazi.jpg" onerror="this.onerror=null;this.src='/img/404.png'" alt="第48周周记"/></a><div class="content"><a class="title" href="/p/2022week48.html" title="第48周周记">第48周周记</a><time datetime="2022-11-26T02:34:23.000Z" title="发表于 2022-11-26 10:34:23">2022-11-26</time></div></div></div></div></div></div></main><footer id="footer"><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" href="https://www.marcus233.top/" title="Marcus的主页" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-home" style="font-size: 1.0rem;"></i></a><a class="deal_link" target="_blank" href="https://blog.marcus233.top/" title="Marcus的Blog" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-blog" style="font-size: 1.0rem;"></i></a><a class="deal_link" target="_blank" href="https://status.marcus233.top/" title="服务状态" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-sellsy" style="font-size: 1.1rem;"></i></a><a class="deal_link" href="mailto:marcus-zh@qq.com" rel="external nofollow" title="mail" data-pjax-state="data-pjax-state"><i class="iconfont icon-email" style="font-size: 1.1rem;"></i></a><img class="footer_mini_logo entered exited" title="返回顶部" onclick="btf.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img01.anzhiy.cn/useruploads/8/2022/12/15/639adf5b8806a.png"/><a class="deal_link" target="_blank" href="http://github.com/marcusyyds" title="Github" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-github-alt" style="font-size: 1.1rem;"></i></a><a class="deal_link" target="_blank" href="https://gitee.com/MarcusYYDS" title="Gitee" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-gitee-fill-round" style="font-size: 1.1rem;"></i></a><a class="deal_link" target="_blank" href="https://space.bilibili.com/4218173/" title="BiliBili" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-bilibili-line" style="font-size: 1.1rem;"></i></a><a class="deal_link" target="_blank" href="tencent://Message/?Uin=3105950984&amp;amp;websiteName=local.edu.com:8888=&amp;amp;Menu=yes" title="QQ" rel="noopener external nofollow noreferrer noopener"><i class="iconfont icon-qq" style="font-size: 1.1rem;"></i></a></div><div id="heo-footer"><div class="footer-group"><h3 class="footer-title">中学</h3><div class="footer-links"><a class="footer-item" href="/tags/周记/" data-pjax-state="data-pjax-state">周记本</a></div></div><div class="footer-group"><h3 class="footer-title">开发</h3><div class="footer-links"><a class="footer-item" href="/tags/Hexo/" data-pjax-state="data-pjax-state">Hexo魔改</a><a class="footer-item" href="/tags/前端/" data-pjax-state="data-pjax-state">网页前端</a><a class="footer-item" href="/tags/Python/" data-pjax-state="data-pjax-state">Python程序</a><a class="footer-item" href="/tags/Vex/" data-pjax-state="data-pjax-state">VEX C++程序</a></div></div><div class="footer-group"><h3 class="footer-title">生活</h3><div class="footer-links"><a class="footer-item" href="/music/" data-pjax-state="data-pjax-state">我的音乐</a><a class="footer-item" href="/movies/" data-pjax-state="data-pjax-state">我的电影</a><a class="footer-item" href="/picture/" data-pjax-state="data-pjax-state">我的图库 </a><a class="footer-item" href="/picture/" data-pjax-state="data-pjax-state">我的图库 </a><a class="footer-item" href="/book/" data-pjax-state="data-pjax-state">我的小说</a></div></div><div class="footer-group"><h3 class="footer-title">文章</h3><div class="footer-links"> <a class="footer-item" href="/archives/" data-pjax-state="data-pjax-state">我的归档</a><a class="footer-item" href="/tags/" data-pjax-state="data-pjax-state">我的标签</a><a class="footer-item" href="/categories/" data-pjax-state="data-pjax-state">我的分类</a></div></div><div class="footer-group"><h3 class="footer-title">链接</h3><div class="footer-links"> <a class="footer-item" href="/link/" data-pjax-state="data-pjax-state">友联</a><a class="footer-item" href="/box/" data-pjax-state="data-pjax-state">百宝箱</a><a class="footer-item" href="/timeline/" data-pjax-state="data-pjax-state">时间线</a><a class="footer-item" href="/nav/" data-pjax-state="data-pjax-state">导航</a><a class="footer-item" href="https://status.marcus233.top/" target="_blank" rel="noopener nofollow">监控</a><a class="footer-item" href="/essay/" data-pjax-state="data-pjax-state">即刻短文</a><a class="footer-item" href="/message/" data-pjax-state="data-pjax-state">留言墙</a></div></div></div><div id="footer-banner"><div class="footer-banner-links"><div class="footer-banner-left"><div id="footer-banner-tips"><div class="copyright">©2022 - 2022 By Marcus</div></div></div><div class="footer-banner-right"><a class="footer-banner-link" href="/rss.xml" data-pjax-state="data-pjax-state">订阅</a><a class="footer-banner-link" href="/about/" data-pjax-state="data-pjax-state">关于</a><a class="footer-banner-link" target="_blank" href="https://icp.gov.moe/" rel="noopener external nofollow noreferrer noopener">萌ICP备20230221,20230002,20236688号</a></div></div></div></footer></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="to_comment" type="button" title="直达评论" onclick="FixedCommentBtn();"><i class="fas fa-comments"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();" rel="external nofollow noreferrer"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();" rel="external nofollow noreferrer"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();" rel="external nofollow noreferrer"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();" rel="external nofollow noreferrer"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();" rel="external nofollow noreferrer"><i class="iconfont icon-baidu"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();" rel="external nofollow noreferrer"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()" rel="external nofollow noreferrer"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()" rel="external nofollow noreferrer"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()" rel="external nofollow noreferrer"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="./#post-comment"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()" rel="external nofollow noreferrer"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.click()" rel="external nofollow noreferrer"><i class="fa fa-arrows-alt"></i><span>全屏显示</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:rmf.switchDarkMode();" rel="external nofollow noreferrer"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:rmf.translate();" rel="external nofollow noreferrer"><i class="iconfont icon-fanti"></i><span>繁简转换</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();" rel="external nofollow noreferrer"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="javascript:window.location.href=&quot;/about/&quot;;" rel="external nofollow noreferrer"><i class="fa fa-info-circle"></i><span>版权声明</span></a></div></div><div><script src="https://cdn1.tianli0.top/gh/marcusyyds/marcusyyds.github.io/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.6/translate/tw_cn.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://npm.elemecdn.com/anzhiyu-blog@2.1.2/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.marcus233.top/',
+      region: 'ap-shanghai',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.marcus233.top/',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'BD2yjX3fWNbBPMejrNK6AdMT-gzGzoHsz',
+      appKey: '5UjefE5tkJarUBnuGtrlldmf',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/valine/1.4.16/Valine.min.js').then(initValine)
+}
+
+if ('Twikoo' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.marcus233.top/',
+        region: 'ap-shanghai',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script><script async data-pjax src="/js/custom.js"></script><script async src="/js/iconfont.js"></script><script async src="/js/rgb.js"></script><script async src="//at.alicdn.com/t/c/font_3823102_phxp2d4oktp.js"></script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script>LA.init({id:"Ju8czrZqekCtSCQY",ck:"Ju8czrZqekCtSCQY",autoTrack:true,hashMode:true})</script><script>new LingQue.Monitor().init({id:"Ju8czrZqekCtSCQY",sendSuspicious:true});</script><script async src="/js/nav_menu.js"></script><script defer data-pjax src="/js/rightMenu.js"></script><script data-pjax src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script async src="/js/title.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/js/lunar.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/js/day.js"></script><script async src="/js/coin.js"></script><script async src="/anzhiyu/random.js"></script><script data-pjax src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/js/swiper.min.js"></script><script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><script src="/js/bber.js"></script><script async data-pjax src="/js/waterfall.js"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://alist.anzhiy.cn/d/anzhiyu/js/Meting2.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="app-refresh" id="app-refresh" style="position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;"><div class="app-refresh-wrap" style=" display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;"><label>✨ 有新文章啦！ 👉</label><a href="javascript:void(0)" rel="external nofollow noreferrer" onclick="location.reload()"><span style="color: #fff;text-decoration: underline;cursor: pointer;">😘 点击查看 😍</span></a></div></div><script>if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker.controller) {
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+showNotification()
+})
+}
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('/sw.js')
+})
+}
+function showNotification() {
+if (GLOBAL_CONFIG.Snackbar) {
+var snackbarBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+GLOBAL_CONFIG.Snackbar.bgLight :
+GLOBAL_CONFIG.Snackbar.bgDark
+var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+Snackbar.show({
+text: '✨ 有新文章啦！ 👉',
+backgroundColor: snackbarBg,
+duration: 500000,
+pos: snackbarPos,
+actionText: '😘 点击查看 😍',
+actionTextColor: '#fff',
+onActionClick: function(e) {
+location.reload()
+},
+})
+} else {
+var showBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+'#49b1f5' :
+'#1f1f1f'
+var cssText = `top: 0; background: ${showBg};`
+document.getElementById('app-refresh').style.cssText = cssText
+}
+}</script></div><!-- hexo injector body_end start --><script>
+    // 全局变量声明区域
+    var fdata = {
+      apiurl: 'https://fcircle.marcus233.top/',
+      initnumber: 30, //【可选】页面初始化展示文章数量
+      stepnumber: 30, //【可选】每次加载增加的篇数
+      error_img: 'https://npm.elemecdn.com/akilar-candyassets/image/404.gif' //【可选，头像图片加载失败时的默认头像】
+    }
+    //存入本地存储
+    localStorage.setItem("fdatalist",JSON.stringify(fdata))
+    </script>
+    <script data-pjax src="https://npm.elemecdn.com/hexo-filter-fcircle-anzhiyu@1.1.2/assets/js/fetch.js"></script><script data-pjax src="/js/random-friends-post.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('null');
+    var item_html = '<div class="swiper_container_card" style="height: auto;width: 100%"><div id="bannerGroup"><div id="random"><div id="random-banner"><canvas id="peoplecanvas"></canvas></div><a id="random-hover" style="width:100%;height:auto;" href="javascript:toRandomPost()" rel="external nofollow noreferrer" one-link-mark="yes"><i class="fa fa-paper-plane" style="margin-left:10px"></i><div style="margin-left:10px">随便逛逛<i class="fa-solid fa-arrow-right" style="margin-left:10px"></i></div></a></div><div class="categoryGroup"><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-blue)"><a class="categoryButton blue" onclick="pjax.loadUrl(&quot;/categories/前端/&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="categoryButtonText">前端</span><i class="fas fa-dove"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-red)"><a class="categoryButton red" onclick="pjax.loadUrl(&quot;/categories/大学/&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="categoryButtonText">大学</span><i class="fas fa-burn"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-green)"><a class="categoryButton green" onclick="pjax.loadUrl(&quot;/categories/生活/&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="categoryButtonText">生活</span><i class="fas fa-book"></i></a></div></div></div><div id="swiper_container_blog"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;p/586ff2f5.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" title="关于我鸽了这么久这件事"><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeci4v4jj22qh1n97wh.jpg" alt="图片" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-17</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;p/586ff2f5.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">关于我鸽了这么久这件事</a><div class="blog-slider__text">关于我鸽了这么久这件事</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;p/586ff2f5.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;p/6709fc4a.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" title="cloudreve--好用的网盘系统(Replit搭建)"><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzntnm2ce1j22yn28eb2b.jpg" alt="图片" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-28</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;p/6709fc4a.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">cloudreve--好用的网盘系统(Replit搭建)</a><div class="blog-slider__text">使用Replit搭建Cloudreve 演示地址 Demo Cloudreve简介</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;p/6709fc4a.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;p/e70bf4f.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" title="Replit.com--超好用的类Linux服务器"><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gznu8tk060j227r1uhqv5.jpg" alt="图片" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-25</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;p/e70bf4f.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Replit.com--超好用的类Linux服务器</a><div class="blog-slider__text">分享一下Replit.com 官网 Replit(超好用的！)</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;p/e70bf4f.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;p/4a17b156.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" title="Hello World"><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzntjix3drj23y53agnpf.jpg" alt="图片" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-08-09</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;p/4a17b156.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">Hello World</a><div class="blog-slider__text">Welcome to Hexo! This is your very first post.</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;p/4a17b156.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div><div id="topGroup"><div class="topGroup"><div class="top-group-list-item"><div class="post_cover left_radius"><a onclick="pjax.loadUrl(&quot;p/4a17b156.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="Hello World" data-pjax-state="data-pjax-state"><span class="top-group-text">荐</span><img class="post_bg" alt="Hello World" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzntjix3drj23y53agnpf.jpg" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a></div><div class="top-group-info"><a class="article-title" onclick="pjax.loadUrl(&quot;p/4a17b156.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="Hello World" data-pjax-state="data-pjax-state">Hello World</a></div></div><div class="top-group-list-item"><div class="post_cover left_radius"><a onclick="pjax.loadUrl(&quot;p/6709fc4a.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="cloudreve--好用的网盘系统(Replit搭建)" data-pjax-state="data-pjax-state"><span class="top-group-text">荐</span><img class="post_bg" alt="cloudreve--好用的网盘系统(Replit搭建)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzntnm2ce1j22yn28eb2b.jpg" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a></div><div class="top-group-info"><a class="article-title" onclick="pjax.loadUrl(&quot;p/6709fc4a.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="cloudreve--好用的网盘系统(Replit搭建)" data-pjax-state="data-pjax-state">cloudreve--好用的网盘系统(Replit搭建)</a></div></div><div class="top-group-list-item"><div class="post_cover left_radius"><a onclick="pjax.loadUrl(&quot;p/72351e9.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="鱼了个鱼" data-pjax-state="data-pjax-state"><span class="top-group-text">荐</span><img class="post_bg" alt="鱼了个鱼" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoecgkrg1j22yo1o0e81.jpg" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a></div><div class="top-group-info"><a class="article-title" onclick="pjax.loadUrl(&quot;p/72351e9.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="鱼了个鱼" data-pjax-state="data-pjax-state">鱼了个鱼</a></div></div><div class="top-group-list-item"><div class="post_cover left_radius"><a onclick="pjax.loadUrl(&quot;p/a2c6a34f.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="Hexo的twikoo,valine和waline配置" data-pjax-state="data-pjax-state"><span class="top-group-text">荐</span><img class="post_bg" alt="Hexo的twikoo,valine和waline配置" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tvax1.sinaimg.cn/large/466f79e8ly1gzoeedna8xj22bc1awwzs.jpg" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a></div><div class="top-group-info"><a class="article-title" onclick="pjax.loadUrl(&quot;p/a2c6a34f.html&quot;);" href="javascript:void(0);" rel="external nofollow noreferrer" alt="" title="Hexo的twikoo,valine和waline配置" data-pjax-state="data-pjax-state">Hexo的twikoo,valine和waline配置</a></div></div><div class="top-group-list-none"></div><div class="top-group-list-none"></div><div class="top-group-list-none"></div></div></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/js/swiper.min.js"></script><script defer data-pjax src="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu-pro/lib/swiper_init.js"></script><script data-pjax src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/gsap/3.9.1/gsap.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper-anzhiyu-pro/lib/people.min.js"></script><script async src="/anzhiyu/random.js"></script><script async src="/js/ali_font.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '1.2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__fadeIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('wowpanels');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://githubcalendar.marcus233.top/api?MarcusYYDS",['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c'],'MarcusYYDS')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
