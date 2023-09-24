@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head><!-- hexo injector head_begin start --><script>
+            (() => {
+                let sw = navigator.serviceWorker
+                let error = () => GLOBAL_CONFIG.Snackbar !== undefined && mar.snackbarShow('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                if (!sw?.register('/sw.js')
+                    ?.then(() => console.log("Service Worker 注册成功！"))
+                    ?.catch(error)
+                ) error()
+            })()
+        </script><!-- hexo injector head_begin end -->
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Hexo的评论配置 - Marcus</title>
+
+  
+    <meta name="description" content="Hexo的twikoo,valine和waline配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo的评论配置">
+<meta property="og:url" content="https://blog.marcus233.top/p/comments.html">
+<meta property="og:site_name" content="Marcus">
+<meta property="og:description" content="Hexo的twikoo,valine和waline配置">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/202210031037.jpeg">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105658.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105757.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110323.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105929.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110027.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110444.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110544.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003115225.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003104350.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003120532.png">
+<meta property="og:image" content="https://vercel.com/button">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142501.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142602.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142804.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142852.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003143110.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003151430.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151705887.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151829531.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151904018.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003152053339.png">
+<meta property="og:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003153309668.png">
+<meta property="article:published_time" content="2022-10-02T13:25:20.000Z">
+<meta property="article:modified_time" content="2022-10-04T13:25:20.000Z">
+<meta property="article:author" content="Marcus">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Twikoo">
+<meta property="article:tag" content="Valine">
+<meta property="article:tag" content="Waline">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/202210031037.jpeg">
+  
+  
+  
+  <meta name="keywords" content="Hexo的评论配置,Marcus,twikoo,valine,waline">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Marcus" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png">
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body><!-- hexo injector body_begin start --><script async src="/sw-dom.js"></script><!-- hexo injector body_begin end -->
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">Marcus</div><div class="sub cap">人间值得，未来可期</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/link/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Hexo的评论配置</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Twikoo"><span class="toc-text">Twikoo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vercel%E9%85%8D%E7%BD%AE"><span class="toc-text">vercel配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-text">主题文件配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AD%94%E6%94%B9"><span class="toc-text">魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AD%94%E6%94%B9%E5%86%85%E5%AE%B9"><span class="toc-text">魔改内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%85%8D"><span class="toc-text">装配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%A0%B7%E5%BC%8F"><span class="toc-text">查看样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96APP-ID-%E5%92%8C-APP-Key"><span class="toc-text">获取APP ID 和 APP Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-text">主题文件配置</span></a></li></ol></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/">我的项目</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-10-02T13:25:20.000Z">2022-10-02</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>Hexo的评论配置</span></h1>
+<details class="tag-plugin folding" ><summary><span>blue, 点击查看更新记录</span></summary><div class="body"><div class="tag-plugin timeline"><div class="timenode" index="0"><div class="header"><!-- timeline 2022.10.4 --><p>更新valine</p><!-- endtimeline --><!-- timeline 2022.10.3 --><p>更新twikoo魔改</p><!-- endtimeline --><!-- timeline 2022.10.3 --><p>更新twikoo</p><!-- endtimeline --><!-- timeline 2022.10.2 --><p>创建文章</p><!-- endtimeline --></div><div class="body fs14"></div></div></div></div></details>
+
+<details class="tag-plugin folding" ><summary><span>blue, 点击查看参考教程</span></summary><div class="body"><table><thead><tr><th><strong>参考方向</strong></th><th><strong>教程原贴</strong></th><th>魔改方向</th></tr></thead><tbody><tr><td>twikoo</td><td><a href="twikoo.js.org">twikoo官方文档</a></td><td><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/p/8b1dde4c.html">Twikoo魔改样式分享-博客评论系统的定制皮肤 张洪Heo (blog.zhheo.com)</a></td></tr><tr><td>valine</td><td><a href="valine.js.org">valine官方文档</a></td><td></td></tr><tr><td>waline</td><td><a href="waline.js.org">waline官方文档</a></td><td></td></tr></tbody></table></div></details>
+
+<h1 id="评论区别"><a href="#评论区别" class="headerlink" title="评论区别"></a>评论区别</h1><table>
+<thead>
+<tr>
+<th>评论</th>
+<th>数据库</th>
+<th>媒介</th>
+<th>适用人群</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>twikoo</td>
+<td><a href="mongodb.com">MongoDB</a></td>
+<td>vercel(需要自己的域名)</td>
+<td>有域名,第一次用MongoDB</td>
+</tr>
+<tr>
+<td>valine</td>
+<td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td>
+<td>无</td>
+<td>无域名</td>
+</tr>
+<tr>
+<td>waline</td>
+<td><a href="leancloud.app">LeanCloud</a>(建议用国际版(.app域名))</td>
+<td>vercel(需要自己的域名)</td>
+<td>有域名不是,第一次用MongoDB</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>评论</th>
+<th>介绍</th>
+<th>有无后端</th>
+<th>Markdown 语法支持</th>
+<th>Emoji</th>
+<th>图片支持</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>twikoo</td>
+<td>一个简洁、安全、免费的静态网站评论系统</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>valine</td>
+<td>一款快速、简洁且高效的无后端评论系统</td>
+<td>无</td>
+<td>有</td>
+<td>有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>waline</td>
+<td>一款从 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://valine.js.org/">Valine</a> 衍生的带后端评论系统</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+</tbody></table>
+<details class="tag-plugin folding" ><summary><span>blue, 点击查twikoo特点</span></summary><div class="body"><p>一. 简单<br>    1. 免费搭建（使用云开发 &#x2F; Vercel &#x2F; 私有服务器作为评论后台）<br>    2. 简单部署（支持云开发 &#x2F; Vercel 一键部署）<br>    二. 易用<br>    1. 支持回复、点赞<br>    2. 无需额外适配，支持搭配浅色主题与深色主题使用<br>    3. 支持 API 调用，批量获取文章评论数、最新评论<br>    4. 访客在昵称栏输入 QQ 号，会自动补全 QQ 昵称和 QQ 邮箱<br>    5. 访客填写数字 QQ 邮箱，会使用 QQ 头像作为评论头像<br>    6. 支持评论框粘贴图片（可禁用）<br>    7. 支持插入图片（可禁用）<br>    8. 支持去不图床、云开发图床<br>    9. 支持插入表情（可禁用）<br>    10. 支持 Ctrl + Enter 快捷回复<br>    11. 评论框内容实时保存草稿，刷新不会丢失<br>    12. 支持 Katex 公式<br>    13. 支持按语言的代码高亮<br>    三. 安全<br>    1. 隐私信息安全（通过云函数控制敏感字段（邮箱、IP、环境配置等）不会泄露）<br>    2. 支持 Akismet 垃圾评论检测（需自行注册 akismet.com）<br>    3. 支持腾讯云内容安全垃圾评论检测（需自行注册 腾讯云内容安全）<br>    4. 支持人工审核模式<br>    5. 防 XSS 注入<br>    6. 支持限制每个 IP 每 10 分钟最多发表多少条评论<br>    四. 即时<br>    1. 支持邮件提醒（访客和博主）<br>    2. 支持微信提醒（仅针对博主，基于 Server酱，需自行注册）<br>    3. 支持 QQ 提醒（仅针对博主，基于 Qmsg酱，需自行注册）<br>    4. 支持 QQ 提醒（针对博主QQ或者群，基于 go-cqhttp，需自己有服务器）<br>    五. 个性<br>    1. 支持自定义评论框背景图片<br>    2. 支持自定义“博主”标识文字<br>    3. 支持自定义通知邮件模板<br>    4. 支持自定义评论框提示信息（placeholder）<br>    5. 支持自定义表情列表（兼容 OwO 的数据格式）<br>    6. 支持自定义【昵称】【邮箱】【网址】必填 &#x2F; 选填<br>    7. 支持自定义代码高亮主题<br>    六. 便捷管理<br>    1. 内嵌式管理面板，通过密码登录，可方便地查看评论、隐藏评论、删除评论、修改配置<br>    2. 支持隐藏管理入口，通过输入暗号显示<br>    3. 支持从 Valine、Artalk、Disqus 导入评论<br>    七. 缺点<br>    1. 不支持 IE</p></div></details>
+<details class="tag-plugin folding" ><summary><span>blue, 点击查valine特点</span></summary><div class="body"><ol><li>快速</li><li>安全</li><li>Emoji 😉</li><li>无后端实现</li><li>MarkDown 全语法支持</li><li>轻量易用</li><li>文章阅读量统计 v1.2.0+</li></ol></div></details>
+<details class="tag-plugin folding" ><summary><span>blue, 点击查valine特点</span></summary><div class="body"><ol><li>邮件通知</li><li>微信通知</li><li>QQ 通知</li><li>Telegram 通知</li><li>Akismet</li><li>文章统计</li><li>多语言同步</li><li>自定义语言支持</li><li>登录支持</li><li>评论管理</li><li>评论删除</li><li>其它数据库支持 (已支持 LeanCloud, MySQL, MongoDB, SQLite, PostgreSQL, CloudBase, Deta, 轻服务, GitHub)</li><li>基于 IP 的发布评论频率限制</li><li>基于关键词的评论过滤限制</li><li>IP 黑名单</li><li>重复内容检测</li><li>CloudBase 腾讯云开发部署支持</li><li>社交登录</li><li>置顶评论</li><li>评论赞踩</li></ol></div></details>
+<h2 id="Twikoo"><a href="#Twikoo" class="headerlink" title="Twikoo"></a>Twikoo</h2><details class="tag-plugin folding" ><summary><span>blue, 点击查twikoo教程</span></summary><div class="body"><p>数据库设置</p><p>1.申请 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.mongodb.com/cloud/atlas/register">MongoDB</a> 账号</p>   <details class="tag-plugin folding" ><summary><span>blue, 点击查看图片教程</span></summary><div class="body"><div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/202210031037.jpeg" fancybox="true"/></div></div><p>填入信息</p><div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105658.png" fancybox="true"/></div></div><div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105757.png" fancybox="true"/></div></div><p>小调查填写</p><div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110323.png" fancybox="true"/></div></div><p>选择<code>FREE</code></p></div></details><p>2.创建免费 MongoDB 数据库，区域选择 <code>AWS / N. Virginia (us-east-1)</code></p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003105929.png" fancybox="true"/></div></div>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110027.png" fancybox="true"/></div></div><p>3.设置<code>username</code>和<code>password</code>并记牢</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110444.png" fancybox="true"/></div></div><p>4.<code>IP Address</code>填入<code>0.0.0.0</code>然后add,最后完成关闭,返回控制台</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003110544.png" fancybox="true"/></div></div>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003115225.png" fancybox="true"/></div></div><p>5.在 Clusters 页面点击 CONNECT,选择<code>Connect your application</code></p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003104350.png" fancybox="true"/></div></div><p>6.<code>DRIVER</code>选择Node.js,<code>VERSION</code>选择4.1 or later</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003120532.png" fancybox="true"/></div></div><p>7.记住<code>mongodb+srv://&lt;user&gt;:&lt;password&gt;</code>这段文字,并将<code>&lt;user&gt;</code>和<code>&lt;password&gt;</code>换成自己的</p><h2 id="vercel配置"><a href="#vercel配置" class="headerlink" title="vercel配置"></a>vercel配置</h2><p>1.申请 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/signup">Vercel</a> 账号</p><p>2.一键部署进vercel<br>  <a target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/import/project?template=https://github.com/imaegoo/twikoo/tree/main/src/server/vercel-min"><div class="tag-plugin image"><div class="image-bg"><img class="" src="https://vercel.com/button" fancybox="true"/></div></div></a></p><p>3.有什么用什么</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142501.png" fancybox="true"/></div></div><p>4.选择账号和设置仓库名称</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142602.png" fancybox="true"/></div></div><p>5.等待部署完成</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142804.png" fancybox="true"/></div></div><p>6.前往控制台</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003142852.png" fancybox="true"/></div></div><p>7.点击<code>Setting</code>-<code>environment-variables</code>新建一个name为<code>MONGODB_URI</code>,值为上面第七步的数据库连接字符串</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003143110.png" fancybox="true"/></div></div><p>8.重新部署一下</p>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/20221003151430.png" fancybox="true"/></div></div>   <div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151705887.png" fancybox="true"/></div></div><p>11.等待部署ing</p><p>12.<div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151829531.png" fancybox="true"/></div></div></p><p>13.完成<div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003151904018.png" fancybox="true"/></div></div></p><p>14.绑定域名<div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003152053339.png" fancybox="true"/></div></div></p><table><thead><tr><th>Type</th><th>Name</th><th>Value</th></tr></thead><tbody><tr><td>CNAME</td><td>twikoo</td><td>cname.vercel-dns.com</td></tr></tbody></table><div class="tip warning faa-horizontal animated"><p>2021年5月初，<code>Vercel</code>因为一些原因被<code>GFW</code>屏蔽，导致无法访问。各位可以通过更改相应的域名解析记录来恢复访问。<br>A记录就从<code>76.76.21.21</code> 改成 <code>52.76.85.65</code>，<code>CNAME</code>记录则是从<code>cname-vercel-dns.com.</code>改成 <code>cname-china.vercel-dns.com.</code>；关于A记录，可用的IP值也可以从这个里面找：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://gist.github.com/ChenYFan/fc2bd4ec1795766f2613b52ba123c0f8">Vercel可用解析记录IP</a>,因为是gist，大概要翻墙才能看。</p></div><p>15.访问! <a target="_blank" rel="noopener external nofollow noreferrer" href="https://twikoo.marcus233.top/">我的twikoo</a></p><div class="tag-plugin image"><div class="image-bg"><img class="" src="https://npm.elemecdn.com/marcusyyds-assets/img/2022-10-03/image-20221003153309668.png" fancybox="true"/></div></div><h2 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h2><ol><li>打开<code>themes\butterfly\_config.yml</code></li><li>填入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Twikoo</span></span><br><span class="line"><span class="comment"># https://github.com/imaegoo/twikoo</span></span><br><span class="line"><span class="attr">twikoo:</span></span><br><span class="line">  <span class="attr">envId:</span> <span class="comment"># https://twikoo.marcus233.top/</span></span><br><span class="line">  <span class="attr">region:</span> <span class="string">ap-shanghai</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure><ol start="3"><li>hexo三联</li></ol><h2 id="魔改"><a href="#魔改" class="headerlink" title="魔改"></a>魔改</h2><div class="tag-plugin note" color="cyan"><div class="title">来自[Twikoo魔改样式分享-博客评论系统的定制皮肤</div><div class="body"><p>| 张洪Heo (zhheo.com)](<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/p/8b1dde4c.html">https://blog.zhheo.com/p/8b1dde4c.html</a>)</p></div></div><h3 id="魔改内容"><a href="#魔改内容" class="headerlink" title="魔改内容"></a>魔改内容</h3><ol><li><p>先输入评论再输入个人信息</p></li><li><p>信息整合，让结构更有条理</p></li><li><p>将工具放入输入框，更符合直觉</p></li><li><p>删除了我个人不需要的按钮</p></li></ol><h3 id="装配"><a href="#装配" class="headerlink" title="装配"></a>装配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js</span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn1.tianli0.top/gh/zhheo/twikoo@dev/dist/twikoo.all.min.js</span><br></pre></td></tr></table></figure><p>由<a target="_blank" rel="noopener external nofollow noreferrer" href="https://tianli-blog.club/jsd/">免费JSD镜像使用手册 – Tianli’s blog (tianli-blog.club)</a>提供</p><h3 id="查看样式"><a href="#查看样式" class="headerlink" title="查看样式"></a>查看样式</h3><p><a href="#post-comment">查看样式</a></p></div></details>
+
+<h1 id="valine"><a href="#valine" class="headerlink" title="valine"></a>valine</h1><details class="tag-plugin folding" ><summary><span>blue, 点击查valine教程</span></summary><div class="body"><h2 id="获取APP-ID-和-APP-Key"><a href="#获取APP-ID-和-APP-Key" class="headerlink" title="获取APP ID 和 APP Key"></a>获取APP ID 和 APP Key</h2><ol><li><p>请先<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/login.html#/signin">登录</a>或<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/login.html#/signup">注册</a> <code>LeanCloud</code>, 进入<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/applist.html#/apps">控制台</a>后点击左下角<a target="_blank" rel="noopener external nofollow noreferrer" href="https://leancloud.cn/dashboard/applist.html#/newapp">创建应用</a>：</p></li><li><p>应用创建好以后，进入刚刚创建的应用，选择左下角的<code>设置</code>&gt;<code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了：</p></li></ol><h2 id="主题文件配置"><a href="#主题文件配置" class="headerlink" title="主题文件配置"></a>主题文件配置</h2><ol><li>打开<code>themes\butterfly\_config.yml</code></li><li>填入</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">这一项</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="string">这一项</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">monsterid</span> <span class="comment"># gravatar style https://valine.js.org/#/avatar</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)</span></span><br><span class="line">  <span class="attr">bg:</span> <span class="comment"># valine background</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">option:</span></span><br></pre></td></tr></table></figure><ol start="3"><li>hexo三联</li></ol></div></details>
+
+<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><div class="tag-plugin checkbox" ><input type="checkbox"/><span>blue checked, Twikoo</span></div>
+
+<div class="tag-plugin checkbox" ><input type="checkbox"/><span>blue checked, Valine</span></div>
+
+<div class="tag-plugin checkbox" ><input type="checkbox"/><span>blue , Waline</span></div>
+
+  
+  <script>
+    let tianliGPT_postSelector = '.md-text.content.post';
+    let tianliGPT_key = 'aX6hJp9B5eZtMqY7VrFg';
+    let tianliGPT_typingAnimate = true;
+  </script>
+  <script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.13/tianli_gpt.js"></script>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/p/2022week48.html">第48周周记</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/p/yulegeyu.html">鱼了个鱼</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\p\footer.html" title="页脚插件版"><span class="title">页脚插件版</span><span class="excerpt">页脚插件版</span></a><a class="item" href="\p\hometop.html" title="首页轮播图"><span class="title">首页轮播图</span><span class="excerpt">首页轮播图</span></a><a class="item" href="\p\hometop2.html" title="新版首页轮播图"><span class="title">新版首页轮播图</span><span class="excerpt">新版首页轮播图</span></a><a class="item" href="\p\guzhan.html" title="记一次全体故障"><span class="title">记一次全体故障</span><span class="excerpt">记一次全体故障</span></a><a class="item" href="\p\yulegeyu.html" title="鱼了个鱼"><span class="title">鱼了个鱼</span><span class="excerpt">鱼了个鱼</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body twikoo'>
+      
+
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/github.com/hexo-theme-acrylic">Acrylic</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/link">友链</a><a href="/message">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于本站</a><a href="/github.com/marcusyyds">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@Marcus</a> 使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+      
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn1.tianli0.top/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn1.tianli0.top/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn1.tianli0.top/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn1.tianli0.top/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn1.tianli0.top/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn1.tianli0.top/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn1.tianli0.top/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://cdn1.tianli0.top/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://cdn1.tianli0.top/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://t.marcus233.top/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
+
+
+
+<!-- inject -->
+
+  
+    <script src="/js/plugins/bb.js"></script>
+  
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head><!-- hexo injector head_begin start --><script>
+            (() => {
+                let sw = navigator.serviceWorker
+                let error = () => GLOBAL_CONFIG.Snackbar !== undefined && mar.snackbarShow('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                if (!sw?.register('/sw.js')
+                    ?.then(() => console.log("Service Worker 注册成功！"))
+                    ?.catch(error)
+                ) error()
+            })()
+        </script><!-- hexo injector head_begin end -->
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>页脚插件版 - Marcus</title>
+
+  
+    <meta name="description" content="页脚插件版">
+<meta property="og:type" content="article">
+<meta property="og:title" content="页脚插件版">
+<meta property="og:url" content="https://blog.marcus233.top/p/footer.html">
+<meta property="og:site_name" content="Marcus">
+<meta property="og:description" content="页脚插件版">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png">
+<meta property="article:published_time" content="2023-01-29T06:08:34.000Z">
+<meta property="article:modified_time" content="2023-02-01T06:08:34.000Z">
+<meta property="article:author" content="Marcus">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png">
+  
+  
+  
+  <meta name="keywords" content="页脚插件版,Marcus">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Marcus" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png">
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body><!-- hexo injector body_begin start --><script async src="/sw-dom.js"></script><!-- hexo injector body_begin end -->
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">Marcus</div><div class="sub cap">人间值得，未来可期</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/link/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">页脚插件版</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">添加配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%87%8A%E4%B9%89"><span class="toc-text">参数释义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-text">最后</span></a></li></ol></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/">我的项目</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-01-29T06:08:34.000Z">2023-01-29</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>页脚插件版</span></h1>
+<h1 id="hexo-butterfly-footer-marcus"><a href="#hexo-butterfly-footer-marcus" class="headerlink" title="hexo-butterfly-footer-marcus"></a>hexo-butterfly-footer-marcus</h1><p>给博客添加<code>仿Heo页脚</code><br><br>适用于<code>hexo-theme-butterfly</code><br>本地版请见(页脚美化)[<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.shineyu.cn/beautify-footer.html]">https://blog.shineyu.cn/beautify-footer.html]</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/">Heo</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.leonus.cn/">Leonus</a></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="" src="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png" fancybox="true"/></div></div>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装插件,在博客根目录[Blogroot]下打开终端，运行以下指令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-butterfly-footer-marcus --save</span><br></pre></td></tr></table></figure>
+<p>如果需要随机友联的话,再运行以下指令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i yamljs --save</span><br></pre></td></tr></table></figure>
+<p>与店长的插件冲突!</p>
+<h2 id="添加配置信息"><a href="#添加配置信息" class="headerlink" title="添加配置信息"></a>添加配置信息</h2><p>以下为写法示例 在站点配置文件<code>_config.yml</code>或者主题配置文件<code>_config.butterfly.yml</code>中添加</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#hexo-butterfly-footer-marcus</span></span><br><span class="line"><span class="comment">#see https://blog.marcus233.top/p/footer.html</span></span><br><span class="line"><span class="attr">footer_beautify:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">priority:</span> <span class="number">5</span> <span class="comment">#过滤器优先权</span></span><br><span class="line">  <span class="attr">enable_page:</span> <span class="string">all</span> <span class="comment"># 应用页面</span></span><br><span class="line">  <span class="attr">layout:</span> <span class="comment"># 挂载容器类型</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">id</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">footer</span></span><br><span class="line">      <span class="attr">index:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">footer_icons:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">left:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-solid</span> <span class="string">fa-compass</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://www.marcus233.top/</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">个人主页</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">out</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-brands</span> <span class="string">fa-qq</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://res.abeim.cn/api/qq/?qq=3105950984</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">联系QQ</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">out</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-brands</span> <span class="string">fa-weixin</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">/wechat/</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">联系微信</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-solid</span> <span class="string">fa-envelope</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">mailto:marcus@marcus233.top</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">发送邮件</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">out</span></span><br><span class="line">    <span class="attr">right:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-brands</span> <span class="string">fa-github</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://github.com/Marcusyyds</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">Github主页</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">out</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-brands</span> <span class="string">fa-bilibili</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://space.bilibili.com/1024450661</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">哔哩哔哩主页</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">out</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-solid</span> <span class="string">fa-star</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">/stars/</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">藏宝阁</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">icon:</span> <span class="string">fa-solid</span> <span class="string">fa-comment</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">/message/</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">留言</span></span><br><span class="line">        <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">  <span class="attr">footer_logo:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://img01.anheyu.com/useruploads/8/2022/12/15/639adf5b8806a.png</span></span><br><span class="line">  <span class="attr">footer_group:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">footer_group_link:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">group_title:</span> <span class="string">直达</span></span><br><span class="line">        <span class="attr">footer_links:</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">藏宝阁</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/stars/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">优秀句子</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/sentence/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">空间说说</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/zone/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">友链订阅</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/fcircle/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">切换背景</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/bg/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">group_title:</span> <span class="string">关于</span></span><br><span class="line">        <span class="attr">footer_links:</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">关于我</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/about/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">RSS订阅</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/atom.xml</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">站点监控</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">https://uptime.marcus233.top/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">out</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">更新记录</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/timeline/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">我的相册</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/picture/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">group_title:</span> <span class="string">分类</span></span><br><span class="line">        <span class="attr">footer_links:</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">博客相关</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/categories/博客相关</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">生活点滴</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/categories/生活点滴</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">资源分享</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/categories/资源分享</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span></span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">学习笔记</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/categories/学习笔记</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">实用教程</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/categories/实用教程</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span> </span><br><span class="line">          <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">查看全部</span></span><br><span class="line">            <span class="attr">link:</span> <span class="string">/categories/</span></span><br><span class="line">            <span class="attr">class:</span> <span class="string">in</span> </span><br><span class="line">  <span class="attr">footer_friend_links:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">number:</span> <span class="number">5</span></span><br><span class="line">  <span class="attr">footer_bottom:</span></span><br><span class="line">    <span class="attr">copyright:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">author:</span> <span class="string">Marcus</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://marcus233.top/</span></span><br><span class="line">      <span class="attr">time:</span> <span class="number">2022</span></span><br><span class="line">    <span class="attr">left:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">雨云</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">本站CDN支持</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://rainyun.com/</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">网盾星球</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">本站CDN防护主要提供商:网盾星球</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://www.netdun.net/</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">萌ICP备20230221</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">萌ICP备20230221</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://icp.gov.moe/?keyword=20230221</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">萌ICP备20236688</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">萌ICP备20236688</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://icp.gov.moe/?keyword=20236688</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">萌ICP备20230002</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">萌ICP备20230002</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://icp.gov.moe/?keyword=20230002</span></span><br><span class="line">    <span class="attr">right:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">Hexo</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">框架</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://hexo.io/zh-cn/</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">text:</span> <span class="string">Butterfly</span></span><br><span class="line">        <span class="attr">desrc:</span> <span class="string">主题</span></span><br><span class="line">        <span class="attr">link:</span> <span class="string">https://butterfly.js.org/</span></span><br><span class="line">    <span class="attr">runtime:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">time:</span> <span class="number">2022</span><span class="string">/08/09</span> <span class="number">00</span><span class="string">:00:00</span></span><br><span class="line">  <span class="attr">footer_css:</span> <span class="string">https://cdn1.tianli0.top/npm/hexo-butterfly-footer-marcus/lib/footer.min.css</span></span><br><span class="line">  <span class="attr">footer_js:</span> <span class="string">https://cdn1.tianli0.top/npm/hexo-butterfly-footer-marcus/lib/footer.min.js</span></span><br></pre></td></tr></table></figure>
+<p>请自行下载footer_js修改建站日期<br>如果开启了随机友联,根目录下却没有link.json,请参考(页脚的随机友链)[<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.shineyu.cn/footer-random-flink.html]">https://blog.shineyu.cn/footer-random-flink.html]</a></p>
+<h2 id="参数释义"><a href="#参数释义" class="headerlink" title="参数释义"></a>参数释义</h2><table>
+<thead>
+<tr>
+<th><strong>参数</strong></th>
+<th><strong>备选值&#x2F;类型</strong></th>
+<th><strong>释义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】控制开关</td>
+</tr>
+<tr>
+<td><strong>priority</strong></td>
+<td>number</td>
+<td>【可选】过滤器优先级，数值越小，执行越早，默认为10，选填</td>
+</tr>
+<tr>
+<td><strong>enable_page</strong></td>
+<td>path&#x2F;all</td>
+<td>【可选】填写想要应用的页面的相对路径（即路由地址）,如根目录就填’&#x2F;‘,分类页面就填’&#x2F;categories&#x2F;‘。若要应用于所有页面，就填’all’，默认为all</td>
+</tr>
+<tr>
+<td><strong>exclude</strong></td>
+<td>path</td>
+<td>【可选】填写想要屏蔽的页面，可以多个。仅当enable_page为’all’时生效。写法见示例。原理是将屏蔽项的内容逐个放到当前路径去匹配，若当前路径包含任一屏蔽项，则不会挂载。</td>
+</tr>
+<tr>
+<td><strong>layout.type</strong></td>
+<td>id&#x2F;class</td>
+<td>【可选】挂载容器类型，填写id或class，不填则默认为id</td>
+</tr>
+<tr>
+<td><strong>layout.name</strong></td>
+<td>text</td>
+<td>【必选】挂载容器名称</td>
+</tr>
+<tr>
+<td><strong>layout.index</strong></td>
+<td>0和正整数</td>
+<td>【可选】前提是layout.type为class，因为同一页面可能有多个class，此项用来确认究竟排在第几个顺位</td>
+</tr>
+<tr>
+<td><strong>insertposition</strong></td>
+<td>text</td>
+<td>‘beforebegin’：元素自身的前面。’afterbegin’：插入元素内部的第一个子节点之前。’beforeend’：插入元素内部的最后一个子节点之后。’afterend’：插入元素自身的后面。</td>
+</tr>
+<tr>
+<td><strong>footer_icons.enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】icon控制开关</td>
+</tr>
+<tr>
+<td>***.text**</td>
+<td>text</td>
+<td>【必选】显示文字</td>
+</tr>
+<tr>
+<td>***.icon**</td>
+<td>class</td>
+<td>【必选】icon(例:fa-solid fa-commet)</td>
+</tr>
+<tr>
+<td>***.desrc**</td>
+<td>text</td>
+<td>【必选】a标签内的title选项</td>
+</tr>
+<tr>
+<td>***.class**</td>
+<td>in&#x2F;out</td>
+<td>【必选】站内&#x2F;外链接(站内:in,站外:out)</td>
+</tr>
+<tr>
+<td>***.link**</td>
+<td>url</td>
+<td>【必选】链接</td>
+</tr>
+<tr>
+<td><strong>footer_logo.enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】icon内logo控制开关</td>
+</tr>
+<tr>
+<td><strong>footer_group.enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】group控制开关</td>
+</tr>
+<tr>
+<td><strong>footer_friend_links.enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】随机友联开关</td>
+</tr>
+<tr>
+<td><strong>footer_friend_link.number</strong></td>
+<td>正整数</td>
+<td>【可选】随机友联数量</td>
+</tr>
+<tr>
+<td><strong>footer_bottom.copyright.enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】copyright开关</td>
+</tr>
+<tr>
+<td><strong>footer_bottom.runtime.enable</strong></td>
+<td>true&#x2F;false</td>
+<td>【必选】网站运行时间开关</td>
+</tr>
+<tr>
+<td><strong>footer_css</strong></td>
+<td>url</td>
+<td>【必选】css链接</td>
+</tr>
+<tr>
+<td><strong>footer_js</strong></td>
+<td>url</td>
+<td>【必选】js链接</td>
+</tr>
+</tbody></table>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>填写配置项<br>需改动源码的地方</p>
+<ol>
+<li>在<code>themes\butterfly\layout\includes\layout.pug</code>43行(修改页脚背景色的bug)<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">        else</span><br><span class="line">          - var footer_bg = &#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="deletion">-        footer#footer(style=footer_bg)</span></span><br><span class="line"><span class="addition">+        footer#footer(style=&#x27;background: transparent&#x27;)</span></span><br><span class="line">          !=partial(&#x27;includes/footer&#x27;, &#123;&#125;, &#123;cache: true&#125;)</span><br><span class="line"></span><br><span class="line">    else</span><br><span class="line">      include ./404.pug</span><br></pre></td></tr></table></figure>
+去掉+号</li>
+<li>在<code>themes\butterfly\source\css\_mode\darkmode.styl</code>43行(修改黑暗模式按钮层级的bug)<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    #web_bg:before,</span><br><span class="line"><span class="deletion">-    #footer:before,</span></span><br><span class="line">    #page-header:before</span><br><span class="line">      position: absolute</span><br><span class="line">      width: 100%</span><br><span class="line">      height: 100%</span><br><span class="line">      background-color: alpha($dark-black, .7)</span><br><span class="line">      content: &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>hexo cl&amp;&amp;hexo g&amp;&amp;hexo s<br>感谢<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.acozycotage.net/">晚安</a>帮助我测试<br><br>有bug欢迎反应</p>
+
+
+  
+  <script>
+    let tianliGPT_postSelector = '.md-text.content.post';
+    let tianliGPT_key = 'aX6hJp9B5eZtMqY7VrFg';
+    let tianliGPT_typingAnimate = true;
+  </script>
+  <script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.13/tianli_gpt.js"></script>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/p/one-year-mark.html">博客一周年记</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/p/hometop2.html">新版首页轮播图</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\p\hometop.html" title="首页轮播图"><span class="title">首页轮播图</span><span class="excerpt">首页轮播图</span></a><a class="item" href="\p\hometop2.html" title="新版首页轮播图"><span class="title">新版首页轮播图</span><span class="excerpt">新版首页轮播图</span></a><a class="item" href="\p\guzhan.html" title="记一次全体故障"><span class="title">记一次全体故障</span><span class="excerpt">记一次全体故障</span></a><a class="item" href="\p\comments.html" title="Hexo的评论配置"><span class="title">Hexo的评论配置</span><span class="excerpt">Hexo的twikoo,valine和waline配置</span></a><a class="item" href="\p\yulegeyu.html" title="鱼了个鱼"><span class="title">鱼了个鱼</span><span class="excerpt">鱼了个鱼</span></a></div></section></div>
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body twikoo'>
+      
+
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/github.com/hexo-theme-acrylic">Acrylic</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/link">友链</a><a href="/message">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于本站</a><a href="/github.com/marcusyyds">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@Marcus</a> 使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+      
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn1.tianli0.top/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn1.tianli0.top/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn1.tianli0.top/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn1.tianli0.top/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn1.tianli0.top/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn1.tianli0.top/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn1.tianli0.top/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://cdn1.tianli0.top/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://cdn1.tianli0.top/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://t.marcus233.top/"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
+
+
+
+<!-- inject -->
+
+  
+    <script src="/js/plugins/bb.js"></script>
+  
+
+
+  </div>
+</body>
+</html>

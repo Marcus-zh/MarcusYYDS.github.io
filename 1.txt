@@ -1,0 +1,340 @@
+{
+	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+  "带下划线的文本": {
+    "prefix": "%xiahua",
+    "body": [
+      "{% u ${1:text} %}"
+    ],
+    "description": " 带下划线的文本\n"
+  },
+  "带着重号的文本": {
+    "prefix": "%zhuozhong",
+    "body": [
+      "{% emp ${1:text} %}"
+    ],
+    "description": " 带着重号的文本\n"
+  },
+  "带波浪线的文本": {
+    "prefix": "%bolang",
+    "body": [
+      "{% wavy ${1:text} %}"
+    ],
+    "description": " 带波浪线的文本\n"
+  },
+  "带删除线的文本": {
+    "prefix": "%shanchu",
+    "body": [
+      "{% del ${1:text} %}"
+    ],
+    "description": " 带删除线的文本\n"
+  },
+  "键盘样式的文本": {
+    "prefix": "%jianpan",
+    "body": [
+      "{% kbd ${1:text} %}"
+    ],
+    "description": " 键盘样式的文本\n"
+  },
+  "密码样式的文本": {
+    "prefix": "%mima",
+    "body": [
+      "{% psw ${1:text} %}"
+    ],
+    "description": " 密码样式的文本\n"
+  },
+  "行内文本span": {
+    "prefix": "%span",
+    "body": [
+      "{% span ${2:font} ${3:color} ${4:size} ${5:direction},${1:text}%}"
+    ],
+    "description": " font:logo,code\n color:rad,yellow,green,cyan,blue,gray\n size:large,small,huge,ultra,h1,h2,h3,h4\n direction:left,center,right\n"
+  },
+  "段落文本p": {
+    "prefix": "%p",
+    "body": [
+      "{% p ${2:font} ${3:color} ${4:size} ${5:direction},${1:text}%}"
+    ],
+    "description": " font:logo,code\n color:rad,yellow,green,cyan,blue,gray\n size:large,small,huge,ultra,h1,h2,h3,h4\n direction:left,center,right\n"
+  },
+  "引用note1": {
+    "prefix": "%note1",
+    "body": [
+      "{% note ${2:class} ${3:style} %}${1:text}{% endnote %}"
+    ],
+    "description": " class:default,primary,success,info,warning,danger\n style:simple,modern,flat,disabled,no-icon\n"
+  },
+  "引用note2": {
+    "prefix": "%note2",
+    "body": [
+      "{% note ${2:class} ${3:icon} ${4:style} %}${1:text}{% endnote %}"
+    ],
+    "description": " class: default,blue,pink,red,purple,orange,green \n icon:fontawesome V5\n style:simple,modern,flat,disabled,no-icon\n"
+  },
+  "上标标签tip": {
+    "prefix": "%tip",
+    "body": [
+      "{% tip ${2:style} %}${1:text}{% endtip %}"
+    ],
+    "description": " style:success,error,warning,bolt,ban,home,sync,cogs,key,bell,fontawesome V5\n"
+  },
+  "动态标签anima1": {
+    "prefix": "%tip.warning",
+    "body": [
+      "{% tip warning faa-horizontal animated %}${1:text}{% endtip %}"
+    ],
+    "description": " 更多可见https://akilar.top/posts/615e2dec/#%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE-anima\n"
+  },
+  "动态标签anima2": {
+    "prefix": "%tip.ban",
+    "body": [
+      "{% tip ban faa-flash animated %}${1:text}{% endtip %}"
+    ],
+    "description": " 更多可见https://akilar.top/posts/615e2dec/#%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE-anima\n"
+  },
+  "复选列表checkbox": {
+    "prefix": "%checkbox",
+    "body": [
+      "{% checkbox ${2:color} ${3:style} ${4:status} ,${1:text-md} %}"
+    ],
+    "description": " color:red,yellow,green,cyan,blue,gray\n style:plus,minus,times\n status:checked\n"
+  },
+  "单选列表radio": {
+    "prefix": "%radio",
+    "body": [
+      "{% radio ${2:color} ${3:status} ,${1:text-md} %}"
+    ],
+    "description": " color:red,yellow,green,cyan,blue,gray\n status:checked\n"
+  },
+  "时间轴timeline": {
+    "prefix": "%timeline",
+    "body": [
+      "{% timeline ${1:title},${2:color} %}",
+      "${3:}",
+      "{% endtimeline %}"
+    ],
+    "description": " color:default(留空),blue,pink,red,purple,orange,green\n"
+  },
+  "时间轴timeline片段": {
+    "prefix": "<timeline",
+    "body": [
+      "<!-- timeline ${1:time} ${2:title} -->",
+      "${3:text}",
+      "<!-- endtimeline -->"
+    ],
+    "description": " 时间轴timeline片段(需时间轴timeline)\n"
+  },
+  "链接卡片link": {
+    "prefix": "%link",
+    "body": [
+      "{% link ${1:title}, ${2:link},${3:avatar(可)} %}"
+    ],
+    "description": " 链接卡片link\n"
+  },
+  "按钮btns": {
+  "prefix": "%btns",
+  "body": [
+    "{% btns ${1:style} ${1:buju}%}",
+    "${3:}",
+    "{% endbtns %}"
+  ],
+  "description": " 按钮btns\n"
+  },
+  "按钮cell": {
+  "prefix": "%cell",
+  "body": [
+    "{% cell ${1:title}, ${3:link}, ${3:img/icon} %}"
+  ],
+  "description": " 按钮cell(需按钮btns)\n"
+  },
+  "github卡片ghcard": {
+    "prefix": "%ghcard",
+    "body": [
+      "{% ghcard ${1:usr/repl}, ${1:canshu} %}"
+    ],
+    "description": " 更多可见https://akilar.top/posts/615e2dec/#github%E5%8D%A1%E7%89%87-ghcard\n"
+  },
+  "github徽标ghbdage": {
+    "prefix": "%ghbdage",
+    "body": [
+      "{% bdage ${1:right},${2:left},${3:logo}||${4:color},${5:link},${6:title}||${7:option} %}"
+    ],
+    "description": " 更多可见https://akilar.top/posts/e87ad7f8\n"
+  },
+  "网站卡片sites组": {
+    "prefix": "%sitegroup",
+    "body": [
+      "{% sitegroup %}",
+      "${1:}",
+      "{% endsitegroup %}"
+    ],
+    "description": " 网站卡片sites组\n"
+  },
+  "网站卡片sites": {
+    "prefix": "%site",
+    "body": [
+      "{% site ${1:title}, url=${2:link}, screenshot=${3:sscreenshot}, avatar=${4:avatar(可)}, description=${1:descr(可)} %}"
+    ],
+    "description": " 网站卡片sites(需网站卡片sites组)\n"
+  },
+  "行内图片inlineimage": {
+    "prefix": "%inlineimage",
+    "body": [
+      "{% inlineimage ${1:link}, height=${2:height(可)} %}"
+    ],
+    "description": " 行内图片inlineimage\n"
+  },
+  "单张图片image": {
+    "prefix": "%image",
+    "body": [
+      "{% image ${1:link}, width=${2:width(可)}, height=${3:height(可)}, alt=${4:desrc(可)}, bg=${5:bgcolor(可)} %}"
+    ],
+    "description": " 单张图片image\n"
+  },
+  "音频audio": {
+    "prefix": "%audio",
+    "body": [
+      "{% audio ${1:link} %}"
+    ],
+    "description": " 音频audio\n"
+  },
+  "视频video": {
+    "prefix": "%video",
+    "body": [
+      "{% video ${1:link} %}"
+    ],
+    "description": " 视频video\n"
+  },
+  "相册图库gallerygroup(div)": {
+    "prefix": "%gallerygroup.div",
+    "body": [
+      "<div class=\"gallery-group-main\">",
+      "${1:}",
+      "</div>"
+    ],
+    "description": " 相册图库gallerygroup(div)\n"
+  },
+  "相册图库gallerygroup": {
+    "prefix": "%gallerygroup",
+    "body": [
+      "{% galleryGroup ${1:name} ${2:desrc} ${3:link} ${4:img-url} %}"
+    ],
+    "description": " 相册图库gallerygroup(需相册图库gallerygroup(div))\n"
+  },
+  "相册gallery": {
+    "prefix": "%gallery",
+    "body": [
+      "{% gallery %}",
+      "${1:text-md}",
+      "{% endgallery %}"
+    ],
+    "description": " 相册gallery(多种图片)\n"
+  },
+  "折叠框folding": {
+    "prefix": "%folding",
+    "body": [
+      "{% folding ${1:color} ${2:status(可)}, ${3:title} %}",
+      "${4:img-url}",
+      "{% endfolding %}"
+    ],
+    "description": " color:red,yellow,green,cyan,blue,gray\n status:open\n"
+  },
+  "分栏tab": {
+    "prefix": "%tab",
+    "body": [
+      "{% tabs ${1:name}, ${2:index(可)} %}",
+      "${3:}",
+      "{% endtabs %}"
+    ],
+    "description": " index:选择第几个选项卡(默认为1,-1为不选择)\n"
+  },
+  "分栏tab片段": {
+    "prefix": "<tab",
+    "body": [
+      "<!-- tab ${1:title} ${2:icon(可)} -->",
+      "${3:}",
+      "<!-- endtab -->"
+    ],
+    "description": " 若选择icon,title不显示\n"
+  },
+  "数据集合issues": {
+    "prefix": "%issues",
+    "body": [
+      "{% issues type | api=url | group=key:value1,value2（可选） %}"
+    ],
+    "description": " 没搞懂嘿嘿~https://akilar.top/posts/615e2dec/#数据集合-issues\n"
+  },
+  "诗词标签poem": {
+    "prefix": "%poem",
+    "body": [
+      "{% poem ${1:title},${2:author} %}",
+      "${3:poem}",
+      "{% endpoem %}"
+    ],
+    "description": " 诗词标签poem\n"
+  },
+  "阿里图标icon": {
+    "prefix": "%icon",
+    "body": [
+      "{% icon ${1:class},${2:size} %}"
+    ],
+    "description": " 阿里图标icon\n"
+  },
+  "特效标签wow": {
+    "prefix": "%wow",
+    "body": [
+      "{% wow ${1:animete},${2:duration},${3:delay},${4:offset},${5:iteration} %}",
+      "${6:text}",
+      "{% endwow %}"
+    ],
+    "description": " animate:动画样式\n duration:动画持续时间\n delay:动画开始的延迟时间\n offset:开始动画的距离(相对浏览器底部)\n iteration:动画重复的次数\n"
+  },
+  "进度条progress": {
+    "prefix": "%progress",
+    "body": [
+      "{% progress ${1:width} ${2:color} ${3:text} %}"
+    ],
+    "description": " width:0~100\n color:red,yellow,green,cyan,blue,gray\n"
+  },
+  "气泡注释bubble": {
+    "prefix": "%bubble",
+    "body": [
+      "{% bubble ${1:text} , ${2:desrc} ,${3:color} %}"
+    ],
+    "description": " 气泡注释bubble\n"
+  },
+  "引用上标referto": {
+    "prefix": "%referto",
+    "body": [
+      "{% referto ${1:id} , ${2:literature} %}"
+    ],
+    "description": " id:上标序号内容,需与referfrom标签的id对应才能实现跳转\n literature:引用的参考文献名称\n"
+  },
+  "引用出处referfrom": {
+    "prefix": "%referfrom",
+    "body": [
+      "{% referfrom ${1:id} , ${2:literature} , ${3:url} %}"
+    ],
+    "description": " id:上标序号内容,需与referfrom标签的id对应才能实现跳转\n literature:引用的参考文献名称\n"
+  },
+  "旋转相册carousel": {
+    "prefix": "%carousel",
+    "body": [
+      "{% carousel ${1:id} , ${2:name} %}",
+      "![](${3:img-url})",
+      "{% endcarousel %}"
+    ],
+    "description": " id:相册唯一ID,用于监测相册鼠标动作.禁止使用中文.同一页内不得出现相同ID的carousel相册.\n name: 相册中间显示的内容,建议用英文单引号包裹.\n"
+  }
+}
