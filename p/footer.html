@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang='zh-CN'>
-
-<head><!-- hexo injector head_begin start --><script>
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start --><script>
             (() => {
                 let sw = navigator.serviceWorker
                 let error = () => GLOBAL_CONFIG.Snackbar !== undefined && mar.snackbarShow('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
@@ -10,115 +7,234 @@
                     ?.catch(error)
                 ) error()
             })()
-        </script><!-- hexo injector head_begin end -->
-  <meta name="generator" content="Hexo 6.3.0">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
-  <meta charset="utf-8">
-  
-
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
-  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
-  <link rel='dns-prefetch' href='//unpkg.com'>
-
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" content="#f8f8f8">
-  
-  <title>页脚插件版 - Marcus</title>
-
-  
-    <meta name="description" content="页脚插件版">
+        </script><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>页脚插件版 | Marcus</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.5.1"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description" content="页脚插件版">
 <meta property="og:type" content="article">
 <meta property="og:title" content="页脚插件版">
 <meta property="og:url" content="https://blog.marcus233.top/p/footer.html">
 <meta property="og:site_name" content="Marcus">
 <meta property="og:description" content="页脚插件版">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png">
+<meta property="og:image" content="https://img.marcus233.top/i/24/03/65ed67469d5e5.webp">
 <meta property="article:published_time" content="2023-01-29T06:08:34.000Z">
 <meta property="article:modified_time" content="2023-02-01T06:08:34.000Z">
 <meta property="article:author" content="Marcus">
 <meta property="article:tag" content="Hexo">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png">
-  
-  
-  
-  <meta name="keywords" content="页脚插件版,Marcus">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.marcus233.top/i/24/03/65ed67469d5e5.webp"><!-- pwa--><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
 
-  <!-- feed -->
-  
-    <link rel="alternate" href="/atom.xml" title="Marcus" type="application/atom+xml">
-  
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
 
-  
-    
-<link rel="stylesheet" href="/css/main.css">
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
 
-  
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
 
-  
-    <link rel="shortcut icon" href="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png">
-  
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
 
-  
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
 
-  
+console.log(
+    "%c Program: Hexo %c Theme: Hexo-Theme-Solitude %c Version: v1.5.1",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;margin:10px 0",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "border-radius:0 5px 5px 0;padding: 5px 10px;background:#0084ff;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2023-08-09 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.png'
+    },
+    hightlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+    },
+    randomlinks: true,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多","🎮 电竞游戏爱好者"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: true,
+        type: '',
+        commentBarrage: true,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: 'https://twikoo.marcus233.top/',
+            accessToken: ''
+        },
+        waline: {
+            url: '',
+        }
+    },
+    lightbox: 'fancybox',
+    rightside: {
+        enable: true
+    },
+    ai: {
+        enable: true,
+        key: 'aX6hJp9B5eZtMqY7VrFg',
+        talk: '我是Marcus开发的摘要生成助理MarGPT，MarGPT在静态部署时进行摘要的撰写，并且在访客访问时通过MarCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
+        randomPost: true,
+    },
+    music: {
+        enable: false,
+    },
+    translate: undefined,
+};</script><!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Marcus" type="application/atom+xml">
+</head><body id="body"><!-- universe--><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png" alt="loading image"></div></div><script>const preloader = {
+    endLoading: () => {
+        document.getElementById('loading-box').classList.add('loaded');
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+    },
+    removePaceDone: () => {
+        document.getElementById('body').classList = 'pace-done';
+    }
+}
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});</script><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论</div></div><div class="aside-list"></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E6%80%BB%E7%BB%93/">总结<sup>2</sup></a><a href="/tags/%E6%95%85%E9%9A%9C/">故障<sup>1</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F/">游戏<sup>1</sup></a><a href="/tags/%E7%99%BD%E5%AB%96/">白嫖<sup>3</sup></a><a href="/tags/Api/">Api<sup>1</sup></a><a href="/tags/CDN/">CDN<sup>1</sup></a><a href="/tags/Hexo/">Hexo<sup>6</sup></a><a href="/tags/SWPP/">SWPP<sup>1</sup></a><a href="/tags/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93/">周年总结<sup>1</sup></a><a href="/tags/%E5%AD%A6%E7%94%9F%E6%9D%83%E7%9B%8A/">学生权益<sup>1</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结<sup>1</sup></a><a href="/tags/steam/">steam<sup>1</sup></a><a href="/tags/Github/">Github<sup>1</sup></a><a href="/tags/Python/">Python<sup>1</sup></a><a href="/tags/Replit/">Replit<sup>2</sup></a><a href="/tags/Twikoo/">Twikoo<sup>1</sup></a><a href="/tags/Valine/">Valine<sup>1</sup></a><a href="/tags/Waline/">Waline<sup>1</sup></a><a href="/tags/Bilibili/">Bilibili<sup>1</sup></a><a href="/tags/Cloudrever/">Cloudrever<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2022/')" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="card-archive-list-date">2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/')" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="card-archive-list-date">2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="sco.switchKeyboard()"><a class="keyboardSwitch" title="键盘快捷键" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-keyboard-box-fill"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><a class="commentBarrage"><i class="scoicon sco-chat-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="scoicon  sco-checkbox-multiple-blank-fill"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon  sco-price-tag-fill"></i><span>标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="scoicon  sco-folder-fill"></i><span>归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>空间</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="scoicon  sco-fire-fill"></i><span>说说</span></a></li><li><a class="site-page child" href="/music/"><i class="scoicon  sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" href="/picture/"><i class="scoicon  sco-image-fill"></i><span>相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="scoicon  sco-wifi-fill"></i><span>鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="scoicon  sco-group-fill"></i><span>友链</span></a></li><li><a class="site-page child" href="/bbers/"><i class="scoicon  sco-fire-fill"></i><span>动态</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon  sco-contacts-fill"></i><span>关于</span></a></li><li><a class="site-page child" href="/message/"><i class="scoicon  sco-chat-fill"></i><span>留言</span></a></li><li><a class="site-page child" href="/todo/"><i class="scoicon  scoicon sco-gift-fill"></i><span>清单</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E6%80%BB%E7%BB%93/">总结<sup>2</sup></a><a href="/tags/%E6%95%85%E9%9A%9C/">故障<sup>1</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F/">游戏<sup>1</sup></a><a href="/tags/%E7%99%BD%E5%AB%96/">白嫖<sup>3</sup></a><a href="/tags/Api/">Api<sup>1</sup></a><a href="/tags/CDN/">CDN<sup>1</sup></a><a href="/tags/Hexo/">Hexo<sup>6</sup></a><a href="/tags/SWPP/">SWPP<sup>1</sup></a><a href="/tags/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93/">周年总结<sup>1</sup></a><a href="/tags/%E5%AD%A6%E7%94%9F%E6%9D%83%E7%9B%8A/">学生权益<sup>1</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结<sup>1</sup></a><a href="/tags/steam/">steam<sup>1</sup></a><a href="/tags/Github/">Github<sup>1</sup></a><a href="/tags/Python/">Python<sup>1</sup></a><a href="/tags/Replit/">Replit<sup>2</sup></a><a href="/tags/Twikoo/">Twikoo<sup>1</sup></a><a href="/tags/Valine/">Valine<sup>1</sup></a><a href="/tags/Waline/">Waline<sup>1</sup></a><a href="/tags/Bilibili/">Bilibili<sup>1</sup></a><a href="/tags/Cloudrever/">Cloudrever<sup>1</sup></a></div></div></div></div><!-- keyboard--><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keyboardList"></div></div><script>const keyboard_addKeyup = (e) => {
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.remove('show');
+    }
+}
 
+const keyboard_addKeydown = (e) => {
+    const keyboards = [];
+    if (e.keyCode === 16) {
+        document.getElementById('keyboard-tips').classList.add('show');
+    }
 
-  
-</head>
+    for (let i = 0; i < keyboards.length; i++) {
+        if (keyboards[i].url) {
+            if (keyboards[i].url.startsWith('http')) {
+                if (e.key === keyboards[i].key) {
+                    window.open(keyboards[i].url);
+                }
+            } else {
+                if (e.key === keyboards[i].key) {
+                    pjax.loadUrl(keyboards[i].url);
+                }
+            }
+        } else if (keyboards[i].sco) {
+            if (e.key === keyboards[i].key) {
+                sco[keyboards[i].sco]();
+            }
+        } else if (keyboards[i].func) {
+            if (e.key === keyboards[i].key) {
+                window[keyboards[i].func]();
+            }
+        }
+    }
+}
 
-<body><!-- hexo injector body_begin start --><script async src="/sw-dom.js"></script><!-- hexo injector body_begin end -->
-  
+function openKeyboard() {
 
+    window.addEventListener('keyup', keyboard_addKeyup);
 
+    window.addEventListener('keydown', keyboard_addKeydown);
+}
+function closeKeyboard() {
 
+    window.removeEventListener('keyup', keyboard_addKeyup);
 
-  <div class='l_body' id='start'>
-    <aside class='l_left' layout='post'>
-    
+    window.removeEventListener('keydown', keyboard_addKeydown);
+}
 
-  
-
-<header class="header"><div class="logo-wrap"><a class="title" href="/"><div class="main" ff="title">Marcus</div><div class="sub cap">人间值得，未来可期</div></a></div>
-
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/link/">友链</a><a class="nav-item" href="/about/">关于</a></nav>
-</header>
-
-
-<div class="widgets">
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
-
-
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">页脚插件版</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">添加配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%87%8A%E4%B9%89"><span class="toc-text">参数释义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-text">最后</span></a></li></ol></div></div></widget>
-
-
-
-
-</div>
-
-
-    </aside>
-    <div class='l_main'>
-      
-
-      
-
-
-
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%88%91%E7%9A%84%E9%A1%B9%E7%9B%AE/">我的项目</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-01-29T06:08:34.000Z">2023-01-29</time></div></div>
-
-<article class='md-text content post'>
-<h1 class="article-title"><span>页脚插件版</span></h1>
-<h1 id="hexo-butterfly-footer-marcus"><a href="#hexo-butterfly-footer-marcus" class="headerlink" title="hexo-butterfly-footer-marcus"></a>hexo-butterfly-footer-marcus</h1><p>给博客添加<code>仿Heo页脚</code><br><br>适用于<code>hexo-theme-butterfly</code><br>本地版请见(页脚美化)[<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.shineyu.cn/beautify-footer.html]">https://blog.shineyu.cn/beautify-footer.html]</a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/">Heo</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.leonus.cn/">Leonus</a></p>
-<div class="tag-plugin image"><div class="image-bg"><img class="" src="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png" fancybox="true"/></div></div>
+var sco_keyboards = localStorage.getItem('keyboard') === 'true'
+if (sco_keyboards) {
+    openKeyboard();
+    document.getElementById('consoleKeyboard').classList.add('on');
+}</script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><i class="scoicon sco-marcus" style="font-size: 20px;"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">页脚插件版</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="scoicon  sco-checkbox-multiple-blank-fill"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon  sco-price-tag-fill"></i><span>标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="scoicon  sco-folder-fill"></i><span>归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>空间</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="scoicon  sco-fire-fill"></i><span>说说</span></a></li><li><a class="site-page child" href="/music/"><i class="scoicon  sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" href="/picture/"><i class="scoicon  sco-image-fill"></i><span>相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="scoicon  sco-wifi-fill"></i><span>鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="scoicon  sco-group-fill"></i><span>友链</span></a></li><li><a class="site-page child" href="/bbers/"><i class="scoicon  sco-fire-fill"></i><span>动态</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon  sco-contacts-fill"></i><span>关于</span></a></li><li><a class="site-page child" href="/message/"><i class="scoicon  sco-chat-fill"></i><span>留言</span></a></li><li><a class="site-page child" href="/todo/"><i class="scoicon  scoicon sco-gift-fill"></i><span>清单</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer" onclick="toTianliGPTblog()" title=""><i class="scoicon sco-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-signal-tower-fill"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer" title="搜索"><i class="scoicon sco-search-line"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://img.marcus233.top/i/24/03/65ed67469d5e5.webp" alt="页脚插件版"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/我的项目/">我的项目</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/"><span class="tags-name tags-punctuation">Hexo</span></a></div></div></div></div><h1 class="post-title">页脚插件版</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="meta_posted 2023-01-29 14:08:34"><i class="post-meta-icon scoicon sco-calendar-todo-fill"></i><time datetime="2023-01-29T06:08:34.000Z">2023-01-29T06:08:34.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon scoicon sco-word-fill" title="文章字数"></i><span class="word-count">1.3k</span><span class="post-meta-separator"></span><i class="post-meta-icon scoicon sco-clock-fill" title="阅读耗时"></i><span>6 min</span></span><span class="post-meta-position" title="作者IP归属地为成都"><i class="post-meta-icon scoicon sco-map-pin-fill"></i><span>成都</span></span><a class="post-meta-pv" href="/p/footer.html" title="文章热度"><i class="post-meta-icon scoicon sco-fire-fill"></i></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="scoicon sco-chat-fill"></i><a href="/p/footer.html#post-comment"></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><div class="post-ai"><div class="ai-title"><div class="ai-title-left"><i class="ai-title-icon scoicon sco-robot-fill"></i><div class="ai-title-text">文章摘要</div></div><div class="ai-tag" id="ai-tag">GPT 4</div></div><div class="ai-explanation" style="display: block;"></div><div class="ai-suggestions"></div><div class="ai-bottom"><div class="ai-tips">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</div><a class="ai-report" title="投诉" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.wzsco.top/about/">投诉</a></div></div><article class="post-content" id="article-container"><h1 id="hexo-butterfly-footer-marcus"><a href="#hexo-butterfly-footer-marcus" class="headerlink" title="hexo-butterfly-footer-marcus"></a>hexo-butterfly-footer-marcus</h1><p>给博客添加<code>仿Heo页脚</code><br><br>适用于<code>hexo-theme-butterfly</code><br>本地版请见(页脚美化)[<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.shineyu.cn/beautify-footer.html]">https://blog.shineyu.cn/beautify-footer.html]</a></p>
+<span id="more"></span>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.zhheo.com/">Heo</a><br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.leonus.cn/">Leonus</a><br><img src="https://img01.anheyu.com/useruploads/8/2023/01/29/63d6167eeb517.png" alt="实际效果"></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装插件,在博客根目录[Blogroot]下打开终端，运行以下指令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-butterfly-footer-marcus --save</span><br></pre></td></tr></table></figure>
 <p>如果需要随机友联的话,再运行以下指令：</p>
@@ -253,252 +369,111 @@
 <li>在<code>themes\butterfly\source\css\_mode\darkmode.styl</code>43行(修改黑暗模式按钮层级的bug)<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">    #web_bg:before,</span><br><span class="line"><span class="deletion">-    #footer:before,</span></span><br><span class="line">    #page-header:before</span><br><span class="line">      position: absolute</span><br><span class="line">      width: 100%</span><br><span class="line">      height: 100%</span><br><span class="line">      background-color: alpha($dark-black, .7)</span><br><span class="line">      content: &#x27;&#x27;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>hexo cl&amp;&amp;hexo g&amp;&amp;hexo s<br>感谢<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.acozycotage.net/">晚安</a>帮助我测试<br><br>有bug欢迎反应</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png"></a><div class="post-copyright__author_name">Marcus</div><div class="post-copyright__author_desc">人间值得，未来可期</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward" onclick="AddRewardMask()"><div class="reward-button" title="赞赏作者"><i class="scoicon sco-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img.marcus233.top/i/24/03/65ed6afe8bfec.webp"><img class="post-qr-code-img" src="https://img.marcus233.top/i/24/03/65ed6afe8bfec.webp" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://img.marcus233.top/i/24/03/65ed6b1c94f68.webp" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://img.marcus233.top/i/24/03/65ed6b1c94f68.webp" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
 
+    console.log("RemoveRewardMask")
 
-  
-  <script>
-    let tianliGPT_postSelector = '.md-text.content.post';
-    let tianliGPT_key = 'aX6hJp9B5eZtMqY7VrFg';
-    let tianliGPT_typingAnimate = true;
-  </script>
-  <script defer src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.13/tianli_gpt.js"></script>
-
-
-
-
-<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-</div></section></div>
-
-</article>
-
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/p/one-year-mark.html">博客一周年记</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/p/hometop2.html">新版首页轮播图</a></div></section></div>
-
-
-<div class="related-wrap reveal" id="related-posts">
-    <section class='header'>
-      <div class='title cap theme'>您可能感兴趣的文章</div>
-    </section>
-    <section class='body'>
-    <div class="related-posts"><a class="item" href="\p\hometop.html" title="首页轮播图"><span class="title">首页轮播图</span><span class="excerpt">首页轮播图</span></a><a class="item" href="\p\hometop2.html" title="新版首页轮播图"><span class="title">新版首页轮播图</span><span class="excerpt">新版首页轮播图</span></a><a class="item" href="\p\guzhan.html" title="记一次全体故障"><span class="title">记一次全体故障</span><span class="excerpt">记一次全体故障</span></a><a class="item" href="\p\comments.html" title="Hexo的评论配置"><span class="title">Hexo的评论配置</span><span class="excerpt">Hexo的twikoo,valine和waline配置</span></a><a class="item" href="\p\yulegeyu.html" title="鱼了个鱼"><span class="title">鱼了个鱼</span><span class="excerpt">鱼了个鱼</span></a></div></section></div>
-
-
-
-  <div class='related-wrap md-text reveal' id="comments">
-    <section class='header cmt-title cap theme'>
-      快来参与讨论吧
-    </section>
-    <section class='body cmt-body twikoo'>
-      
-
-<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
-    </section>
-  </div>
-
-
-
-      
-<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/github.com/hexo-theme-acrylic">Acrylic</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/link">友链</a><a href="/message">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于本站</a><a href="/github.com/marcusyyds">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">@Marcus</a> 使用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
-</div></footer>
-
-      <div class='float-panel mobile-only blur' style='display:none'>
-  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
-    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
-  </button>
-</div>
-
-      
-    </div>
-  </div>
-  <div class='scripts'>
-    <script type="text/javascript">
-  const stellar = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    loadCSS: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
-
-    // 从 butterfly 和 volantis 获得灵感
-    loadScript: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = stellar.config.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    // https://github.com/jerryc127/hexo-theme-butterfly
-    jQuery: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        stellar.loadScript(stellar.plugins.jQuery).then(fn)
-      } else {
-        fn()
-      }
-    }
-  };
-  stellar.version = '1.19.0';
-  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
-  stellar.config = {
-    date_suffix: {
-      just: '刚刚',
-      min: '分钟前',
-      hour: '小时前',
-      day: '天前',
-      month: '个月前',
-    },
-    root : '/',
-  };
-
-  // required plugins (only load if needs)
-  stellar.plugins = {
-    jQuery: 'https://cdn1.tianli0.top/npm/jquery@3.6.2/dist/jquery.min.js'
-  };
-
-  if ('local_search') {
-    stellar.search = {};
-    stellar.search.service = 'local_search';
-    if (stellar.search.service == 'local_search') {
-      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
-      stellar.search[stellar.search.service] = service_obj;
-    }
-  }
-
-  // stellar js
-  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
-
-  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
-  // optional plugins
-  if ('true' == 'true') {
-    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn1.tianli0.top/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
-  }
-  if ('' == 'true') {
-    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn1.tianli0.top/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn1.tianli0.top/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn1.tianli0.top/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn1.tianli0.top/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn1.tianli0.top/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
-  }
-  if ('false' == 'true') {
-    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
-  }
-  if ('true' == 'true') {
-    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
-  }
-</script>
-
-<!-- required -->
-
-  
-<script src="/js/main.js" async></script>
-
-
-
-<!-- optional -->
-
-  <script>
-    function load_twikoo() {
-        if (!document.querySelectorAll("#twikoo_container")[0]) return;
-        stellar.loadScript('https://cdn1.tianli0.top/npm/twikoo@1.6.8/dist/twikoo.all.min.js', {defer: true}).then(function () {
-            const el = document.getElementById("twikoo_container");
-            var path = el.getAttribute('comment_id');
-            if (!path) {
-                path = decodeURI(window.location.pathname);
-            }
-            twikoo.init(Object.assign({"js":"https://cdn1.tianli0.top/npm/twikoo@1.6.8/dist/twikoo.all.min.js","envId":"https://t.marcus233.top/"}, {
-                el: '#twikoo_container',
-                path: path,
-            }));
-        });
-    }
-
-    window.addEventListener('DOMContentLoaded', (event) => {
-        load_twikoo();
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
     });
-</script>
 
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
 
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
 
-<!-- inject -->
+    console.log("AddRewardMask")
 
-  
-    <script src="/js/plugins/bb.js"></script>
-  
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
 
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script><div class="reward-link mode"><a class="reward-link-button" href="/atom.xml" title="订阅"><i class="scoicon sco-plant-fill"></i>订阅</a></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Marcus</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/"><span class="tags-punctuation"></span>Hexo<span class="tagsPageCount">6</span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/one-year-mark.html"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">博客一周年记</div></div></a></div><div class="next-post pull-right"><a href="/p/bilibili-API-collect.html"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Bilibili视频AI总结</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="scoicon sco-star-smile-fill"></i><span>喜欢这篇的人也看了</span><div class="relatedPosts-link"><a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a></div></div><div class="relatedPosts-list"><div><a href="/p/hometop2.html" title="新版首页轮播图"><img class="cover" src="https://img.marcus233.top/i/24/03/65ed672b1456c.webp" alt="cover"><div class="content is-center"><div class="title">新版首页轮播图</div></div></a></div><div><a href="/p/hometop.html" title="首页轮播图"><img class="cover" src="https://img.marcus233.top/i/24/03/65ed672b8dba5.webp" alt="cover"><div class="content is-center"><div class="title">首页轮播图</div></div></a></div></div></div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="scoicon sco-chat-fill"></i><span> 评论</span><span></span></div><div class="comment-randomInfo"><a onclick="sco.addRandomCommentInfo()" href="javascript:void(0)" rel="external nofollow noreferrer">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div id="comment"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://bu.dusays.com/2023/12/30/659011053e246.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">这有关于<b>生活、设计、开发</b>相关的问题和看法，还有<b>游戏推荐</b>和<b>分享</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的<b>知识</b>和<b>教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">Marcus</div><div class="author-info__desc">人间值得，未来可期</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marcusyyds" title="Github"><i class="scoicon  sco-github-line"></i></a><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/1024450661" title="Bilibili"><i class="scoicon  sco-bilibili-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="scoicon sco-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-butterfly-footer-marcus"><span class="toc-text">hexo-butterfly-footer-marcus</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="toc-text">添加配置信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%87%8A%E4%B9%89"><span class="toc-text">参数释义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-text">最后</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="scoicon sco-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/14c68eb.html" title="Github学生包申请"><img alt="Github学生包申请" src="https://img.marcus233.top/i/24/03/65ed663edaf73.webp"></a><div class="content"><a class="title" href="/p/14c68eb.html" title="Github学生包申请">Github学生包申请</a><a class="article-recent_post_categories" href="/p/14c68eb.html">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/Neodb-Api.html" title="NeoDBAPI"><img alt="NeoDBAPI" src="https://img.marcus233.top/i/24/03/65ed680cf2075.webp"></a><div class="content"><a class="title" href="/p/Neodb-Api.html" title="NeoDBAPI">NeoDBAPI</a><a class="article-recent_post_categories" href="/p/Neodb-Api.html">我的项目</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/5a1df3f8.html" title="如何提升你的网站速度"><img alt="如何提升你的网站速度" src="https://img.marcus233.top/i/24/03/65ed6704d26dd.webp"></a><div class="content"><a class="title" href="/p/5a1df3f8.html" title="如何提升你的网站速度">如何提升你的网站速度</a><a class="article-recent_post_categories" href="/p/5a1df3f8.html">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/steam001.html" title="STEAM游戏《PP》推荐"><img alt="STEAM游戏《PP》推荐" src="https://img.marcus233.top/i/24/03/65ed66c636f4a.webp"></a><div class="content"><a class="title" href="/p/steam001.html" title="STEAM游戏《PP》推荐">STEAM游戏《PP》推荐</a><a class="article-recent_post_categories" href="/p/steam001.html">游戏推荐</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/one-year-mark.html" title="博客一周年记"><img alt="博客一周年记" src="https://img.marcus233.top/i/24/03/65ed66f0cc891.webp"></a><div class="content"><a class="title" href="/p/one-year-mark.html" title="博客一周年记">博客一周年记</a><a class="article-recent_post_categories" href="/p/one-year-mark.html">我的总结</a></div></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><i class="scoicon sco-marcus"></i></div><div class="footer-bar-description">来自Marcus - 人间值得，未来可期的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marcusyyds" title="Github"><i class="scoicon  sco-github-line"></i></a><a class="deal_link" href="mailto:marcus-zh@qq.com" rel="external nofollow noreferrer" title="Mail"><i class="scoicon  sco-mail-line"></i></a><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/1024450661" title="Bilibili"><i class="scoicon  sco-bilibili-line"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://dribbble.com/Marcus2333" title="Dribbble"><i class="scoicon  sco-dribbble-line"></i></a></div><div id="sco-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="归档">归档</a><a class="footer-item" href="/categories/" title="分类">分类</a><a class="footer-item" href="/tags/" title="标签">标签</a></div></div><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.chuqiyun.com/" title="初七云">初七云</a><a class="footer-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://umami.marcus233.top/" title="自建Umami">自建Umami</a></div></div><div class="footer-group"><h3 class="footer-title">支持</h3><div class="footer-links"><a class="footer-item" href="/about/" title="打赏记录">打赏记录</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/privacy/" title="用户协议">用户协议</a><a class="footer-item" href="/copyright/" title="版权协议">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><h3 class="footer-title">友链</h3><a class="random-friends-btn" href="javascript:randomLinksList();" rel="external nofollow noreferrer"><i class="scoicon sco-refresh-line"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2024 By&nbsp;<a class="footer-bar-link" href="/">Marcus</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link" href="/atom.xml" title="订阅">订阅</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div><div class="needEndHide" id="cookies-window"><div class="cookies-window-title">协议提醒助手</div><div class="cookies-window-content"><span class="cookies-tip">查看本站为你的个人隐私做出的努力</span><a class="cookies-link" href="/privacy/" title="本站如何保护你的隐私"><i class="scoicon sco-right-btn-fill"></i></a></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.5.1"></script><script src="/js/utils.js?v=1.5.1"></script><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="scoicon sco-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="scoicon sco-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="scoicon sco-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="scoicon sco-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="scoicon sco-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="scoicon sco-clipboard-fill"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="scoicon sco-chat-new-fill"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="scoicon sco-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="scoicon sco-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="scoicon sco-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="scoicon sco-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="scoicon sco-search-line"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="scoicon sco-play-fill"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="scoicon sco-skip-back-fill"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="scoicon sco-skip-forward-fill"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open('https://music.163.com/#/playlist?id=8407304077', '_blank');"><i class="scoicon sco-play-list-2-line"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="scoicon sco-copy-fill"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-Link" id="menu-randomPost"><i class="scoicon sco-signal-tower-fill"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-copy"><i class="scoicon sco-external-link-fill"></i><span>复制地址</span></div><div class="rightMenu-item" id="menu-commentBarrage"><i class="scoicon sco-chat-fill"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="scoicon sco-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div></div></div><div id="rightmenu-mask"></div><script src="/js/rightside.js?v=1.5.1"></script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="/js/sco-ai.min.js?v=1.5.1"></script><script>const coverColorConfig = {
+    api: 'https://img2color.wzsco.top/api?img=',
+    time: 43200000,
+}</script><script src="/js/covercolor/api.js?v=1.5.1"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><script src="https://cdn.staticfile.org/lunr.js/2.3.9/lunr.min.js"></script></div><div id="js-pjax"><script async src="https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.min.js"></script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: 'post',
+    toc: true,
+    comment: true,
+}
+</script></div><script>const links = []
+function travelling() {
+    const link = links[utils.randomNum(links.length)];
+    utils.snackbarShow('您即将前往 ⌈ ' + link.name + ' ⌋ , 安全性未知', false, 3000);
+    setTimeout(() => {
+        window.open(link.link, "_blank")
+    }, 3000)
+}
+</script><script>function randomLinksList() {
+    const linkcard = document.getElementById('friend-links-in-footer');
+    if (linkcard == null) return;
 
-  </div>
-</body>
-</html>
+    let data = '';
+    let linksCopy = [...links];
+    let count = Math.min(3, linksCopy.length);
+
+    for (let i = 0; i < count; i++) {
+        let index = utils.randomNum(linksCopy.length);
+        const {link, name} = linksCopy[index];
+        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
+        linksCopy.splice(index, 1);
+    }
+
+    linkcard.innerHTML = data + '<a class="footer-item" href="/links/">更多</a>';
+}</script><!-- newest comment--><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="scoicon sco-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.5.1"></script><!-- music--></body></html><script>const posts=["p/footer.html","p/hometop.html","p/one-year-mark.html","p/hometop2.html","p/guzhan.html","p/2022.html","p/Neodb-Api.html","p/comments.html","p/5a1df3f8.html","p/14c68eb.html","p/HelloWord.html","p/steam001.html","p/bilibili-API-collect.html","p/replit.html","p/cloudreve.html"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>

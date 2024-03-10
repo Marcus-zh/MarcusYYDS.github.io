@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><!-- hexo injector head_begin start --><script>
+            (() => {
+                let sw = navigator.serviceWorker
+                let error = () => GLOBAL_CONFIG.Snackbar !== undefined && mar.snackbarShow('Service Worker 注册失败！可能是由于您的浏览器不支持该功能！')
+                if (!sw?.register('/sw.js')
+                    ?.then(() => console.log("Service Worker 注册成功！"))
+                    ?.catch(error)
+                ) error()
+            })()
+        </script><!-- hexo injector head_begin end --><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NeoDBAPI | Marcus</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.5.1"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css"><!-- aplayer--><!-- swiper--><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css"><!-- Open Graph--><meta name="description" content="neodb.social是一个致力于为联邦宇宙居民提供一个自由开放互联的书籍、电影、音乐和游戏收藏评论空间。NeoDB 的源代码来自 NiceDB，NiceDB 由里瓣社区众筹开发。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NeoDBAPI">
+<meta property="og:url" content="https://blog.marcus233.top/p/Neodb-Api.html">
+<meta property="og:site_name" content="Marcus">
+<meta property="og:description" content="neodb.social是一个致力于为联邦宇宙居民提供一个自由开放互联的书籍、电影、音乐和游戏收藏评论空间。NeoDB 的源代码来自 NiceDB，NiceDB 由里瓣社区众筹开发。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.marcus233.top/i/24/03/65ed680cf2075.webp">
+<meta property="article:published_time" content="2023-11-26T02:34:23.000Z">
+<meta property="article:modified_time" content="2024-03-10T07:58:25.120Z">
+<meta property="article:author" content="Marcus">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.marcus233.top/i/24/03/65ed680cf2075.webp"><!-- pwa--><script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+
+        const DarkModeStatus = localStorage.getItem('theme')
+        if (DarkModeStatus !== null) {
+            if (DarkModeStatus === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        }
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
+        }
+    }
+)(window)
+
+console.log(
+    "%c Program: Hexo %c Theme: Hexo-Theme-Solitude %c Version: v1.5.1",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;margin:10px 0",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "border-radius:0 5px 5px 0;padding: 5px 10px;background:#0084ff;"
+);</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2023-08-09 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.png'
+    },
+    hightlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+    },
+    randomlinks: true,
+    lang: {
+        theme: {
+            dark: '已切换至深色模式',
+            light: '已切换至浅色模式',
+        },
+        copy: {
+            success: '复制成功',
+            error: '复制失败',
+        },
+        backtop: '返回顶部',
+        time: {
+            recent: '最近',
+            yesterday: '昨天',
+            berforeyesterday: '前天',
+            daybefore: '天前',
+            runtime: '天',
+        },
+        search: {
+            empty: '找不到你查询的内容：${query}',
+            hit: '找到 ${hits} 条结果，用时 ${time} 毫秒',
+            placeholder: '输入关键词快速查找',
+        },
+        chs: {
+            chs_to_cht: '繁體中文',
+            cht_to_chs: '简体中文',
+        }
+    },
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: ["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多","🎮 电竞游戏爱好者"],
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {
+        enable: true,
+        type: '',
+        commentBarrage: true,
+        randomInfoStart: ["聪敏的","可爱的","美丽的"],
+        randomInfoEnd: ["白菜","小可爱","小仙女"],
+        twikoo: {
+            url: 'https://twikoo.marcus233.top/',
+            accessToken: ''
+        },
+        waline: {
+            url: '',
+        }
+    },
+    lightbox: 'fancybox',
+    rightside: {
+        enable: true
+    },
+    ai: {
+        enable: true,
+        key: 'aX6hJp9B5eZtMqY7VrFg',
+        talk: '我是Marcus开发的摘要生成助理MarGPT，MarGPT在静态部署时进行摘要的撰写，并且在访客访问时通过MarCorrection转译后的文本摘要实现工具。我在这里只负责已经生成的摘要显示，你无法与我直接沟通，但我可以回答一些预设的问题。',
+        randomPost: true,
+    },
+    music: {
+        enable: false,
+    },
+    translate: undefined,
+};</script><!-- hexo injector head_end start --><script defer src="/sw-dom.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Marcus" type="application/atom+xml">
+</head><body id="body"><!-- universe--><!-- loading--><div id="loading-box" onclick="preloader.endLoading();" style="zoom:1"><div class="loading-bg"><img class="loading-img nolazyload" src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png" alt="loading image"></div></div><script>const preloader = {
+    endLoading: () => {
+        document.getElementById('loading-box').classList.add('loaded');
+    },
+    initLoading: () => {
+        document.getElementById('loading-box').classList.remove('loaded');
+    },
+    removePaceDone: () => {
+        document.getElementById('body').classList = 'pace-done';
+    }
+}
+window.addEventListener('load', () => {
+    preloader.endLoading();
+});
+window.addEventListener('pjax:send', () => {
+    preloader.initLoading();
+});
+document.addEventListener('pjax:complete', () => {
+    preloader.endLoading();
+});</script><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="scoicon sco-close-fill"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论</div></div><div class="aside-list"></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E6%80%BB%E7%BB%93/">总结<sup>2</sup></a><a href="/tags/%E6%95%85%E9%9A%9C/">故障<sup>1</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F/">游戏<sup>1</sup></a><a href="/tags/%E7%99%BD%E5%AB%96/">白嫖<sup>3</sup></a><a href="/tags/Api/">Api<sup>1</sup></a><a href="/tags/CDN/">CDN<sup>1</sup></a><a href="/tags/Hexo/">Hexo<sup>6</sup></a><a href="/tags/SWPP/">SWPP<sup>1</sup></a><a href="/tags/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93/">周年总结<sup>1</sup></a><a href="/tags/%E5%AD%A6%E7%94%9F%E6%9D%83%E7%9B%8A/">学生权益<sup>1</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结<sup>1</sup></a><a href="/tags/steam/">steam<sup>1</sup></a><a href="/tags/Github/">Github<sup>1</sup></a><a href="/tags/Python/">Python<sup>1</sup></a><a href="/tags/Replit/">Replit<sup>2</sup></a><a href="/tags/Twikoo/">Twikoo<sup>1</sup></a><a href="/tags/Valine/">Valine<sup>1</sup></a><a href="/tags/Waline/">Waline<sup>1</sup></a><a href="/tags/Bilibili/">Bilibili<sup>1</sup></a><a href="/tags/Cloudrever/">Cloudrever<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2022/')" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="card-archive-list-date">2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/')" href="javascript:void(0);" rel="external nofollow noreferrer"><span class="card-archive-list-date">2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-moon-clear-fill"></i></a></div><div class="console-btn-item" id="consoleHideAside"><a class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-side-bar-fill"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="sco.switchKeyboard()"><a class="keyboardSwitch" title="键盘快捷键" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-keyboard-box-fill"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><a class="commentBarrage"><i class="scoicon sco-chat-fill"></i></a></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-moon-clear-fill"></i><span>显示模式</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="scoicon  sco-checkbox-multiple-blank-fill"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon  sco-price-tag-fill"></i><span>标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="scoicon  sco-folder-fill"></i><span>归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>空间</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="scoicon  sco-fire-fill"></i><span>说说</span></a></li><li><a class="site-page child" href="/music/"><i class="scoicon  sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" href="/picture/"><i class="scoicon  sco-image-fill"></i><span>相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="scoicon  sco-wifi-fill"></i><span>鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="scoicon  sco-group-fill"></i><span>友链</span></a></li><li><a class="site-page child" href="/bbers/"><i class="scoicon  sco-fire-fill"></i><span>动态</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon  sco-contacts-fill"></i><span>关于</span></a></li><li><a class="site-page child" href="/message/"><i class="scoicon  sco-chat-fill"></i><span>留言</span></a></li><li><a class="site-page child" href="/todo/"><i class="scoicon  scoicon sco-gift-fill"></i><span>清单</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E6%80%BB%E7%BB%93/">总结<sup>2</sup></a><a href="/tags/%E6%95%85%E9%9A%9C/">故障<sup>1</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F/">游戏<sup>1</sup></a><a href="/tags/%E7%99%BD%E5%AB%96/">白嫖<sup>3</sup></a><a href="/tags/Api/">Api<sup>1</sup></a><a href="/tags/CDN/">CDN<sup>1</sup></a><a href="/tags/Hexo/">Hexo<sup>6</sup></a><a href="/tags/SWPP/">SWPP<sup>1</sup></a><a href="/tags/%E5%91%A8%E5%B9%B4%E6%80%BB%E7%BB%93/">周年总结<sup>1</sup></a><a href="/tags/%E5%AD%A6%E7%94%9F%E6%9D%83%E7%9B%8A/">学生权益<sup>1</sup></a><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结<sup>1</sup></a><a href="/tags/steam/">steam<sup>1</sup></a><a href="/tags/Github/">Github<sup>1</sup></a><a href="/tags/Python/">Python<sup>1</sup></a><a href="/tags/Replit/">Replit<sup>2</sup></a><a href="/tags/Twikoo/">Twikoo<sup>1</sup></a><a href="/tags/Valine/">Valine<sup>1</sup></a><a href="/tags/Waline/">Waline<sup>1</sup></a><a href="/tags/Bilibili/">Bilibili<sup>1</sup></a><a href="/tags/Cloudrever/">Cloudrever<sup>1</sup></a></div></div></div></div><!-- keyboard--><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keyboardList"></div></div><script>const keyboard_addKeyup = (e) => {
+    if (e.key === 'Shift') {
+        document.getElementById('keyboard-tips').classList.remove('show');
+    }
+}
+
+const keyboard_addKeydown = (e) => {
+    const keyboards = [];
+    if (e.keyCode === 16) {
+        document.getElementById('keyboard-tips').classList.add('show');
+    }
+
+    for (let i = 0; i < keyboards.length; i++) {
+        if (keyboards[i].url) {
+            if (keyboards[i].url.startsWith('http')) {
+                if (e.key === keyboards[i].key) {
+                    window.open(keyboards[i].url);
+                }
+            } else {
+                if (e.key === keyboards[i].key) {
+                    pjax.loadUrl(keyboards[i].url);
+                }
+            }
+        } else if (keyboards[i].sco) {
+            if (e.key === keyboards[i].key) {
+                sco[keyboards[i].sco]();
+            }
+        } else if (keyboards[i].func) {
+            if (e.key === keyboards[i].key) {
+                window[keyboards[i].func]();
+            }
+        }
+    }
+}
+
+function openKeyboard() {
+
+    window.addEventListener('keyup', keyboard_addKeyup);
+
+    window.addEventListener('keydown', keyboard_addKeydown);
+}
+function closeKeyboard() {
+
+    window.removeEventListener('keyup', keyboard_addKeyup);
+
+    window.removeEventListener('keydown', keyboard_addKeydown);
+}
+
+var sco_keyboards = localStorage.getItem('keyboard') === 'true'
+if (sco_keyboards) {
+    openKeyboard();
+    document.getElementById('consoleKeyboard').classList.add('on');
+}</script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><i class="scoicon sco-marcus" style="font-size: 20px;"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">NeoDBAPI</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="scoicon  sco-checkbox-multiple-blank-fill"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="scoicon  sco-price-tag-fill"></i><span>标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="scoicon  sco-folder-fill"></i><span>归档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>空间</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="scoicon  sco-fire-fill"></i><span>说说</span></a></li><li><a class="site-page child" href="/music/"><i class="scoicon  sco-disc-fill"></i><span>音乐</span></a></li><li><a class="site-page child" href="/picture/"><i class="scoicon  sco-image-fill"></i><span>相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="scoicon  sco-wifi-fill"></i><span>鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="scoicon  sco-group-fill"></i><span>友链</span></a></li><li><a class="site-page child" href="/bbers/"><i class="scoicon  sco-fire-fill"></i><span>动态</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="scoicon  sco-contacts-fill"></i><span>关于</span></a></li><li><a class="site-page child" href="/message/"><i class="scoicon  sco-chat-fill"></i><span>留言</span></a></li><li><a class="site-page child" href="/todo/"><i class="scoicon  scoicon sco-gift-fill"></i><span>清单</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" href="javascript:void(0);" rel="external nofollow noreferrer" onclick="toTianliGPTblog()" title=""><i class="scoicon sco-train-line"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-signal-tower-fill"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" rel="external nofollow noreferrer" title="搜索"><i class="scoicon sco-search-line"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="scoicon sco-dashboard-fill"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="scoicon sco-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="scoicon sco-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://img.marcus233.top/i/24/03/65ed680cf2075.webp" alt="NeoDBAPI"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/我的项目/">我的项目</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/"><span class="tags-name tags-punctuation">Python</span></a></div></div></div></div><h1 class="post-title">NeoDBAPI</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="meta_posted 2023-11-26 10:34:23"><i class="post-meta-icon scoicon sco-calendar-todo-fill"></i><time datetime="2023-11-26T02:34:23.000Z">2023-11-26T02:34:23.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon scoicon sco-word-fill" title="文章字数"></i><span class="word-count">1.6k</span><span class="post-meta-separator"></span><i class="post-meta-icon scoicon sco-clock-fill" title="阅读耗时"></i><span>7 min</span></span><span class="post-meta-position" title="作者IP归属地为成都"><i class="post-meta-icon scoicon sco-map-pin-fill"></i><span>成都</span></span><a class="post-meta-pv" href="/p/Neodb-Api.html" title="文章热度"><i class="post-meta-icon scoicon sco-fire-fill"></i></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="scoicon sco-chat-fill"></i><a href="/p/Neodb-Api.html#post-comment"></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><div class="post-ai"><div class="ai-title"><div class="ai-title-left"><i class="ai-title-icon scoicon sco-robot-fill"></i><div class="ai-title-text">文章摘要</div></div><div class="ai-tag" id="ai-tag">GPT 4</div></div><div class="ai-explanation" style="display: block;"></div><div class="ai-suggestions"></div><div class="ai-bottom"><div class="ai-tips">此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结</div><a class="ai-report" title="投诉" target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.wzsco.top/about/">投诉</a></div></div><article class="post-content" id="article-container"><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://neodb.social/">neodb.social</a> 是一个致力于为联邦宇宙居民提供一个自由开放互联的书籍、电影、音乐和游戏收藏评论空间。NeoDB 的源代码来自 NiceDB，NiceDB 由里瓣社区众筹开发。</p>
+<p>个人主页<a target="_blank" rel="noopener external nofollow noreferrer" href="https://neodb.social/users/marcus233@mastodon.social/">Marcus233@mastodon.social</a></p>
+<p>参考<a target="_blank" rel="noopener external nofollow noreferrer" href="https://immmmm.com/hi-neodb-api/">@immmmm</a>和<a target="_blank" rel="noopener external nofollow noreferrer" href="https://eallion.com/neodb/">@eallion</a></p>
+<p><a class="develop_button" target="_blank" rel="noopener external nofollow noreferrer" href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMarcusYYDS%2FNeodb-Api&project-name=Neodb-Api&repository-name=Neodb-Api&env=ACCESSTOKEN,USE_REDIS,USE_I2C,IMG2COLOR,KV_URL,KV_REST_API_URL,KV_REST_API_TOKEN,KV_REST_API_READ_ONLY_TOKEN&envDescription=Enter%20your%20secret%20from%20https%3A%2F%2Fblog.marcus233.top%2Fwiki%2Fneodbapi%2Findex.html." alt="Deploy with Vercel"><img src="https://vercel.com/button"></img></a></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><h4 id="ACCESSTOKEN"><a href="#ACCESSTOKEN" class="headerlink" title="ACCESSTOKEN"></a>ACCESSTOKEN</h4><p>见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://eallion.com/neodb_token">@eallion</a></p>
+<h4 id="USE-REDIS-USE-I2C"><a href="#USE-REDIS-USE-I2C" class="headerlink" title="USE_REDIS,USE_I2C"></a>USE_REDIS,USE_I2C</h4><p>是否使用redis和提取主题色功能<br>填<code>true</code>，则后几项必填</p>
+<blockquote>
+<p>redis数据可先不填，后面有更快的方法</p>
+</blockquote>
+<h4 id="IMG2COLOR"><a href="#IMG2COLOR" class="headerlink" title="IMG2COLOR"></a>IMG2COLOR</h4><p>见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com//anzhiyu-c/img2color-go">@anzhiyu-c&#x2F;img2color-go</a><br>填入类似于<code>https://xxx.top/api?img=</code>的链接</p>
+<h4 id="KV-URL-KV-REST-API-URL-KV-REST-API-TOKEN-KV-REST-API-READ-ONLY-TOKEN"><a href="#KV-URL-KV-REST-API-URL-KV-REST-API-TOKEN-KV-REST-API-READ-ONLY-TOKEN" class="headerlink" title="KV_URL,KV_REST_API_URL,KV_REST_API_TOKEN,KV_REST_API_READ_ONLY_TOKEN"></a>KV_URL,KV_REST_API_URL,KV_REST_API_TOKEN,KV_REST_API_READ_ONLY_TOKEN</h4><p><img src="https://img01.anheyu.com/useruploads/8/2023/09/24/650ff4042f4fe.png" alt="创建数据库"></p>
+<p>然后随便填入名字</p>
+<p>找到.env,直接复制粘贴进去</p>
+<p>(真的可以直接粘贴,不需要一个一个输入)</p>
+<p><img src="https://img01.anheyu.com/useruploads/8/2023/09/24/650ff5239fa71.png" alt="直接复制粘贴"></p>
+<blockquote>
+<p>如果部署时没有填链接<br><img src="https://img01.anheyu.com/useruploads/8/2023/09/24/650ff452e5512.png" alt="链接数据库"><br><img src="https://img01.anheyu.com/useruploads/8/2023/09/24/650ff4ed67ada.png" alt="选择项目连接"></p>
+</blockquote>
+<h4 id="域名配置"><a href="#域名配置" class="headerlink" title="域名配置"></a>域名配置</h4><p>如果需要国内访问,需添加自己的域名</p>
+<p>访问<code>https://xxx.top/?type=complete&amp;category=movie&amp;page=2&amp;theme=true</code>得到返回即部署成功</p>
+<h3 id="传入"><a href="#传入" class="headerlink" title="传入"></a>传入</h3><p>同<a target="_blank" rel="noopener external nofollow noreferrer" href="https://neodb.social/developer/#/default/journal_api_list_marks_on_shelf">官方</a></p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>参数</strong></th>
+<th align="center"><strong>是否必要</strong></th>
+<th align="center"><strong>类型</strong></th>
+<th align="center"><strong>默认值</strong></th>
+<th align="center"><strong>可选</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">type</td>
+<td align="center">是</td>
+<td align="center">str</td>
+<td align="center">无</td>
+<td align="center">wishlist &#x2F; progress &#x2F; complete</td>
+</tr>
+<tr>
+<td align="center">category</td>
+<td align="center">否</td>
+<td align="center">str</td>
+<td align="center">全部</td>
+<td align="center">book&#x2F;movie&#x2F;tv&#x2F;music&#x2F;game&#x2F;podcast&#x2F;performance</td>
+</tr>
+<tr>
+<td align="center">page</td>
+<td align="center">否</td>
+<td align="center">int</td>
+<td align="center">1</td>
+<td align="center">1-最大页数</td>
+</tr>
+</tbody></table>
+<h3 id="返回"><a href="#返回" class="headerlink" title="返回"></a>返回</h3><p>同<a target="_blank" rel="noopener external nofollow noreferrer" href="https://neodb.social/developer/#/default/journal_api_list_marks_on_shelf">官方</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;shelf_type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;wishlist&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;visibility&quot;</span><span class="punctuation">:</span> <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;item&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;api_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;book&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;parent_uuid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;display_title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;external_resources&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">          <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;brief&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cover_image_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;rating&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;rating_count&quot;</span><span class="punctuation">:</span> <span class="number">0</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;created_time&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2023-09-23T10:58:23.814Z&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;comment_text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;string&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;rating_grade&quot;</span><span class="punctuation">:</span> <span class="number">10</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;tags&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;string&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pages&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;count&quot;</span><span class="punctuation">:</span> <span class="number">0</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>见<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.kouseki.cn/">@石姐姐</a></p>
+<h3 id="代码讲解"><a href="#代码讲解" class="headerlink" title="代码讲解"></a>代码讲解</h3><details class="folding-tag" ><summary> 点击打开代码讲解(为不懂的人准备) color:cyan </summary>
+              <div class='content'>
+              <h4 id="app-py"><a href="#app-py" class="headerlink" title="app.py"></a>app.py</h4><ol><li><p>导入模块和库：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, request</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> environ</span><br><span class="line"><span class="keyword">from</span> redis_color <span class="keyword">import</span> get_theme_color, kv, process_item</span><br><span class="line"><span class="keyword">import</span> threading</span><br></pre></td></tr></table></figure><ul><li><code>flask</code>：导入 Flask 模块，用于创建 Web 应用程序。</li><li><code>requests</code>：用于发送 HTTP 请求。</li><li><code>json</code>：用于处理 JSON 数据。</li><li><code>os.environ</code>：用于获取环境变量。</li></ul></li><li><p>创建 Flask 应用：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app = Flask(__name__)</span><br></pre></td></tr></table></figure><ul><li>创建了一个名为 <code>app</code> 的 Flask 应用。</li></ul></li><li><p>定义了一个路由和视图函数：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span>, methods=[<span class="string">&#x27;GET&#x27;</span>]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getdata</span>():</span><br></pre></td></tr></table></figure><ul><li>定义了一个路由为 <code>/</code>，并指定了请求方法为 GET。</li></ul></li><li><p>获取环境变量中的 ACCESSTOKEN：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">token = environ.get(<span class="string">&#x27;ACCESSTOKEN&#x27;</span>)</span><br></pre></td></tr></table></figure><ul><li>使用 <code>environ.get()</code> 获取环境变量中名为 <code>ACCESSTOKEN</code> 的值。</li></ul></li><li><p>设置请求头：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;accept&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Authorization&#x27;</span>: <span class="string">f&#x27;Bearer <span class="subst">&#123;token&#125;</span>&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;http://redish101.top&#x27;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>定义了一个字典 <code>headers</code> 包含了请求头信息。</li></ul></li><li><p>获取请求参数：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cate = request.args.get(<span class="string">&#x27;category&#x27;</span>)</span><br><span class="line">page = request.args.get(<span class="string">&#x27;page&#x27;</span>)</span><br><span class="line"><span class="built_in">type</span> = request.args.get(<span class="string">&#x27;type&#x27;</span>)</span><br><span class="line">theme = request.args.get(<span class="string">&#x27;theme&#x27;</span>)</span><br></pre></td></tr></table></figure><ul><li>使用 Flask 的 <code>request.args.get()</code> 方法获取请求中的参数。</li></ul></li><li><p>判断参数是否完整：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> token <span class="keyword">and</span> <span class="built_in">type</span>:</span><br></pre></td></tr></table></figure><ul><li>确保 <code>token</code> 和 <code>type</code> 不为空。</li></ul></li><li><p>发起请求：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = requests.get(<span class="string">f&quot;https://neodb.social/api/me/shelf/<span class="subst">&#123;<span class="built_in">type</span>&#125;</span>?category=<span class="subst">&#123;cate&#125;</span>&amp;page=<span class="subst">&#123;page&#125;</span>&quot;</span>, headers=headers)</span><br></pre></td></tr></table></figure><ul><li>使用 <code>requests.get()</code> 发起一个 GET 请求。</li></ul></li><li><p>解析响应：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = json.loads(response.text)</span><br></pre></td></tr></table></figure><ul><li>使用 <code>json.loads()</code> 解析响应数据。</li></ul></li><li><p>判断是否使用缓存：</p>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> environ.get(<span class="string">&#x27;USE_REDIS&#x27;</span>):</span><br></pre></td></tr></table></figure></li></ol><ul><li>确保环境变量中有 <code>USE_REDIS</code>。</li></ul><ol start="11"><li>判断是否使用主题色提取：   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> environ.get(<span class="string">&#x27;USE_I2C&#x27;</span>) <span class="keyword">and</span> theme == <span class="string">&quot;true&quot;</span>:</span><br></pre></td></tr></table></figure></li></ol><ul><li>确保环境变量中有 <code>USE_I2C</code> 并且请求参数中的 <code>theme</code> 为 “true”。</li></ul><ol start="12"><li>使用多线程处理提取主题色：   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="string">&#x27;data&#x27;</span>]:</span><br><span class="line">    thread = threading.Thread(target=process_item, args=(i,))</span><br><span class="line">    threads.append(thread)</span><br><span class="line">    thread.start()</span><br><span class="line"><span class="keyword">for</span> thread <span class="keyword">in</span> threads:</span><br><span class="line">    thread.join()</span><br></pre></td></tr></table></figure></li></ol><ul><li>创建了多个线程用于处理每个数据项。</li></ul><ol start="13"><li><p>判断是否使用缓存并返回结果：</p>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> kvdata <span class="keyword">and</span> <span class="built_in">str</span>(data[<span class="string">&#x27;count&#x27;</span>]) == <span class="built_in">str</span>(kvcount):</span><br><span class="line">    <span class="keyword">return</span> json.loads(kvdata)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="comment"># ...（设置缓存等操作）</span></span><br><span class="line">    <span class="keyword">return</span> data</span><br></pre></td></tr></table></figure></li><li><p>其他处理和返回信息。</p></li><li><p>启动应用程序：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure><ul><li>如果当前脚本被直接执行，则启动应用程序。</li></ul></li></ol><h4 id="redis-color-py"><a href="#redis-color-py" class="headerlink" title="redis_color.py"></a>redis_color.py</h4><p>这段代码是一个用于处理主题颜色的功能模块。让我逐段解释：</p><ol><li><strong>导入模块和库</strong>：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> lru_cache</span><br><span class="line"><span class="keyword">from</span> vercel_kv_sdk <span class="keyword">import</span> KV</span><br><span class="line"><span class="keyword">import</span> dotenv</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> environ</span><br></pre></td></tr></table></figure><p>这里首先导入了需要用到的模块和库，包括了：</p><ul><li><code>lru_cache</code>：这是一个装饰器，用于对函数的返回值进行缓存，可以提高函数的执行效率。</li><li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://pypi.org/project/vercel-kv-sdk/"><code>KV</code></a>：这是一个用于操作 vercel_kv 的模块，与redis相似。</li><li><code>dotenv</code>：用于从环境变量文件（比如 <code>.env</code> 文件）中加载环境变量。</li><li><code>requests</code>：用于发送 HTTP 请求。</li><li><code>json</code>：用于处理 JSON 数据的模块。</li><li><code>os.environ</code>：用于获取系统的环境变量。</li></ul><ol><li><strong>加载环境变量</strong>：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotenv.load_dotenv()</span><br></pre></td></tr></table></figure><p>这一行代码从环境变量文件中加载环境变量，使其可以在程序中使用。</p><ol start="3"><li><strong>初始化 KV 对象和设置请求头</strong>：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">kv = KV()</span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Referer&#x27;</span>: <span class="string">&#x27;http://redish101.top&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Encoding&#x27;</span>: <span class="string">&#x27;gzip, deflate, br&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;en-GB,en;q=0.9,en-US;q=0.8,ml;q=0.7&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;keep-alive&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这部分代码初始化了一个 <code>KV</code> 对象，同时设置了一些用于 HTTP 请求的请求头。</p><ol start="4"><li><strong>定义获取主题颜色的函数</strong>：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@lru_cache(<span class="params">maxsize=<span class="literal">None</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_theme_color</span>(<span class="params">uuid,cover_image_url</span>):</span><br><span class="line">    <span class="comment"># ...</span></span><br></pre></td></tr></table></figure><p>这是一个用于获取主题颜色的函数。<code>@lru_cache(maxsize=None)</code> 是一个装饰器，它会缓存函数的返回值，以提高函数的执行效率。</p><ol start="5"><li><strong>处理获取主题颜色的逻辑</strong>：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">theme_color = kv.get(uuid)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> theme_color <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">    <span class="keyword">return</span> theme_color</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># ...</span></span><br></pre></td></tr></table></figure><p>这部分代码首先尝试从缓存中获取主题颜色，如果缓存中存在，就直接返回。如果不存在，就尝试从<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com//anzhiyu-c/img2color-go">主题色api</a>获取主题颜色。</p><ol start="6"><li><strong>定义处理单个项目的函数</strong>：</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">process_item</span>(<span class="params">item</span>):</span><br><span class="line">    uuid = item[<span class="string">&#x27;item&#x27;</span>][<span class="string">&#x27;uuid&#x27;</span>]</span><br><span class="line">    cover_image_url = item[<span class="string">&#x27;item&#x27;</span>][<span class="string">&#x27;cover_image_url&#x27;</span>]</span><br><span class="line">    theme_color = get_theme_color(uuid, cover_image_url)</span><br><span class="line">    item[<span class="string">&#x27;item&#x27;</span>][<span class="string">&#x27;color&#x27;</span>] = theme_color</span><br></pre></td></tr></table></figure><p>这个函数接收一个项目作为参数，并从项目中提取出 UUID 和封面图片的 URL。然后使用之前定义的获取主题颜色的函数，将得到的主题颜色添加到项目的属性中。</p><p>–由ChatGPT生成–</p>
+              </div>
+            </details>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png"></a><div class="post-copyright__author_name">Marcus</div><div class="post-copyright__author_desc">人间值得，未来可期</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward" onclick="AddRewardMask()"><div class="reward-button" title="赞赏作者"><i class="scoicon sco-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://img.marcus233.top/i/24/03/65ed6afe8bfec.webp"><img class="post-qr-code-img" src="https://img.marcus233.top/i/24/03/65ed6afe8bfec.webp" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://img.marcus233.top/i/24/03/65ed6b1c94f68.webp" rel="external nofollow noreferrer" target="_blank"><img class="post-qr-code-img" src="https://img.marcus233.top/i/24/03/65ed6b1c94f68.webp" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    console.log("RemoveRewardMask")
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    console.log("AddRewardMask")
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script><div class="reward-link mode"><a class="reward-link-button" href="/atom.xml" title="订阅"><i class="scoicon sco-plant-fill"></i>订阅</a></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">Marcus</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/"><span class="tags-punctuation"></span>Python<span class="tagsPageCount">1</span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/14c68eb.html"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Github学生包申请</div></div></a></div><div class="next-post pull-right"><a href="/p/5a1df3f8.html"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">如何提升你的网站速度</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="scoicon sco-chat-fill"></i><span> 评论</span><span></span></div><div class="comment-randomInfo"><a onclick="sco.addRandomCommentInfo()" href="javascript:void(0)" rel="external nofollow noreferrer">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div id="comment"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://bu.dusays.com/2023/12/30/659011053e246.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">这有关于<b>生活、设计、开发</b>相关的问题和看法，还有<b>游戏推荐</b>和<b>分享</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的<b>知识</b>和<b>教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">Marcus</div><div class="author-info__desc">人间值得，未来可期</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marcusyyds" title="Github"><i class="scoicon  sco-github-line"></i></a><a class="social-icon" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/1024450661" title="Bilibili"><i class="scoicon  sco-bilibili-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="scoicon sco-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE"><span class="toc-text">环境变量配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ACCESSTOKEN"><span class="toc-text">ACCESSTOKEN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#USE-REDIS-USE-I2C"><span class="toc-text">USE_REDIS,USE_I2C</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IMG2COLOR"><span class="toc-text">IMG2COLOR</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KV-URL-KV-REST-API-URL-KV-REST-API-TOKEN-KV-REST-API-READ-ONLY-TOKEN"><span class="toc-text">KV_URL,KV_REST_API_URL,KV_REST_API_TOKEN,KV_REST_API_READ_ONLY_TOKEN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE"><span class="toc-text">域名配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E5%85%A5"><span class="toc-text">传入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E"><span class="toc-text">返回</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%AE%B2%E8%A7%A3"><span class="toc-text">代码讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#app-py"><span class="toc-text">app.py</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#redis-color-py"><span class="toc-text">redis_color.py</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="scoicon sco-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/14c68eb.html" title="Github学生包申请"><img alt="Github学生包申请" src="https://img.marcus233.top/i/24/03/65ed663edaf73.webp"></a><div class="content"><a class="title" href="/p/14c68eb.html" title="Github学生包申请">Github学生包申请</a><a class="article-recent_post_categories" href="/p/14c68eb.html">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/Neodb-Api.html" title="NeoDBAPI"><img alt="NeoDBAPI" src="https://img.marcus233.top/i/24/03/65ed680cf2075.webp"></a><div class="content"><a class="title" href="/p/Neodb-Api.html" title="NeoDBAPI">NeoDBAPI</a><a class="article-recent_post_categories" href="/p/Neodb-Api.html">我的项目</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/5a1df3f8.html" title="如何提升你的网站速度"><img alt="如何提升你的网站速度" src="https://img.marcus233.top/i/24/03/65ed6704d26dd.webp"></a><div class="content"><a class="title" href="/p/5a1df3f8.html" title="如何提升你的网站速度">如何提升你的网站速度</a><a class="article-recent_post_categories" href="/p/5a1df3f8.html">经验分享</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/steam001.html" title="STEAM游戏《PP》推荐"><img alt="STEAM游戏《PP》推荐" src="https://img.marcus233.top/i/24/03/65ed66c636f4a.webp"></a><div class="content"><a class="title" href="/p/steam001.html" title="STEAM游戏《PP》推荐">STEAM游戏《PP》推荐</a><a class="article-recent_post_categories" href="/p/steam001.html">游戏推荐</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/one-year-mark.html" title="博客一周年记"><img alt="博客一周年记" src="https://img.marcus233.top/i/24/03/65ed66f0cc891.webp"></a><div class="content"><a class="title" href="/p/one-year-mark.html" title="博客一周年记">博客一周年记</a><a class="article-recent_post_categories" href="/p/one-year-mark.html">我的总结</a></div></div></div></div></div></div></main><footer id="footer"><div id="sco-footer-bar"><div class="footer-logo"><i class="scoicon sco-marcus"></i></div><div class="footer-bar-description">来自Marcus - 人间值得，未来可期的文章</div><a class="footer-bar-link" href="/">了解更多</a></div><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/marcusyyds" title="Github"><i class="scoicon  sco-github-line"></i></a><a class="deal_link" href="mailto:marcus-zh@qq.com" rel="external nofollow noreferrer" title="Mail"><i class="scoicon  sco-mail-line"></i></a><div class="footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://img01.anheyu.com/useruploads/8/2023/08/09/64d307c2d8873.png" alt="返回顶部"></div><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/1024450661" title="Bilibili"><i class="scoicon  sco-bilibili-line"></i></a><a class="deal_link" target="_blank" rel="noopener external nofollow noreferrer" href="https://dribbble.com/Marcus2333" title="Dribbble"><i class="scoicon  sco-dribbble-line"></i></a></div><div id="sco-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="归档">归档</a><a class="footer-item" href="/categories/" title="分类">分类</a><a class="footer-item" href="/tags/" title="标签">标签</a></div></div><div class="footer-group"><h3 class="footer-title">服务</h3><div class="footer-links"><a class="footer-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://www.chuqiyun.com/" title="初七云">初七云</a><a class="footer-item" target="_blank" rel="noopener external nofollow noreferrer" href="https://umami.marcus233.top/" title="自建Umami">自建Umami</a></div></div><div class="footer-group"><h3 class="footer-title">支持</h3><div class="footer-links"><a class="footer-item" href="/about/" title="打赏记录">打赏记录</a></div></div><div class="footer-group"><h3 class="footer-title">协议</h3><div class="footer-links"><a class="footer-item" href="/cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/privacy/" title="用户协议">用户协议</a><a class="footer-item" href="/copyright/" title="版权协议">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><h3 class="footer-title">友链</h3><a class="random-friends-btn" href="javascript:randomLinksList();" rel="external nofollow noreferrer"><i class="scoicon sco-refresh-line"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2024 By&nbsp;<a class="footer-bar-link" href="/">Marcus</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/wleelw/hexo-theme-solitude" title="主题">主题</a><a class="footer-bar-link" href="/atom.xml" title="订阅">订阅</a><a class="footer-bar-link cc"><i class="scoicon sco-copyright-line"></i><i class="scoicon sco-creative-commons-by-line"></i><i class="scoicon sco-creative-commons-nc-line"></i><i class="scoicon sco-creative-commons-nd-line"></i></a></div></div></div><div class="needEndHide" id="cookies-window"><div class="cookies-window-title">协议提醒助手</div><div class="cookies-window-content"><span class="cookies-tip">查看本站为你的个人隐私做出的努力</span><a class="cookies-link" href="/privacy/" title="本站如何保护你的隐私"><i class="scoicon sco-right-btn-fill"></i></a></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- inject body--><div><script src="/js/main.js?v=1.5.1"></script><script src="/js/utils.js?v=1.5.1"></script><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="scoicon sco-arrow-left-line"></i></div><div class="rightMenu-item" id="menu-forward"><i class="scoicon sco-arrow-right-line"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="scoicon sco-restart-line"></i></div><div class="rightMenu-item" id="menu-top"><i class="scoicon sco-arrow-up-line"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="scoicon sco-copy-fill"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="scoicon sco-clipboard-fill"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="scoicon sco-chat-new-fill"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="scoicon sco-window-fill"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="scoicon sco-link-line"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="scoicon sco-copy-fill"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="scoicon sco-download-cloud-fill"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="scoicon sco-search-line"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="scoicon sco-play-fill"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="scoicon sco-skip-back-fill"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="scoicon sco-skip-forward-fill"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open('https://music.163.com/#/playlist?id=8407304077', '_blank');"><i class="scoicon sco-play-list-2-line"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="scoicon sco-copy-fill"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-Link" id="menu-randomPost"><i class="scoicon sco-signal-tower-fill"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="scoicon sco-checkbox-multiple-blank-fill"></i><span>文章分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="scoicon sco-price-tag-fill"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-copy"><i class="scoicon sco-external-link-fill"></i><span>复制地址</span></div><div class="rightMenu-item" id="menu-commentBarrage"><i class="scoicon sco-chat-fill"></i><span class="menu-commentBarrage-text">关闭热评</span></div><div class="rightMenu-item" id="menu-darkmode"><i class="scoicon sco-moon-clear-fill"></i><span class="menu-darkmode-text">深色模式</span></div></div></div><div id="rightmenu-mask"></div><script src="/js/rightside.js?v=1.5.1"></script><script src="https://cdn.staticfile.org/pjax/0.2.8/pjax.min.js"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><script src="/js/sco-ai.min.js?v=1.5.1"></script><script>const coverColorConfig = {
+    api: 'https://img2color.wzsco.top/api?img=',
+    time: 43200000,
+}</script><script src="/js/covercolor/api.js?v=1.5.1"></script><script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script><script src="https://cdn.staticfile.org/lunr.js/2.3.9/lunr.min.js"></script></div><div id="js-pjax"><script async src="https://cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.min.js"></script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: 'post',
+    toc: true,
+    comment: true,
+}
+</script></div><script>const links = []
+function travelling() {
+    const link = links[utils.randomNum(links.length)];
+    utils.snackbarShow('您即将前往 ⌈ ' + link.name + ' ⌋ , 安全性未知', false, 3000);
+    setTimeout(() => {
+        window.open(link.link, "_blank")
+    }, 3000)
+}
+</script><script>function randomLinksList() {
+    const linkcard = document.getElementById('friend-links-in-footer');
+    if (linkcard == null) return;
+
+    let data = '';
+    let linksCopy = [...links];
+    let count = Math.min(3, linksCopy.length);
+
+    for (let i = 0; i < count; i++) {
+        let index = utils.randomNum(linksCopy.length);
+        const {link, name} = linksCopy[index];
+        data += `<a class="footer-item" href="${link}" target="_blank" rel="noopener noreferrer nofollow">${name}</a>`;
+        linksCopy.splice(index, 1);
+    }
+
+    linkcard.innerHTML = data + '<a class="footer-item" href="/links/">更多</a>';
+}</script><!-- newest comment--><!-- pjax--><script>let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax',
+    'meta[property^="og:"]',
+]
+
+const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+}
+initTheme()</script><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="scoicon sco-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.5.1"></script><!-- music--></body></html><script>const posts=["p/footer.html","p/hometop.html","p/one-year-mark.html","p/hometop2.html","p/guzhan.html","p/2022.html","p/Neodb-Api.html","p/comments.html","p/5a1df3f8.html","p/14c68eb.html","p/HelloWord.html","p/steam001.html","p/bilibili-API-collect.html","p/replit.html","p/cloudreve.html"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); };</script>
